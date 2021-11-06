@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="screen.min.css">
         <link rel="stylesheet" href="static/css/custom.min.css">
 
+        <link rel = "icon" href = "lanway.png" type = "image/x-icon">
+
+
     </head>
     
     <body><!-- $Page header-->
@@ -21,79 +24,80 @@
         <header class="page-header js-header">
     <div class="page-header__inner">
         <div class="page-header__logo"></div>
-        <nav class="page-header__nav js-nav"><ul><li><a class="page-header__nav-link js-anchor js-link is-active" href="#home">Home</a></li>
-            <li><a class="page-header__nav-link js-anchor js-link" href="#portfolio">About Us</a></li>
-            <li><a class="page-header__nav-link js-anchor js-link" href="#team">Services</a></li>
+        <nav class="page-header__nav js-nav"><ul>
+            <li><a class="page-header__nav-link js-anchor js-link is-active" href="#home">Home</a></li>
+            <li><a class="page-header__nav-link js-anchor js-link" href="#aboutus">About Us</a></li>
+            <li><a class="page-header__nav-link js-anchor js-link" href="#services">Services</a></li>
             <li><a class="page-header__nav-link js-anchor js-link" href="#contact">Contact</a></li>
         </ul></nav></div></header>
         
         <!-- $Promo section-->
         <section class="promo js-jumbo" id="home">
-            <h2 class="promo__title">Done the right way.</h2>
-            <p class="promo__descr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-            <a class="promo__btn" href="#">Learn more</a>
-            <a class="promo__go-next js-anchor" href="#portfolio">Scroll down</a>
+            <h2 class="about__title">Done the right way.</h2>
+            <p class="about__descr">Serving North Carolina, South Carolina, and Virginia since 1967.</p>
+            <!-- <a class="about__btn" href="#aboutus">Learn more</a> -->
+            <a class="about__go-next js-anchor" href="#aboutus">Learn More</a>
         </section>
 
-            <!-- $Portfolio section-->
-            <section class="portfolio js-portfolio" id="portfolio">
-                <div class="portfolio__inner"><h2 class="portfolio__title">Portfolio</h2>
-                    <p class="portfolio__descr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                    <nav class="portfolio__filter"><ul><li class="portfolio__filter-btn is-selected js-filter" data-filter="all">All</li>
-                        <li class="portfolio__filter-btn js-filter" data-filter="web">Web design</li>
-                        <li class="portfolio__filter-btn js-filter" data-filter="graphic">Graphic design</li>
-                        <li class="portfolio__filter-btn js-filter" data-filter="flat">Flat design</li></ul></nav>
-                        <ul class="portfolio__content"><li class="portfolio__item js-item" data-cat="all flat">
-                            <a href="#"><img class="portfolio__item-img js-lazy" src="static/images/port1.png" alt="">
-                                <div class="portfolio__item-caption"><span class="portfolio__item-title">Example title</span>
-                                    <span class="portfolio__item-cat">Flat design</span></div></a></li>
-                                    <li class="portfolio__item js-item" data-cat="all web"><a href="#"><img class="portfolio__item-img js-lazy" src="static/images/port2.png" alt="">
-                                        <div class="portfolio__item-caption"><span class="portfolio__item-title">Example title</span>
-                                            <span class="portfolio__item-cat">Web design</span></div></a></li><li class="portfolio__item js-item" data-cat="all graphic"><a href="#">
-                                                <img class="portfolio__item-img js-lazy" src="static/images/port3.png" alt=""><div class="portfolio__item-caption"><span class="portfolio__item-title">Example title</span>
-                                                    <span class="portfolio__item-cat">Graphic design</span></div></a></li><li class="portfolio__item js-item" data-cat="all graphic web"><a href="#">
-                                                        <img class="portfolio__item-img js-lazy" src="static/images/port4.png" alt="">
-                                                        <div class="portfolio__item-caption"><span class="portfolio__item-title">Example title</span><span class="portfolio__item-cat">Graphic design</span></div>
+            <!-- $About Us section-->
+            <section class="aboutus js-aboutus" id="aboutus">
+                <div class="aboutus__inner"><h2 class="aboutus__title">About Us</h2>
+                    <p class="aboutus__descr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    <nav class="aboutus__filter"><ul><li class="aboutus__filter-btn is-selected js-filter" data-filter="all">All</li>
+                        <li class="aboutus__filter-btn js-filter" data-filter="web">Web design</li>
+                        <li class="aboutus__filter-btn js-filter" data-filter="graphic">Graphic design</li>
+                        <li class="aboutus__filter-btn js-filter" data-filter="flat">Flat design</li></ul></nav>
+                        <ul class="aboutus__content"><li class="aboutus__item js-item" data-cat="all flat">
+                            <a href="#"><img class="aboutus__item-img js-lazy" src="static/images/port1.png" alt="">
+                                <div class="aboutus__item-caption"><span class="aboutus__item-title">Example title</span>
+                                    <span class="aboutus__item-cat">Flat design</span></div></a></li>
+                                    <li class="aboutus__item js-item" data-cat="all web"><a href="#"><img class="aboutus__item-img js-lazy" src="static/images/port2.png" alt="">
+                                        <div class="aboutus__item-caption"><span class="aboutus__item-title">Example title</span>
+                                            <span class="aboutus__item-cat">Web design</span></div></a></li><li class="aboutus__item js-item" data-cat="all graphic"><a href="#">
+                                                <img class="aboutus__item-img js-lazy" src="static/images/port3.png" alt=""><div class="aboutus__item-caption"><span class="aboutus__item-title">Example title</span>
+                                                    <span class="aboutus__item-cat">Graphic design</span></div></a></li><li class="aboutus__item js-item" data-cat="all graphic web"><a href="#">
+                                                        <img class="aboutus__item-img js-lazy" src="static/images/port4.png" alt="">
+                                                        <div class="aboutus__item-caption"><span class="aboutus__item-title">Example title</span><span class="aboutus__item-cat">Graphic design</span></div>
                                                     </a></li>
-                  <li class="portfolio__item js-item" data-cat="all graphic flat"><a href="#"><img class="portfolio__item-img js-lazy" src="static/images/port6.png" alt="">
-                                 <div class="portfolio__item-caption"><span class="portfolio__item-title">Example title</span><span class="portfolio__item-cat">Flat design</span></div></a></li>
-                                        <li class="portfolio__item js-item" data-cat="all web"><a href="#"><img class="portfolio__item-img js-lazy" src="static/images/port5.png" alt=""><div class="portfolio__item-caption"><span class="portfolio__item-title">Example title</span><span class="portfolio__item-cat">Web design</span></div></a></li><li class="portfolio__item js-item" data-cat="all flat web"><a href="#"><img class="portfolio__item-img js-lazy" src="static/images/port1.png" alt=""><div class="portfolio__item-caption"><span class="portfolio__item-title">Example title</span><span class="portfolio__item-cat">Flat design</span></div></a></li><li class="portfolio__item js-item" data-cat="all web"><a href="#"><img class="portfolio__item-img js-lazy" src="static/images/port2.png" alt=""><div class="portfolio__item-caption"><span class="portfolio__item-title">Example title</span><span class="portfolio__item-cat">Web design</span></div></a></li></ul></div></section>
+                  <li class="aboutus__item js-item" data-cat="all graphic flat"><a href="#"><img class="aboutus__item-img js-lazy" src="static/images/port6.png" alt="">
+                                 <div class="aboutus__item-caption"><span class="aboutus__item-title">Example title</span><span class="aboutus__item-cat">Flat design</span></div></a></li>
+                                        <li class="aboutus__item js-item" data-cat="all web"><a href="#"><img class="aboutus__item-img js-lazy" src="static/images/port5.png" alt=""><div class="aboutus__item-caption"><span class="aboutus__item-title">Example title</span><span class="aboutus__item-cat">Web design</span></div></a></li><li class="aboutus__item js-item" data-cat="all flat web"><a href="#"><img class="aboutus__item-img js-lazy" src="static/images/port1.png" alt=""><div class="aboutus__item-caption"><span class="aboutus__item-title">Example title</span><span class="aboutus__item-cat">Flat design</span></div></a></li><li class="aboutus__item js-item" data-cat="all web"><a href="#"><img class="aboutus__item-img js-lazy" src="static/images/port2.png" alt=""><div class="aboutus__item-caption"><span class="aboutus__item-title">Example title</span><span class="aboutus__item-cat">Web design</span></div></a></li></ul></div></section>
                                         
                                         
                                         
                                         
                                         
-                                        <!-- $Team section-->
-                                        <section class="team" id="team">
-                                            <div class="team__inner">
-                                                <h2 class="team__title">About us</h2>
-                                                <p class="team__descr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                                                <div class="team__member"><img src="static/images/ava1.jpg" alt="Melanie Doe">
-                                                    <div class="team__member-info"><h3 class="team__member-name">Melannie Doe</h3><span class="team__member-role">Project manager</span>
-                                                        <p class="team__member-descr">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p></div>
-                                                        <ul class="team__member-soc"><li><a class="team__member-icon fb" href="#">My Facebook</a></li>
-                                                            <li><a class="team__member-icon tw" href="#">Follow me on twitter</a></li>
-                                                            <li><a class="team__member-icon gplus" href="#">My Google+</a></li>
-                                                            <li><a class="team__member-icon db" href="#">I am on Dribble</a></li>
+                                        <!-- $Services section-->
+                                        <section class="services" id="services">
+                                            <div class="services__inner">
+                                                <h2 class="services__title">Services</h2>
+                                                <p class="services__descr">Specializing in roof replacement, repair, and maintenance on industrial and commerical roofs.</p>
+                                                <div class="services__member"><img src="static/images/ava1.jpg" alt="Melanie Doe">
+                                                    <div class="services__member-info"><h3 class="services__member-name">Melannie Doe</h3><span class="services__member-role">Project manager</span>
+                                                        <p class="services__member-descr">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p></div>
+                                                        <ul class="services__member-soc"><li><a class="services__member-icon fb" href="#">My Facebook</a></li>
+                                                            <li><a class="services__member-icon tw" href="#">Follow me on twitter</a></li>
+                                                            <li><a class="services__member-icon gplus" href="#">My Google+</a></li>
+                                                            <li><a class="services__member-icon db" href="#">I am on Dribble</a></li>
                                                         </ul></div>
 
-                                                        <div class="team__member"><img src="static/images/ava2.jpg" alt="Jhonie Doe">
-                                                            <div class="team__member-info"><h3 class="team__member-name">Jhonnie Doe</h3><span class="team__member-role">Graphic designer</span>
-                                                                <p class="team__member-descr">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p></div>
-                                                                <ul class="team__member-soc">
-                                                                    <li><a class="team__member-icon fb" href="#">My Facebook</a></li>
-                                                                    <li><a class="team__member-icon tw" href="#">Follow me on twitter</a></li>
-                                                                    <li><a class="team__member-icon gplus" href="#">My Google+</a></li>
-                                                                    <li><a class="team__member-icon db" href="#">I am on Dribble</a></li>
+                                                        <div class="services__member"><img src="static/images/ava2.jpg" alt="Jhonie Doe">
+                                                            <div class="services__member-info"><h3 class="services__member-name">Jhonnie Doe</h3><span class="services__member-role">Graphic designer</span>
+                                                                <p class="services__member-descr">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p></div>
+                                                                <ul class="services__member-soc">
+                                                                    <li><a class="services__member-icon fb" href="#">My Facebook</a></li>
+                                                                    <li><a class="services__member-icon tw" href="#">Follow me on twitter</a></li>
+                                                                    <li><a class="services__member-icon gplus" href="#">My Google+</a></li>
+                                                                    <li><a class="services__member-icon db" href="#">I am on Dribble</a></li>
                                                                 </ul></div>
 
-                                                                <div class="team__member"><img src="static/images/ava3.jpg" alt="Daniel Doe"><div class="team__member-info"><h3 class="team__member-name">Daniel Doe</h3>
-                                                                    <span class="team__member-role">Web designer</span><p class="team__member-descr">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                                                </div><ul class="team__member-soc">
-                                                                    <li><a class="team__member-icon fb" href="#">My Facebook</a></li>
-                                                                    <li><a class="team__member-icon tw" href="#">Follow me on twitter</a></li>
-                                                                    <li><a class="team__member-icon gplus" href="#">My Google+</a></li>
-                                                                    <li><a class="team__member-icon db" href="#">I am on Dribble</a></li>
+                                                                <div class="services__member"><img src="static/images/ava3.jpg" alt="Daniel Doe"><div class="services__member-info"><h3 class="services__member-name">Daniel Doe</h3>
+                                                                    <span class="services__member-role">Web designer</span><p class="services__member-descr">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                                                </div><ul class="services__member-soc">
+                                                                    <li><a class="services__member-icon fb" href="#">My Facebook</a></li>
+                                                                    <li><a class="services__member-icon tw" href="#">Follow me on twitter</a></li>
+                                                                    <li><a class="services__member-icon gplus" href="#">My Google+</a></li>
+                                                                    <li><a class="services__member-icon db" href="#">I am on Dribble</a></li>
                                                                 </ul>
                                                                 </div>
                                                             </div>
@@ -107,7 +111,7 @@
                                         <section class="contact" id="contact">
                                             <div class="contact__inner">
                                                 <h2 class="contact__title">Contact us</h2>
-                                                <p class="contact__descr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                                <p class="contact__descr">To request a quote, you can call us directly or complete and submit the form below.</p>
                                                 <form class="contact__form" action="#" method="post">
                                                     <input class="contact__form-input" id="name" type="text" name="name" placeholder="Your name"> 
                                                     <input class="contact__form-input" id="email" type="email" name="email" placeholder="Your email"> 
@@ -116,20 +120,24 @@
                                                 </form><div class="contact__card vcard">
                                                     <h3 class="contact__card-title">Information</h3>
                                                     <div class="contact__card-item place">
-                                                        <div class="fn org">Bak-One Company</div>
+                                                        <div class="fn org">Lan-Way Roofing</div>
                                                         <div class="adr">
-                                                            <div class="street-address">12345 Hollywood Bvld Street</div>
-                                                            <span class="locality">Los Angeles</span>,<span class="region">California</span></div>
-                                                        </div><div class="contact__card-item tel">+444<span class="type">&nbsp;(Phone)&nbsp;</span>123456</div>
-                                                        <div class="contact__card-item fax tel">+123<span class="type">&nbsp;(FAX)&nbsp;</span>0011223</div>
-                                                        <a class="contact__card-item email" href="#">info@companyname.com</a></div></div></section>
+                                                            <div class="street-address">3200 Spottswood Street Suite 106</div>
+                                                            <span class="locality">Raleigh</span>,<span class="region">North Carolina</span></div>
+                                                        </div><div class="contact__card-item tel">+919<span class="type">&nbsp;(Phone)&nbsp;</span>872-3102</div>
+                                                        <div class="contact__card-item fax tel">+919<span class="type">&nbsp;(FAX)&nbsp;</span>878-9895</div>
+                                                        <a class="contact__card-item email" href="#">info@companyname.com</a></div>
+                                                    </div>
+                                                    </section>
                                         
                                         
                                         
                                                        
     <!-- $Page footer-->
     <footer class="page-footer">
-        <div class="page-footer__inner"><span class="page-footer__copyright">&copy; Copyright 2013 Bak-One | One Page Flat Template</span>
+        <div class="page-footer__inner"><span class="page-footer__lan">Lan-Way Roofing | Since 1967</span>
+            <a href="http://www.NRCA.net"><img  src="http://lanwayroofing.com/wp-content/themes/lanway/images/menmber.png" width="128" height="35" alt="Membership" /></a>&nbsp; &nbsp; &nbsp;
+            <img src="http://lanwayroofing.com/wp-content/uploads/2011/03/veteran-1.jpg" width="116" height="33"/>
             <a class="page-footer__gotop js-anchor" href="#home">Go to top</a>
         </div> 
     </footer><script src="body.min.js"></script></body></html>
