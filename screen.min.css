@@ -44,6 +44,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .contact__card-item.place:before{content:"\f041"}
 .contact__card-item.tel{padding-left:17px;margin-bottom:10px}
 .contact__card-item.tel:before{content:"\f098"}
+.contact__card-item.tel-two{padding-left:17px;margin-bottom:10px}
+.contact__card-item.tel-two:before{content:"\f098"}
 .contact__card-item.fax:before{content:"\f02f"}
 .contact__card-item.email{display:inline-block;padding-left:20px;font-size:14px;line-height:24px;color:#444}
 
