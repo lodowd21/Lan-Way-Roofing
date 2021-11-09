@@ -31,7 +31,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .contact__form:after{content:'';display:table;clear:both}    
 
 .contact__form-input{display:inline-block;width:220px;height:45px;margin-bottom:20px;padding-left:12px;border:2px solid #bec3c7;font-style:italic;color:#999}    
-.contact__form-input:first-of-type{margin-right:20px}    
+.contact__form-input{margin-right:10px}   
 .contact__form-tarea{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;width:465px;height:155px;margin-bottom:25px;padding:20px 0 0 12px;border:2px solid #bec3c7;font-style:italic;color:#999;resize:none}
 .contact__form-submit{display:block;float:right;width:115px;height:35px;text-align:center;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
 .contact__form-submit:hover{background-color:#158f76}
