@@ -57,7 +57,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-header.is-fixed{position:fixed;top:0;left:0;z-index:999;-webkit-box-shadow:0 2px 4px 0 #424242;box-shadow:0 2px 4px 0 #424242}
 .page-header__inner{max-width:1024px;margin:0 auto}
 .page-header__inner:after{content:'';display:table;clear:both}
-.page-header__logo{float:left;height:50px;width: 300px;margin:25px 0 0 40px;padding:5px 0 0 65px;background:url(logo.jpg) 0 center no-repeat}
+.page-header__logo{float:left;height:50px;width: 300px;margin:25px 0 0 40px;padding:5px 0 0 65px;background:url(images/logo.jpg) 0 center no-repeat}
 .page-header__nav{float:right;margin:30px 55px 0 0;background-color:#fff}
 .page-header__nav li{display:inline-block;margin-left:5px}
 .page-header__nav-link{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s;color:#424242}
@@ -91,7 +91,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__item-title{display:block;font-size:18px;margin-bottom:10px}
 .aboutus__item-title:before{content:"\f002";-webkit-box-sizing:border-box;box-sizing:border-box;display:block;width:40px;height:40px;-webkit-border-radius:50%;border-radius:50%;margin:0 auto 20px;padding-top:10px;background-color:#ccc;background-color:rgba(0,0,0,.5);font-family:FontAwesome;text-align:center}
 .aboutus__item-cat{display:block;font-size:15px}
-.promo{width:100%;min-height:455px;padding:70px 0;background:#323232 url(roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:cover;text-align:center;color:#fff}
+.promo{width:100%;min-height:455px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:cover;text-align:center;color:#fff}
 .promo__inner{max-width:1024px;margin:0 auto}
 .promo__inner:after{content:'';display:table;clear:both}
 .about__title{margin-bottom:35px;font-size:55px;text-transform:capitalize}
