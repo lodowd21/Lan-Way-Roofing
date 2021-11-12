@@ -91,19 +91,13 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__item-title{display:block;font-size:18px;margin-bottom:10px}
 .aboutus__item-title:before{content:"\f002";-webkit-box-sizing:border-box;box-sizing:border-box;display:block;width:40px;height:40px;-webkit-border-radius:50%;border-radius:50%;margin:0 auto 20px;padding-top:10px;background-color:#ccc;background-color:rgba(0,0,0,.5);font-family:FontAwesome;text-align:center}
 .aboutus__item-cat{display:block;font-size:15px}
-.promo{width:100%;min-height:455px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:cover;text-align:center;color:#fff}
+
+.promo{width:100%;min-height:495px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:cover;text-align:center;color:#fff}
 .promo__inner{max-width:1024px;margin:0 auto}
 .promo__inner:after{content:'';display:table;clear:both}
 .about__title{margin-bottom:35px;font-size:55px;text-transform:capitalize}
 .about__title span{font-weight:700}
 .about__descr{max-width:580px;margin:0 auto 50px;font-size:18px;line-height:1.1;color:#fff}
-
-/*
-.about__btn{display:block;width:125px;height:35px;margin:0 auto 45px;padding-top:10px;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
-.about__btn:hover{background-color:#158f76}
-.about__btn:before{font-size:30px;line-height:40px;font-family:FontAwesome;content:"\f078"}
-.about__btn:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-*/
 .about__go-next{display:block;width:125px;height:35px;margin:0 auto 45px;padding-top:10px;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
 .about__go-next:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
 .about__go-next:hover{background-color:#158f76}
