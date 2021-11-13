@@ -66,6 +66,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-footer{width:100%;min-height:85px;padding-bottom:30px;background-color:#2d3e50}
 .page-footer__inner{max-width:1024px;margin:0 auto}
 .page-footer__inner:after{content:'';display:table;clear:both}
+page-footer__inner img{top:50%;}
 .page-footer__lan{display:inline-block;margin:35px 0 0 45px;font-size:14px;color:#fff}
 
 
@@ -111,7 +112,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .services__member{display:inline-block;position:relative;width:250px;height:450px;margin:0 30px 30px;background-color:#fff;transition: .5s;}
 .services__member:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
-.services__member img{width:100%;height:60%}
+.services__member img{width:100%;height:57%}
 .services__member-info{display:block;width:100%;height:190px;padding:15px 10px}
 .services__member-name{margin-bottom:5px;font-size:18px}
 .services__member-role{display:block;margin-bottom:20px;font-size:13px;font-style:italic;text-transform:capitalize}
