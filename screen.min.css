@@ -109,15 +109,18 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__title{font-size:28px;font-weight:400;margin-bottom:10px;color:#fff;text-transform:capitalize}
 .services__descr{font-size:14px;font-weight:400;margin-bottom:45px;color:#fff}
 
-.services__member{display:inline-block;position:relative;width:250px;height:450px;margin:0 30px 30px;background-color:#fff}
+.services__member{display:inline-block;position:relative;width:250px;height:450px;margin:0 30px 30px;background-color:#fff;transition: .5s;}
+.services__member:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
 .services__member img{width:100%;height:60%}
 .services__member-info{display:block;width:100%;height:190px;padding:15px 10px}
 .services__member-name{margin-bottom:5px;font-size:18px}
 .services__member-role{display:block;margin-bottom:20px;font-size:13px;font-style:italic;text-transform:capitalize}
 .services__member-descr{text-align:left;line-height:1.3}
-.services__member-soc{display:block;position:absolute;width:180px;height:50px;top:95px;left:50%;margin-left:-90px;background-color:#16a086;background-color:rgba(22,160,134,.8);white-space:nowrap;overflow:hidden;opacity:0;visibility:hidden;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
-.services__member:hover .services__member-soc{opacity:1;visibility:visible}
+
+/*
+ .services__member-soc{opacity:1;visibility:visible}
 .services__member-soc li{display:inline-block}
+.services__member-soc{display:block;position:absolute;width:180px;height:50px;top:95px;left:50%;margin-left:-90px;background-color:#16a086;background-color:rgba(22,160,134,.8);white-space:nowrap;overflow:hidden;opacity:0;visibility:hidden;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
 .services__member-icon{display:block;width:45px;height:50px;margin-left:-3px;color:#fff;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;font-size:0}
 .services__member-icon:hover{color:#c1c1c1}
 .services__member-icon:before{display:block;font-family:FontAwesome;font-size:30px;line-height:50px}
@@ -125,6 +128,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__member-icon.tw:before{content:"\f099"}
 .services__member-icon.gplus:before{content:"\f0d5"}
 .services__member-icon.db:before{content:"\f17d"}
+*/
+
 @media screen and (max-width:1000px){.aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
 .services__member{width:190px;margin:0 20px 30px}
     }
