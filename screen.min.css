@@ -75,8 +75,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-footer__gotop:hover{background-color:#158f76} 
 .page-footer__gotop:before{font-size:20px;line-height:45px;font-family:FontAwesome;content:"Top";color:#fff}
 
-.aboutus{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;border:1px solid black;}
-.aboutus__inner{max-width:1024px;margin:0 auto;border: 1px blue;}
+.aboutus{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
+.aboutus__inner{max-width:1024px;margin:0 auto;}
 .aboutus__inner:after{content:'';display:table;clear:both}
 .aboutus__title{font-size:28px;font-weight:400;margin-bottom:10px}
 .aboutus__descr{font-size:14px;font-weight:400;margin-bottom:40px} 
