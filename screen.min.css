@@ -84,15 +84,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__filter li{display:block}    
 .aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
 .aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
-.aboutus__content{margin:45px auto 60px}
-.aboutus__item{position:relative;display:inline-block;width:180px;height:180px;margin:0 30px 35px;-webkit-border-radius:50%;border-radius:50%;overflow:hidden}
-.aboutus__item.is-hidden{display:none} 
-.aboutus__item-img{display:inline-block;height:100%;margin:0 auto}
-.aboutus__item-caption{visibility:hidden;position:absolute;width:100%;height:100%;top:0;padding-top:35px;background-color:#1bbc9b;background-color:rgba(27,188,155,.8);-webkit-border-radius:50%;border-radius:50%;color:#fff;opacity:0;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
-.aboutus__item:hover .aboutus__item-caption{opacity:1;visibility:visible} 
-.aboutus__item-title{display:block;font-size:18px;margin-bottom:10px}
-.aboutus__item-title:before{content:"\f002";-webkit-box-sizing:border-box;box-sizing:border-box;display:block;width:40px;height:40px;-webkit-border-radius:50%;border-radius:50%;margin:0 auto 20px;padding-top:10px;background-color:#ccc;background-color:rgba(0,0,0,.5);font-family:FontAwesome;text-align:center}
-.aboutus__item-cat{display:block;font-size:15px}
+
 
 
 .promo{width:100%;min-height:465px;padding:70px 0;background:#323232 url(images/roof4.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}
