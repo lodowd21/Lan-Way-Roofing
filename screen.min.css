@@ -73,7 +73,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .page-footer__gotop{display:block;float:right;width:45px;height:45px;margin:20px 45px 0 0;font-size:0;text-align:center;overflow:hidden;background-color:#1bbc9b;color:transparent;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
 .page-footer__gotop:hover{background-color:#158f76} 
-.page-footer__gotop:before{font-size:20px;line-height:45px;font-family:FontAwesome;content:"Top";color:#fff}
+.page-footer__gotop:before{font-size:20px;line-height:45px;font-family:FontAwesome;content:"\f077";color:#fff}
 
 .aboutus{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
 .aboutus__inner{max-width:1024px;margin:0 auto;}
