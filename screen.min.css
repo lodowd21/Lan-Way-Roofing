@@ -21,7 +21,8 @@ a{font-size:20px;text-decoration:none}
 
 html,body{width:100%;height:100%}    
 
-body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}    
+body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
+    
 .contact{width:100%;min-height:500px;padding:50px 0;background-color:#ecf0f1;text-align:left}    
 .contact__inner{max-width:1024px;margin:0 auto}    
 .contact__inner:after{content:'';display:table;clear:both}    
@@ -68,9 +69,6 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-footer__inner:after{content:'';display:table;clear:both}
 .page-footer__inner img{position:relative;top:19px;}
 .page-footer__lan{display:inline-block;margin:35px 0 0 45px;font-size:14px;color:#fff}
-
-
-
 .page-footer__gotop{display:block;float:right;width:45px;height:45px;margin:20px 45px 0 0;font-size:0;text-align:center;overflow:hidden;background-color:#1bbc9b;color:transparent;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
 .page-footer__gotop:hover{background-color:#158f76} 
 .page-footer__gotop:before{font-size:20px;line-height:45px;font-family:FontAwesome;content:"\f077";color:#fff}
@@ -88,7 +86,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 
 
-.promo{width:100%;min-height:465px;padding:70px 0;background:#323232 url(images/roof4.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}
+.promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}
 .promo__inner{max-width:1024px;margin:0 auto}
 .promo__inner:after{content:'';display:table;clear:both}
 .about__title{margin-bottom:35px;font-size:55px;text-transform:capitalize}
@@ -113,23 +111,23 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__member-role{display:block;margin-bottom:20px;font-size:13px;font-style:italic;text-transform:capitalize}
 .services__member-descr{text-align:left;line-height:1.3}
 
-/*
- .services__member-soc{opacity:1;visibility:visible}
-.services__member-soc li{display:inline-block}
-.services__member-soc{display:block;position:absolute;width:180px;height:50px;top:95px;left:50%;margin-left:-90px;background-color:#16a086;background-color:rgba(22,160,134,.8);white-space:nowrap;overflow:hidden;opacity:0;visibility:hidden;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
-.services__member-icon{display:block;width:45px;height:50px;margin-left:-3px;color:#fff;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s;font-size:0}
-.services__member-icon:hover{color:#c1c1c1}
-.services__member-icon:before{display:block;font-family:FontAwesome;font-size:30px;line-height:50px}
-.services__member-icon.fb:before{content:"\f09a"}
-.services__member-icon.tw:before{content:"\f099"}
-.services__member-icon.gplus:before{content:"\f0d5"}
-.services__member-icon.db:before{content:"\f17d"}
-*/
+.advantages{text-align:center;border-left:10px solid #ecf0f1;border-right:10px solid #ecf0f1;float:left;width:98%;width:calc(100% - 40px);margin-left:1%;margin-right:1%;margin-left:calc(20px);margin-right:calc(20px);height:auto;margin-top:0;margin-bottom:30px;margin-top:50px;}
+.advantages h2{position:relative;margin-top:-15px}
+.advantages h2:before,.advantages h2:after{content:"";position:absolute;top:15px;display:block;width:30%;height:10px;background-color:#ecf0f1}
+.advantages h2:before{left:0}
+.advantages h2:after{right:0}
+.advantages blockquote{padding:40px 0;border-bottom:10px solid #ecf0f1;}
+.advantages blockquote p,.advantages blockquote cite{display:inline-block;color:black;width:80%;margin:0 auto}
+.advantages blockquote p{margin-bottom:20px;font-weight:lighter;font-size:25px}
+.advantages blockquote cite{font-size:30px}
 
-@media screen and (max-width:1000px){.aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
+@media screen and (max-width:1000px){
+    .aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
 .services__member{width:190px;margin:0 20px 30px}
     }
-        @media screen and (max-width:800px){.contact__form{max-width:50%;margin:0 2% 0 8%}
+
+@media screen and (max-width:800px){
+            .contact__form{max-width:50%;margin:0 2% 0 8%}
 .contact__form-input{width:100%}
 .contact__form-tarea{width:100%}
 .contact__card{width:40%}
@@ -140,7 +138,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__item{width:190px;height:190px;margin:0 5% 35px}
 .services__member{width:180px;margin:0 10px 30px}    }
 
-    @media screen and (max-width:640px){
+@media screen and (max-width:640px){
 .contact{padding:50px 10px}
 .contact__form{float:none;max-width:90%;margin:0 auto 50px}
 .contact__card{display:block;width:230px;margin:20px auto}
@@ -160,7 +158,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__member-soc{width:260px;top:220px;margin-left:-130px}    }
 
 
-@media screen and (max-width:480px){.contact__form-submit{float:none;margin:0 auto} 
+@media screen and (max-width:480px){
+.contact__form-submit{float:none;margin:0 auto} 
 .page-header{min-height:50px}
 .page-header__inner{text-align:center}
 .page-header__logo{float:none;position:relative;display:inline-block;margin:20px auto 10px;text-align:left}
@@ -168,6 +167,9 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-header__logo span{display:inline-block}
 .page-header__nav{float:none;margin:10px auto;padding-top:20px;text-align:center;border-top:1px solid #eee}
 .page-header__nav li{margin-left:0}
+
+
+
 
 .page-footer{padding:0 10px 30px;text-align:center}
 .page-footer__lan{margin:35px auto 0}
