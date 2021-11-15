@@ -80,8 +80,9 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__inner:after{content:'';display:table;clear:both}
 .aboutus__title{font-size:28px;font-weight:400;margin-bottom:10px}
 .aboutus__descr{font-size:14px;font-weight:400;margin-bottom:40px}
-.aboutus__filter li{display:inline-block;padding-left:125px;margin:0 10px;cursor:pointer;float:left}
-.aboutus__filter li{display:block}    
+.aboutus__filter{margin-left:23%;}
+.aboutus__filter li{display:inline-block;margin:0 10px;cursor:pointer;float:left;}
+.aboutus__filter li{display:block;}    
 .aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
 .aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
 
