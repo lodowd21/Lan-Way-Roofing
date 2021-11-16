@@ -83,6 +83,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__filter li{display:block;}    
 .aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
 .aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
+.aboutus__img{width:20%;height:auto;}
 
 
 
