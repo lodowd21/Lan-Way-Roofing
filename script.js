@@ -1,4 +1,4 @@
 
-function clickTest(){
-    document.getElementByID("click").innerHTML = "You clicked me!";
-}
+function showDiv() {
+    document.getElementById('missionStatement').style.display = "block";
+ }
