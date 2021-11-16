@@ -51,7 +51,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .contact__card-item.email{display:inline-block;padding-left:20px;font-size:14px;line-height:24px;color:#444}
 
 .contact__card-item.po{padding-left:15px;margin-bottom:15px}
-.contact__card-item.po:before{content:"\f064"}
+.contact__card-item.po:before{content:"\f01c"}
 
 .contact__card-item.email:before{content:"\f003"}
 .contact__card-item.email:hover{text-decoration:underline}
