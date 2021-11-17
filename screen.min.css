@@ -86,8 +86,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__filter li{display:block;}    
 .aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
 .aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
-.aboutus__slideshow{display:block;width:30%;height:375px;margin-left:20px;background-image:url(wayneeidson.jpg);background-size:contain;}
-.aboutus__slideshow img{width:100%;height:100%}
+.aboutus__slideshow{display:block;width:30%;height:375px;margin-left:20px;}
+.aboutus__slideshow img{width:100%;height:100%;}
 
 
 .promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}

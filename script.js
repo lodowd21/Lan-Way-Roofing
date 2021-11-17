@@ -14,22 +14,18 @@ function showDiv() {
 
  function slideShow(){
 
-    var pic = document.getElementById('aboutus__slideshow');
-	
-	var img = pic.style.backgroundImage; 
-	
-	if( img == "" ){
-		pic.style.backgroundImage = 'url("image2.jpg")';
-	}else if(img == 'url("image2.jpg")' ) {
-	pic.style.backgroundImage = 'url("nrca.png")';
-	}else if(img == 'url("nrca.png")' ) {
-	pic.style.backgroundImage = 'url("wayneeidson.jpg")';
-	}else if(img == 'url("wayneeidson.jpg")' ) {
-	pic.style.backgroundImage = 'url("image2.jpg")';
-	}
-	
-	setTimeout(function(){
-		slideShow();
-	}, 1000);
+    var indexValue = 0;
+            function slideShow(){
+              setTimeout(slideShow, 4000);
+              var x;
+              const img = document.querySelectorAll("img");
+              for(x = 0; x < img.length; x++){
+                img[x].style.display = "none";
+              }
+              indexValue++;
+              if(indexValue > img.length){indexValue = 1}
+              img[indexValue -1].style.display = "block";
+            }
+            slideShow();
 
  }
