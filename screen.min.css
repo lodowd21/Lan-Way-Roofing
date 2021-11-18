@@ -86,8 +86,72 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__filter li{display:block;}    
 .aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
 .aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
-.aboutus__slideshow{display:block;width:30%;height:375px;margin-left:20px;}
+
 .aboutus__slideshow img{width:100%;height:100%;}
+.mySlides img{width:100%;height:100%;}
+
+.slideshow__container {
+    border: 1px solid black;
+    display:block;
+    width:30%;
+    height:375px;
+    position: relative;
+    margin: auto;
+    margin-left: 20px;
+  }
+  
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {left:0;border-radius: 3px 0 0 3px;}
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    border: 1px solid black;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    border: 1px solid black;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+
 
 
 .promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}
@@ -180,5 +244,10 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 /*
 .page-footer__gotop{float:none;width:100%;margin:20px auto 0}
 */
+
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
 
 }    
