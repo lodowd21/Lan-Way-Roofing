@@ -81,16 +81,15 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__inner:after{content:'';display:table;clear:both}
 .aboutus__title{font-size:28px;font-weight:400;margin-bottom:10px}
 .aboutus__descr{font-size:14px;font-weight:400;margin-bottom:40px}
-.aboutus__filter{margin-left:23%;}
-.aboutus__filter li{display:inline-block;margin:0 10px;cursor:pointer;float:left;}
-.aboutus__filter li{display:block;}    
-.aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
+
+.aboutus__filter{width:130px;position:absolute;z-index: 1;left:0px;;overflow-x:hidden;padding: 8px 0;margin-top: 50px;}
+.aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:15px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
 .aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
 
 .aboutus__slideshow img{width:100%;height:100%;}
 .mySlides img{width:100%;height:100%;}
 
-.slideshow__container {border: 1px solid black;display:block;width:30%;height:375px;position: relative;margin: auto;margin-left: 20px;}
+.slideshow__container {display:block;width:30%;height:375px;position:relative;margin: auto;margin-left:35%;}
 
 /* Next & previous buttons */
 .prev, .next {cursor: pointer;position: absolute;top: 50%;width: auto;padding: 16px;margin-top: -22px;color: white;font-weight: bold;font-size: 18px;border-radius: 0 3px 3px 0;user-select: none;}
@@ -100,12 +99,12 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {background-color: rgba(0,0,0,0.8);}
 /* Caption text */
-.text {border: 1px solid black;color: #f2f2f2;font-size: 15px;padding: 8px 12px;position: absolute;bottom: 8px;width: 100%;text-align: center;}
+.text {color: #f2f2f2;font-size: 15px;padding: 8px 12px;position: absolute;bottom: 8px;width: 100%;text-align: center;}
 /* Number text (1/3 etc) */
-.numbertext {border: 1px solid black;color: #f2f2f2;font-size: 12px;padding: 8px 12px;position: absolute;top: 0;}
+.numbertext {color: #f2f2f2;font-size: 12px;padding: 8px 12px;position: absolute;top: 0;}
 
-.aboutus__text{ border: 1px solid black;}
-
+/*.aboutus__text{border: 1px solid black;display:inline;height:300px;width:45%;top:50%;}
+*/
 
 .promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}
 .promo__inner{max-width:1024px;margin:0 auto}
@@ -143,12 +142,12 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .advantages blockquote cite{font-size:25px}
 
 @media screen and (max-width:1000px){
-    .aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
+.aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
 .services__member{width:190px;margin:0 20px 30px}
     }
 
 @media screen and (max-width:800px){
-            .contact__form{max-width:50%;margin:0 2% 0 8%}
+.contact__form{max-width:50%;margin:0 2% 0 8%}
 .contact__form-input{width:100%}
 .contact__form-tarea{width:100%}
 .contact__card{width:40%}
