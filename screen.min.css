@@ -86,6 +86,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:15px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
 .aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
 
+.aboutus__text img {width: 100%;}
+
 .aboutus__slideshow img{width:100%;height:100%;}
 .mySlides img{width:100%;height:100%;}
 
@@ -103,9 +105,9 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 /* Number text (1/3 etc) */
 .numbertext {color: #f2f2f2;font-size: 12px;padding: 8px 12px;position: absolute;top: 0;}
 
-.aboutus__text{border: 1px solid black;}
+/*.aboutus__text{border: 1px solid black;}
 .aboutus__text p{color:black;font-weight:bolder;}
-
+*/
 
 .promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}
 .promo__inner{max-width:1024px;margin:0 auto}
