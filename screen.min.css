@@ -107,6 +107,11 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 /*.aboutus__text{border: 1px solid black;}
 .aboutus__text p{color:black;font-weight:bolder;}
+
+
+#about-services{ display: inline; border-top:#b8b8b8 dashed 1px;border-bottom:#b8b8b8 dashed 1px;padding:8px 0;margin:30px 0;text-align:center!important}
+#about-services .col3:nth-child(-n+3){border-right:#b8b8b8 dashed 1px;height:230px}
+#about-services li{padding-bottom:20px;}
 */
 
 .promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}
@@ -181,6 +186,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__member-info{height:auto} 
 .services__member-descr{display:none}
 .services__member-soc{width:260px;top:220px;margin-left:-130px}    }
+.tester{font-size: 10px; margin-left:0; margin-right: 0;}
 
 
 @media screen and (max-width:480px){
@@ -192,6 +198,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-header__logo span{display:inline-block}
 .page-header__nav{float:none;margin:10px auto;padding-top:20px;text-align:center;border-top:1px solid #eee}
 .page-header__nav li{margin-left:0}
+.tester{font-size: 10px; margin-left:0; margin-right: 0;}
 
 
 
@@ -204,6 +211,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
+    .tester{font-size: 10px; margin-left:0; margin-right: 0;}
+
   }
 
 
