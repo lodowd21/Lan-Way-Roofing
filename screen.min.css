@@ -141,6 +141,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .advantages blockquote p,.advantages blockquote cite{display:inline-block;color:black;width:80%;margin:0 auto}
 .advantages blockquote p{margin-bottom:20px;font-weight:lighter;font-size:22px}
 .advantages blockquote cite{font-size:25px}
+/* fix resizing on the phone
+*/
 
 @media screen and (max-width:1000px){
 .aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
