@@ -10,4 +10,8 @@ function showDiv() {
      var img=new Image();
      img.src=url;
  }
+ 
 
+function showDiv2() {
+    document.getElementById('contact').style.display = "block";
+ }

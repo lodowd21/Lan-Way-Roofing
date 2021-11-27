@@ -114,9 +114,15 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 #about-services li{padding-bottom:20px;}
 */
 
-.promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 4px solid #0066ff;}
+.promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
 .promo__inner{max-width:1024px;margin:0 auto}
 .promo__inner:after{content:'';display:table;clear:both}
+
+.commerical__promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/com__promo.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
+.commerical__quote{display:block;width:140px;height:50px;margin:0 auto 45px;padding-top:10px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center; margin: auto;}
+.commerical__quote:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+.commerical__quote:hover{background-color:blue}
+
 .about__title{margin-bottom:35px;font-size:55px;text-transform:capitalize}
 .about__title span{font-weight:700}
 .about__descr{max-width:580px;margin:0 auto 50px;font-size:18px;line-height:1.1;color:#fff}
