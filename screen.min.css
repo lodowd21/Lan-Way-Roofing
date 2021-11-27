@@ -114,7 +114,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 #about-services li{padding-bottom:20px;}
 */
 
-.promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff}
+.promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 4px solid #0066ff;}
 .promo__inner{max-width:1024px;margin:0 auto}
 .promo__inner:after{content:'';display:table;clear:both}
 .about__title{margin-bottom:35px;font-size:55px;text-transform:capitalize}
