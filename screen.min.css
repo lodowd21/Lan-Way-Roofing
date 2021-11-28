@@ -119,7 +119,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .promo__inner:after{content:'';display:table;clear:both}
 
 .commerical__promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/com__promo.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
-.commerical__quote{display:block;width:140px;height:50px;margin:0 auto 45px;padding-top:10px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center; margin: auto;}
+.commerical__quote{display:block;width:160px;height:55px;margin:0 auto 45px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center;margin-bottom: 10px;border-radius: 8px;}
 .commerical__quote:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
 .commerical__quote:hover{background-color:blue}
 
@@ -156,6 +156,21 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .advantages blockquote cite{font-size:25px}
 /* fix resizing on the phone
 */
+
+/* Commercial__Info section */
+.commercial__info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
+.commercial_img1{float:left;margin-left:15%;position: relative;}
+.commercial_text{display:inline-blcok;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:830px;margin-left: 55%;position: relative;}
+.commercial_text h2,h4{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
+.commercial_text p{color:black;text-align: left;font-size: 18px;}
+.commercial_text li{color:black;text-align: left;font-size: 16px;}
+
+.commercial_expert{width:470px;height:400px;float:left;margin-left:15%;position:relative;top:-500px;}
+.commercial_expert h2{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
+.commercial_expert p{color:black;text-align: left;font-size: 18px;}
+
+
+
 
 @media screen and (max-width:1000px){
 .aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
@@ -205,6 +220,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-header__nav{float:none;margin:10px auto;padding-top:20px;text-align:center;border-top:1px solid #eee}
 .page-header__nav li{margin-left:0}
 .tester{font-size: 10px; margin-left:0; margin-right: 0;}
+
 
 
 .page-footer{padding:0 10px 30px;text-align:center}
