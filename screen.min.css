@@ -169,6 +169,18 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .commercial_expert h2{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
 .commercial_expert p{color:black;text-align: left;font-size: 18px;}
 
+/* Commercial__Info section */
+.industrial__info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
+.industrial_img1{float:left;margin-left:15%;position: relative;}
+.industrial_text{display:inline-blcok;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:650px;margin-left: 55%;position: relative;}
+.industrial_text h2,h4{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
+.industrial_text p{color:black;text-align: left;font-size: 18px;}
+.industrial_text li{color:black;text-align: left;font-size: 16px;}
+
+.industrial_expert{width:470px;height:400px;float:left;margin-left:15%;position:relative;top:-500px;}
+.industrial_expert h2{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
+.industrial_expert p{color:black;text-align: left;font-size: 18px;}
+
 
 
 
