@@ -86,8 +86,6 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:15px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
 .aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
 
-.aboutus__text img {width: 100%;}
-
 .aboutus__slideshow img{width:100%;height:100%;}
 .mySlides img{width:100%;height:100%;}
 
@@ -108,14 +106,9 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 /* Number text (1/3 etc) */
 .numbertext {color: #f2f2f2;font-size: 12px;padding: 8px 12px;position: absolute;top: 0;}
 
-/*.aboutus__text{border: 1px solid black;}
-.aboutus__text p{color:black;font-weight:bolder;}
+/*.aboutus__text{border: 1px solid black;}*/
+.aboutus__text img {width: 100%;}
 
-
-#about-services{ display: inline; border-top:#b8b8b8 dashed 1px;border-bottom:#b8b8b8 dashed 1px;padding:8px 0;margin:30px 0;text-align:center!important}
-#about-services .col3:nth-child(-n+3){border-right:#b8b8b8 dashed 1px;height:230px}
-#about-services li{padding-bottom:20px;}
-*/
 
 .promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
 .promo__inner{max-width:1024px;margin:0 auto}
@@ -164,16 +157,18 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .commerical__quote:hover{background-color:blue}
 
 .commercial__info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
-.commercial_img1{float:left;margin-left:15%;position: relative;}
-.commercial_text{display:inline-blcok;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:830px;margin-left: 55%;position: relative;}
+.commercial_img1{float:left;margin-left:17%;position: relative;}
+.commercial_text{display:inline-blcok;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:830px;margin-left: 50%;position: relative;}
 .commercial_text h2,h4{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
 .commercial_text p{color:black;text-align: left;font-size: 18px;}
 .commercial_text li{color:black;text-align: left;font-size: 16px;}
 
-.commercial_expert{width:470px;height:400px;float:left;margin-left:15%;position:relative;top:-500px;}
+.commercial_expert{width:470px;height:400px;float:left;margin-left:17%;position:relative;top:-500px;}
 .commercial_expert h2{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
 .commercial_expert p{color:black;text-align: left;font-size: 18px;}
 
+.commercial_bottom_imgs{margin-top:20px;border:1px solid black;height:300px;}
+.commercial_bottom_imgs img{height: 250px; width: 250px;}
 /* Industrial__Info section */
 .industrial__promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/industrial-cover.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
 .industrial__quote{display:block;width:160px;height:55px;margin:0 auto 45px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center;margin-bottom: 10px;border-radius: 8px;}
@@ -191,7 +186,10 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .industrial_expert h2{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
 .industrial_expert p{color:black;text-align: left;font-size: 18px;}
 
-
+@media(max-width: 1300px) {
+.commercial_img1{margin-left:0%;width:350px;}
+.commercial_expert{margin-left:0%;width: 310px;}
+}
 
 
 @media screen and (max-width:1000px){
