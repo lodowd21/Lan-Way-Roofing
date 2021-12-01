@@ -1,4 +1,6 @@
 <?php
+/*
+ TODO: send an automatic email
 	if (isset($_POST["submit"])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
@@ -39,3 +41,4 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 }
 	}
 ?>
+*/
