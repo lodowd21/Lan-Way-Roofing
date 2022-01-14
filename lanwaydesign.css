@@ -227,7 +227,9 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 @media screen and (max-width:1000px){
 .aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
 .services__member{width:190px;margin:0 20px 30px}
-    }
+.aboutus__text{display: none;}
+
+}
 
 @media screen and (max-width:800px){
 .contact__form{max-width:50%;margin:0 2% 0 8%}
@@ -240,7 +242,6 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .aboutus__item{width:190px;height:190px;margin:0 5% 35px}
 .services__member{width:180px;margin:0 10px 30px}
-.aboutus__text{display:none;}
 }
 
 @media screen and (max-width:640px){
