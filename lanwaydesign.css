@@ -239,7 +239,9 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-header__nav{margin:30px 10px 0 0}
 
 .aboutus__item{width:190px;height:190px;margin:0 5% 35px}
-.services__member{width:180px;margin:0 10px 30px}    }
+.services__member{width:180px;margin:0 10px 30px}
+.aboutus__text{display:none;}
+}
 
 @media screen and (max-width:640px){
 .contact{padding:50px 10px}
