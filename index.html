@@ -121,6 +121,15 @@
 
         <br><br>
         <a onclick="getWeather()">Hi3</a>
+        <p>Loading content from the API: <b id="name">...</b></p>
+        <script>
+            (async function() {
+                const { text } = await( await fetch(`/api/message`)).json();
+                document.querySelector('#name').textContent = text;
+            }())
+            </script>
+
+
     </section>
 
     <section id="aboutus__text" class="aboutus__text"
