@@ -31,7 +31,8 @@ function showDiv2() {
  function getWeather(){
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open("GET", "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=london&appid=f4c546f898560a59b0cd737648f02285");
+    xhr.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=london&appid=f4c546f898560a59b0cd737648f02285");
+    xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
     xhr.send();
     xhr.onload = () => {
         console.log(xhr)
