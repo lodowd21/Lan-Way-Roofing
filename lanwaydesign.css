@@ -277,10 +277,15 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-header__nav li{margin-left:0}
 .tester{font-size: 10px; margin-left:0; margin-right: 0;}
 
-
-
 .page-footer{padding:0 10px 30px;text-align:center}
 .page-footer__lan{margin:35px auto 0}
+
+.contact__card-item.tel-two:before{display: none;}
+.imageHolder{display: none;}
+.commercial_expert{display:none;}
+.service__repair__info{display:none;}
+.industrial_expert{display:none;}
+ 
 }
 /*
 .page-footer__gotop{float:none;width:100%;margin:20px auto 0}
