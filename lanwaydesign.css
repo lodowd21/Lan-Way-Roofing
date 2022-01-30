@@ -280,10 +280,10 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-footer{padding:0 10px 30px;text-align:center}
 .page-footer__lan{margin:35px auto 0}
 
-.contact__card-item.tel-two:before{display: none;}
+.contact__card-item.tel-two{display: none;}
 .imageHolder{display: none;}
 .commercial_expert{display:none;}
-.service__repair__info{display:none;}
+/* .service__repair__info{display:none;} */
 .industrial_expert{display:none;}
  
 }
