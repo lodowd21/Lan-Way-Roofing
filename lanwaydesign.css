@@ -285,10 +285,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .commercial_expert{display:none;}
 /* .service__repair__info{display:none;} */
 .industrial_expert{display:none;}
-/*.advantages{border-left: none;border-right: none;} 
-.advantages blockquote{border-bottom:none;} */
-.advantages h2:before,.advantages h2:after{background-color: none;}
-.advantages{margin-top: 0;}
+.advantages h2:before,.advantages h2:after{background-color: clear;}
 
  
 }
