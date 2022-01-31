@@ -265,7 +265,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 /*.tester{font-size: 10px; margin-left:0; margin-right: 0;}*/
 }
 
-/* for mobile screens */
+/* to fit mobile phone screens */
 
 @media screen and (max-width:480px){
 .contact__form-submit{float:none;margin:0 auto} 
