@@ -265,7 +265,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 /*.tester{font-size: 10px; margin-left:0; margin-right: 0;}*/
 }
 
-/* to fit mobile phone screens */
+/* fits mobile screens */
 
 @media screen and (max-width:480px){
 .contact__form-submit{float:none;margin:0 auto} 
@@ -288,6 +288,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .industrial_expert{display:none;}
 .advantages h2:before,.advantages h2:after{display: none;background-color: clear;}
 
+.service__repair__promo h2{color: white;}
+
  
 }
 /*
@@ -299,5 +301,3 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
     /*.tester{font-size: 10px; margin-left:0; margin-right: 0;}*/
 
   }
-
-
