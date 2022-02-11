@@ -2,9 +2,11 @@ module.exports = async function (context, req) {
     //const { Connection, Request } = require("tedious");
     let x = 1;
     let y = 2;
+    console.log("in app/message 1 ")
     getWeather2();
+    console.log("hi getWeather2")
     context.res.json({
-        text: "Hello from the API 4" + (x+y)
+        text: "Hello from the API 5 " + (x+y)
     });
 };
 
