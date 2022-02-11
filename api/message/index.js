@@ -26,7 +26,7 @@ module.exports = async function (context, req) {
     let y = 2;
     console.log("in app/message 1")
     //getWeather2();
-    let xhr = new XMLHttpRequest();
+    //var xhr = new XMLHttpRequest(); - doesnt work, not sure why
     const url = new URL("https://www.geeksforgeeks.org");   // Using toString() method 
     console.log(url.toString());
 
