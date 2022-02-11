@@ -26,6 +26,8 @@ module.exports = async function (context, req) {
     let y = 2;
     console.log("in app/message 1")
     //getWeather2();
+    var xhr = new XMLHttpRequest();
+
     console.log("hi getWeather2")
     context.res.json({
         text: "Hello from the API 6 " + (x+y)
