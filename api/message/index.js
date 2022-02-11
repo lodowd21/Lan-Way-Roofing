@@ -32,7 +32,7 @@ module.exports = async function (context, req) {
 
     console.log("hi getWeather2")
     context.res.json({
-        text: "Hello from the API 8 " + (x+y)
+        text: "Hello from the API 9 " + (x+y)
     });
 
 };
