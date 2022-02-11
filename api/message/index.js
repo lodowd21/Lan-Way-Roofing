@@ -1,5 +1,6 @@
 module.exports = async function (context, req) {
     //const { Connection, Request } = require("tedious");
+    /*
     function getWeather2(){
         console.log("hi getWeather2")
         var xhr = new XMLHttpRequest();
@@ -19,14 +20,15 @@ module.exports = async function (context, req) {
             }
          }
      }
+*/
 
     let x = 1;
     let y = 2;
     console.log("in app/message 1 ")
-    getWeather2();
+    //getWeather2();
     console.log("hi getWeather2")
     context.res.json({
-        text: "Hello from the API 5 " + (x+y)
+        text: "Hello from the API 6 " + (x+y)
     });
 
 };
