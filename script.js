@@ -78,7 +78,7 @@ function validateUser() {
         if(xhr.status === 200){
             console.log(JSON.parse(xhr.response));
             alert(`Successful login ${xhr.status}  ${xhr.statusText}`);
-            window.location.href="index.html";
+            window.location.href="admin_functions.html";
                 } else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
             alert(`Username or password incorrect ${xhr.status}  ${xhr.statusText}`);
