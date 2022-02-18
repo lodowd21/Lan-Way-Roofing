@@ -48,6 +48,25 @@ function showDiv2() {
      }
  }
 
+ function getLogicApp(){
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = false;
+    xhr.open("GET", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-validate-user/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MfH_Rxu-2s_5OhuwaUKsZWxwUWRO2tdkzqMV7VPl5HY");
+    //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
+    xhr.send();
+    xhr.onload = () => {
+        console.log(xhr)
+        if(xhr.status === 202){
+            console.log(JSON.parse(xhr.response));
+            alert(`The logic app api worked ${xhr.status}  ${xhr.statusText}`);
+                } else {
+            console.log(`error ${xhr.status} ${xhr.statusText}`)
+            alert(`The logic app api failed ${xhr.status}  ${xhr.statusText}`);
+
+        }
+     }
+ }
+
 function validateUser() {
     let x = document.forms["login"]["username"].value;
     let y = document.forms["login"]["password"].value;
