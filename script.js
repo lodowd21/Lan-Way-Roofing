@@ -56,7 +56,7 @@ function showDiv2() {
     xhr.send();
     xhr.onload = () => {
         console.log(xhr)
-        if(xhr.status === 202){
+        if(xhr.status === 200){
             console.log(JSON.parse(xhr.response));
             alert(`The logic app api worked ${xhr.status}  ${xhr.statusText}`);
                 } else {
