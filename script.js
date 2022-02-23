@@ -74,7 +74,7 @@ function validateUser() {
     let y = document.forms["login"]["password"].value;
 
     if (x == "") {
-        alert("Username5 must be filled out");
+        alert("Username6 must be filled out");
         return false;
     }
 
