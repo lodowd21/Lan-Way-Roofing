@@ -101,7 +101,7 @@ function validateUser() {
         console.log(xhr)
         var isLoginSuccessful = JSON.parse(xhr.response)
         console.log(isLoginSuccessful.isValid)
-        if (xhr.status === 200) {
+        if (xhr.status === 200 && isLoginSuccessful.isValid === true) {
             console.log(JSON.parse(xhr.response));
             alert(`Successful login ${xhr.status}  ${xhr.statusText}`);
             window.location.href = "admin_functions.html";
