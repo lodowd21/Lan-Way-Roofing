@@ -74,7 +74,7 @@ function validateUser() {
     let y = document.forms["login"]["password"].value;
 
     if (x == "") {
-        alert("Username4 must be filled out");
+        alert("Username5 must be filled out");
         return false;
     }
 
@@ -99,6 +99,8 @@ function validateUser() {
     xhr.send(loginData);
     xhr.onload = () => {
         console.log(xhr)
+        var isLoginSuccessful = JSON.parse(xhr.response)
+        console.log(isLoginSuccessful.isValid)
         if (xhr.status === 200) {
             console.log(JSON.parse(xhr.response));
             alert(`Successful login ${xhr.status}  ${xhr.statusText}`);
