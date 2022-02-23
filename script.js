@@ -67,12 +67,14 @@ function showDiv2() {
      }
  }
 
+
+
 function validateUser() {
     let x = document.forms["login"]["username"].value;
     let y = document.forms["login"]["password"].value;
 
     if (x == "") {
-        alert("Username must be filled out");
+        alert("Username1 must be filled out");
         return false;
     }
 
@@ -81,15 +83,16 @@ function validateUser() {
         return false;
     }
 
+    /* test validation
     if (x != "lodowd" || y != "hotdog"){
         alert("incorrect user or pass");
         return false;
     }
-
+    */
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = false;
-    xhr.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=london&appid=f4c546f898560a59b0cd737648f02285");
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-admin-login/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=9VrhMwMgkDGkcwhOQmI5UAkSFrT6pVbtB13P9NE42Yo");
     //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
     xhr.send();
     xhr.onload = () => {
