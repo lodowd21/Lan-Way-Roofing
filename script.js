@@ -92,10 +92,10 @@ function validateUser() {
 
     var xhr = new XMLHttpRequest();
     var loginData = JSON.stringify({"username": x, "pass": y});
-    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.withCredentials = false;
     xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-admin-login/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=9VrhMwMgkDGkcwhOQmI5UAkSFrT6pVbtB13P9NE42Yo");
     //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(loginData);
     xhr.onload = () => {
         console.log(xhr)
