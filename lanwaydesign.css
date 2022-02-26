@@ -134,7 +134,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .contact__card-item.tel-two{padding-left:17px;margin-bottom:10px}
 .contact__card-item.tel-two:before{content:"\f098"}
 .contact__card-item.fax:before{content:"\f02f"}
-.contact__card-item.email{display:inline-block;padding-left:20px;font-size:14px;line-height:24px;color:#444}
+.contact__card-item.email{content:"\f0e0";display:inline-block;padding-left:20px;font-size:14px;line-height:24px;color:#444}
 
 .contact__card-item.po{padding-left:15px;margin-bottom:15px}
 .contact__card-item.po:before{content:"\f01c"}
