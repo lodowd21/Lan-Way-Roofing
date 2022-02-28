@@ -23,14 +23,40 @@
     <form name="login" method="post" action="">
       <p><input type="text" name="username" value="" placeholder="Username"></p>
       <p><input type="password" name="password" value="" placeholder="Password"></p>
-      <p class="remember_me">
-      </p>
       <input type="button" value="Login" onclick="validateUser();">
+      <br><br>
+      <input id="newUser" type="button" value="Create New User">
     </form>
   </div>
 
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <h2>Create new Lan-Way admin</h2>
+    <form name="newLogin" method="post" action="">
+      <p><input type="text" name="username" value="" placeholder="New Username"></p>
+      <p><input type="password" name="password" value="" placeholder="New Password"></p>
+      <p><input type="password" name="password" value="" placeholder="Confirm Password"></p>
+      <button class="newbtn">Login</button>
+      <br><br>
+      <button class="cancel">Cancel</button>
+    </form>
+  </div>
+</div>
 
-  
+  <script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("newUser");
+
+    btn.onclick = function(){
+      modal.style.display = "block";
+    }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 
 </body>
 </html>

@@ -113,3 +113,11 @@ function validateUser() {
     }
 
 }
+
+function createNewUser(){
+
+    /* add username and password to the database
+        redirect to admin_functions.html
+    */
+
+}
