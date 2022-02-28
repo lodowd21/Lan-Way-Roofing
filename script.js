@@ -115,6 +115,33 @@ function validateUser() {
 }
 
 function createNewUser(){
+    let x = document.forms["newLogin"]["newUsername"].value;
+    let y = document.forms["newLogin"]["newPassword"].value;
+    let z = document.forms["newLogin"]["newPassword2"].value;
+
+    if (x == "") {
+        alert("Username7 must be filled out");
+        return false;
+    }
+
+    if (y == "") {
+        alert("Password must be filled out");
+        return false;
+    }
+
+    if(y.length < 5){
+        alert("Password too short")
+    }
+
+    if (z == "") {
+        alert("Password confirmation must be filled out");
+        return false;
+    }
+
+    if (y != z){
+        alert("Passwords do not match.")
+    }
+
 
     /* add username and password to the database
         redirect to admin_functions.html
