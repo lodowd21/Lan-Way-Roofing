@@ -118,7 +118,7 @@ function createNewUser(){
     let x = document.forms["newLogin"]["newUsername"].value;
     let y = document.forms["newLogin"]["newPassword"].value;
     let z = document.forms["newLogin"]["newPassword2"].value;
-    let id = 123;
+    let id = 125;
 
     if (x == "") {
         alert("Username7 must be filled out");
