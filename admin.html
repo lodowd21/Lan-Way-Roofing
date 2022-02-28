@@ -36,7 +36,7 @@
       <p><input type="text" name="newUsername" value="" placeholder="New Username"></p>
       <p><input type="password" name="newPassword" value="" placeholder="New Password"></p>
       <p><input type="password" name="newPassword2" value="" placeholder="Confirm Password"></p>
-      <button class="newbtn" onclick="createNewUser()">Login</button>
+      <button class="newbtn" onclick="createNewUser()">Create</button>
       <br><br>
       <button class="cancel">Cancel</button>
     </form>
@@ -50,12 +50,13 @@
     btn.onclick = function(){
       modal.style.display = "block";
     }
-
+/*
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
   }
+  */
   </script>
 
 </body>

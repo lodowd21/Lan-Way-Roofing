@@ -118,6 +118,7 @@ function createNewUser(){
     let x = document.forms["newLogin"]["newUsername"].value;
     let y = document.forms["newLogin"]["newPassword"].value;
     let z = document.forms["newLogin"]["newPassword2"].value;
+    let id = 123;
 
     if (x == "") {
         alert("Username7 must be filled out");
@@ -129,10 +130,6 @@ function createNewUser(){
         return false;
     }
 
-    if(y.length < 5){
-        alert("Password too short")
-    }
-
     if (z == "") {
         alert("Password confirmation must be filled out");
         return false;
@@ -142,9 +139,41 @@ function createNewUser(){
         alert("Passwords do not match.")
     }
 
+    /*
+    if(y.length < 5){
+        alert("Password too short")
+    }
+    */
+
+    console.log(x);
+
+    var xhr = new XMLHttpRequest();
+    var loginData = JSON.stringify({"ID": id, "username": x, "pass": y});
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-create-user/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YFU64zqgUeZkAlHp99EN4JxJ_dMuZDtZ3CTzBDwerkM");
+    //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(loginData);
+    xhr.onload = () => {
+        console.log(xhr)
+        //var isLoginSuccessful = JSON.parse(xhr.response)
+        //console.log(isLoginSuccessful.isValid)
+        if (xhr.status === 200) {
+            //console.log(JSON.parse(xhr.response));
+            alert(`Account created successfully. ${xhr.status}  ${xhr.statusText}`);
+            window.location.href = "admin_functions.html";
+        } else {
+            console.log(`error ${xhr.status} ${xhr.statusText}`)
+            alert(`Failed to create account. Try again ${xhr.status}  ${xhr.statusText} ld: ${loginData} x: ${x}  y: ${y}`);
+
+        }
+    }
 
     /* add username and password to the database
         redirect to admin_functions.html
+
+        instead of having a modial - create a new form with display.none
+
     */
 
 }
