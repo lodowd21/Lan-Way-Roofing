@@ -141,7 +141,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .contact__card-item.email:before{content:"\f003"}
 .contact__card-item.email:hover{text-decoration:underline}
-
+.visitors{display:none}
 /* footer */
 .page-footer{width:100%;min-height:85px;padding-bottom:30px;background-color:#2d3e50}
 .page-footer__inner{max-width:1024px;margin:0 auto}
@@ -152,8 +152,6 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-footer__gotop:hover{background-color:#158f76} 
 .page-footer__gotop:before{font-size:20px;line-height:45px;font-family:FontAwesome;content:"\f077";color:#fff}
 
-/* fix resizing on the phone
-*/
 
 /* Commercial__Info section */
 .commerical__promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/com__promo.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}

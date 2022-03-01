@@ -23,25 +23,10 @@
     <form name="login" method="post" action="">
       <p><input type="text" name="username" value="" placeholder="Username"></p>
       <p><input type="password" name="password" value="" placeholder="Password"></p>
+      <br>
       <input type="button" value="Login" onclick="validateUser();">
-      <br><br>
-      <input id="newUser" type="button" value="Create New User">
     </form>
   </div>
-
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <h2>Create new Lan-Way admin</h2>
-    <form name="newLogin" method="post" action="">
-      <p><input type="text" name="newUsername" value="" placeholder="New Username"></p>
-      <p><input type="password" name="newPassword" value="" placeholder="New Password"></p>
-      <p><input type="password" name="newPassword2" value="" placeholder="Confirm Password"></p>
-      <input id="create_btn" type="button" value="Create" onclick="createNewUser();">
-      <br><br>
-      <button class="cancel">Cancel</button>
-    </form>
-  </div>
-</div>
 
   <script>
     /*
