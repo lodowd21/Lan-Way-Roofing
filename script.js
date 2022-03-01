@@ -138,11 +138,10 @@ function createNewUser(){
         alert("Passwords do not match.")
     }
 
-    /*
     if(y.length < 5){
         alert("Password too short")
     }
-    */
+    
 
     console.log(x);
 
@@ -169,12 +168,5 @@ function createNewUser(){
             alert(`Failed to create account. Unexpected error occured. Try again ${xhr.status}  ${xhr.statusText} ld: ${loginData} x: ${x}  y: ${y}`);
         }
     }
-
-    /* add username and password to the database
-        redirect to admin_functions.html
-
-        instead of having a modial - create a new form with display.none
-
-    */
 
 }
