@@ -101,7 +101,7 @@ body {
     outline-offset: 0;
   }
  
-/* modal stying */
+/* modal stying 
 
 .modal {
   display: none;
@@ -117,7 +117,7 @@ body {
   background-color: rgba(0,0,0,0.4);
 }
 
-/* Modal Content */
+ Modal Content 
 .modal-content {
   background-color: #fefefe;
   margin: auto;
@@ -130,7 +130,7 @@ body {
   cursor: pointer;
   padding: 5px 15px;
   display: inline-block;
-  /*border: none;*/
+  border: none;
   background-color: green;
   color: white;
 }
@@ -139,7 +139,8 @@ body {
   cursor: pointer;
   padding: 5px 15px;
   display: inline-block;
-  /*border: none;*/
+  border: none;
   background-color: red;
   color: white;
 }
+*/
