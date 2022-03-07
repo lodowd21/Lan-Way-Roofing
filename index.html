@@ -252,7 +252,7 @@
             <h2 class="contact__title">Contact us</h2>
             <p class="contact__descr">To request a quote, you can call us directly or complete and submit the form
                 below.</p>
-            <form name="requestForm" class="contact__form" onsubmit="sendEmail()">
+            <form name="requestForm" class="contact__form">
                 <input class="contact__form-input" id="name" type="text" name="name" placeholder="Your name" required>
                 <input class="contact__form-input" id="email" type="email" name="email" placeholder="Your email" required>
                 <input class="contact__form-input" id="address" type="text" name="address" placeholder="Mailing Address" required>
@@ -262,7 +262,7 @@
                 <input class="contact__form-input" id="phone_num" type="number" name="phone_num"
                     placeholder="Phone Number">
                 <textarea class="contact__form-tarea" id="message" name="message" placeholder="Your message"></textarea>
-                <input class="contact__form-submit" type="submit" value="Submit">
+                <input class="contact__form-submit" type="submit" value="Submit" onclick="sendEmail()">
             </form>
             <div class="contact__card vcard">
                 <h3 class="contact__card-title">Information</h3>
