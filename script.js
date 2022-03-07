@@ -41,7 +41,7 @@ function sendEmail(){
     xhr.onload = () => {
         console.log(xhr)
         if (xhr.status === 200) {
-            //console.log(JSON.parse(xhr.response));
+            console.log(JSON.parse(xhr.response));
             alert(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`);
         }
         else {
@@ -170,10 +170,12 @@ function createNewUser(){
 
     if (y != z){
         alert("Passwords do not match.")
+        return false;
     }
 
     if(y.length < 5){
         alert("Password too short")
+        return false;
     }
     
 
