@@ -26,11 +26,6 @@ function sendEmail(){
     let phoneNum = document.forms["requestForm"]["phone_num"].value;
     let message = document.forms["requestForm"]["message"].value;
 
-    if (name == "" || email == "" || address != "" || phoneNum == "" || city =="") {
-        alert("Please fill out all fields.");
-        return false;
-    }
-
     var xhr = new XMLHttpRequest();
     var formData = JSON.stringify({"name": name, "email": email, "address": address, "city": city, "state": state, "zip": zip, "phoneNum": phoneNum, "message": message});
     xhr.withCredentials = false;
