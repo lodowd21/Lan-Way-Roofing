@@ -42,7 +42,7 @@ function sendEmail(){
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Failed to process request. Try again. ${xhr.status}  ${xhr.statusText} ld: ${loginData} x: ${x}  y: ${y}`);
+            alert(`Failed to process request. Try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
         }
     }  
 }
