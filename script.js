@@ -18,7 +18,7 @@ function showDiv2() {
 
 function sendEmail(){
     alert(`Test!`);
-/*
+
     let name = document.forms["requestForm"]["name"].value;
     let email = document.forms["requestForm"]["email"].value;
     let address = document.forms["requestForm"]["address"].value;
@@ -46,7 +46,6 @@ function sendEmail(){
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
         }
     }  
-    */
 }
 
 function thankyouMessage() {
