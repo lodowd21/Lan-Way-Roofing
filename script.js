@@ -1,5 +1,6 @@
 function start() {
     preloadImage('images/roof.jpg');
+
 }
 
 function showDiv() {
@@ -17,7 +18,7 @@ function showDiv2() {
 }
 
 function sendEmail(){
-    alert(`Test2!`);
+    alert(`Test3!`);
 
     let name = document.forms["requestForm"]["name"].value;
     let email = document.forms["requestForm"]["email"].value;
@@ -38,7 +39,7 @@ function sendEmail(){
     xhr.onload = () => {
         console.log(xhr.status)
         if (xhr.status === 200) {
-            console.log(JSON.parse(xhr.response));
+            //console.log(JSON.parse(xhr.response));
             alert(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`);
         }
         else {
