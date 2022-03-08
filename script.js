@@ -17,7 +17,7 @@ function showDiv2() {
 }
 
 function sendEmail(){
-    alert(`Test!`);
+    alert(`Test2!`);
 
     let name = document.forms["requestForm"]["name"].value;
     let email = document.forms["requestForm"]["email"].value;
@@ -36,7 +36,7 @@ function sendEmail(){
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(formData);
     xhr.onload = () => {
-        console.log(xhr)
+        console.log(xhr.status)
         if (xhr.status === 200) {
             console.log(JSON.parse(xhr.response));
             alert(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`);
