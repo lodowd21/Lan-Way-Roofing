@@ -39,6 +39,7 @@ function sendEmail(){
         console.log(xhr.status)
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
+            console.log(`hi`)
             alert(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`);
         }
         else {
