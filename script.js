@@ -7,6 +7,14 @@ function showDiv() {
     document.getElementById('missionStatement').style.display = "block";
 }
 
+function show_admin_div(id){
+    document.getElementById(id).style.display = "block";
+}
+
+function hide_div(id){
+    document.getElementById(id).style.display = "none";
+}
+
 function preloadImage(url) {
     var img = new Image();
     img.src = url;
