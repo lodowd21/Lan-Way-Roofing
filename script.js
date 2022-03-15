@@ -219,7 +219,7 @@ function createNewEmployee(){
     let position = document.forms["newEmployee"]["employeePosition"].value;
     let num = document.forms["newEmployee"]["employeeNum"].value;
     let address = document.forms["newEmployee"]["employeeAddress"].value;
-    let salary = document.forms["newEmployee"]["employeeSalary"]
+    let salary = document.forms["newEmployee"]["employeeSalary"].value;
 
     var xhr = new XMLHttpRequest();
     var employeeData = JSON.stringify({"first": first, "last": last, "position": position, "phone_num": num, "address": address, "salary": salary});
