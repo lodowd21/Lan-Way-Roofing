@@ -232,12 +232,12 @@ function createNewEmployee(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             alert(`Employee created successfully! ${xhr.status}  ${xhr.statusText}`);
+            hide_div('new-employee')
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
         }
     }
-    hide_div('new-employee')
 }
 
