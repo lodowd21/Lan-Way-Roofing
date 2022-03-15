@@ -228,7 +228,7 @@ function createNewEmployee(){
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(employeeData);
     xhr.onload = () => {
-        console.log(xhr.status)
+        console.log(xhr)
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             alert(`Employee created successfully! ${xhr.status}  ${xhr.statusText}`);
@@ -236,7 +236,7 @@ function createNewEmployee(){
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
+            alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${employeeData}`);
         }
     }
 }

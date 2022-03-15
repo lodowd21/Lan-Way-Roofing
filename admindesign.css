@@ -101,21 +101,14 @@ body {
     outline-offset: 0;
   }
 
-  #create{
+  .create{
     cursor: pointer;
     padding: 5px 15px;
     display: inline-block;
     background-color: green;
     color: white;
   }
-  #create2{
-    cursor: pointer;
-    padding: 5px 15px;
-    display: inline-block;
-    background-color: green;
-    color: white;
-  }
-
+  
   .show_new_admin{
     display: block;
   }
