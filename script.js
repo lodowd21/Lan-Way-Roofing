@@ -224,7 +224,7 @@ function createNewEmployee(){
     var xhr = new XMLHttpRequest();
     var employeeData = JSON.stringify({"first": first, "last": last, "position": position, "phone_num": num, "address": address, "salary": salary});
     xhr.withCredentials = false;
-    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createUser/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=HlTKOFZEGlH-8oWyaroQmvGsDZ8byHZrRk_FvxnBe-A");
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createEmployee/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5kIcp2zjga_q7j9GyVIAYYI7EYhMIKw1bG18kdCHOWM");
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(employeeData);
     xhr.onload = () => {
