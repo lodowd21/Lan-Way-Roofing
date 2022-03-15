@@ -200,6 +200,7 @@ function createNewUser(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             alert(`Account created successfully. ${xhr.status}  ${xhr.statusText}`);
+            hide_div('new-admin');
             //window.location.href = "admin_functions.html";
         } else if(xhr.status === 409){
             alert(`Username already exists ${xhr.status}  ${xhr.statusText}`);
@@ -209,6 +210,10 @@ function createNewUser(){
             alert(`Failed to create account. Unexpected error occured. Try again ${xhr.status}  ${xhr.statusText} ld: ${loginData} x: ${x}  y: ${y}`);
         }
     }
+   
+}
 
+function createNewEmployee(){
+    hide_div('new-employee')
 }
 

@@ -109,6 +109,14 @@ body {
     color: white;
   }
 
-  .new-person{
+  .show_new_admin{
     display: block;
+  }
+
+  .new-admin{
+    display: none;
+  }
+
+  .new-employee{
+    display: none;
   }
