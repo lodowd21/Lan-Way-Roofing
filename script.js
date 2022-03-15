@@ -232,7 +232,7 @@ function createNewEmployee(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             alert(`Employee created successfully! ${xhr.status}  ${xhr.statusText}`);
-            hide_div('new-employee')
+            hide_div('new-employee');
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
