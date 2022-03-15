@@ -159,7 +159,7 @@ function createNewUser(){
     let z = document.forms["newLogin"]["newPassword2"].value;
 
     if (x == "") {
-        alert("Username7 must be filled out");
+        alert("Username must be filled out");
         return false;
     }
 
@@ -221,6 +221,26 @@ function createNewEmployee(){
     let address = document.forms["newEmployee"]["employeeAddress"].value;
     let salary = document.forms["newEmployee"]["employeeSalary"].value;
 
+    if (first == "") {
+        alert("First name must be filled out");
+        return false;
+    }
+
+    if (position == "") {
+        alert("Position must be filled out");
+        return false;
+    }
+
+    if (address == "") {
+        alert("Address must be filled out");
+        return false;
+    }
+
+    if (salary == "") {
+        alert("Pay must be filled out");
+        return false;
+    }
+
     var xhr = new XMLHttpRequest();
     var employeeData = JSON.stringify({"first": first, "last": last, "position": position, "phone_num": num, "address": address, "salary": salary});
     xhr.withCredentials = false;
@@ -241,3 +261,18 @@ function createNewEmployee(){
     }
 }
 
+function newPhoneNum(){
+    hide_div('new-num');
+}
+
+function newFaxNum(){
+    hide_div('new-fax');
+}
+
+function newEmailAddress(){
+    hide_div('new-email');
+}
+
+function newPOBox(){
+    hide_div('new-po');
+}

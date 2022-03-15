@@ -46,23 +46,13 @@ body {
     box-shadow: 0 1px whitesmoke;
   }
   
-  .login p {
-    margin: 20px 0 0;
-  }
+  .login p {margin: 20px 0 0;}
   
-  .login p:first-child {
-    margin-top: 0;
-  }
+  .login p:first-child {margin-top: 0;}
   
-  .login input[type=text], .login input[type=password] {
-    width: 278px;
-  }
+  .login input[type=text], .login input[type=password] {width: 278px;}
   
-  
-  .login p.submit {
-    text-align: right;
-  }
-  
+  .login p.submit {text-align: right;}
   
   :-moz-placeholder {
     color: #c9c9c9;
@@ -109,14 +99,12 @@ body {
     color: white;
   }
   
-  .show_new_admin{
-    display: block;
-  }
+  .show_new_admin{display: block;}
 
-  .new-admin{
-    display: none;
-  }
+  .new-admin{display: none;}
+  .new-employee{display: none;}
 
-  .new-employee{
-    display: none;
-  }
+  #new-num{display:none;}
+  #new-fax{display:none;}
+  #new-email{display:none;}
+  #new-po{display: none;}

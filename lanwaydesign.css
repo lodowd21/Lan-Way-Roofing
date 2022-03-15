@@ -1,8 +1,5 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,input,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,main,nav,output,ruby,section,summary,time,mark,audio,video
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,address,big,cite,img,i,center,ol,ul,li,form,input,label,footer,header,menu,main,section
 {margin:0;padding:0;border:0;scroll-behavior: smooth;-webkit-box-sizing:border-box;box-sizing:border-box}    
-
-article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section
-{display:block}    
 
 nav ol,nav ul{list-style:none}    
 
@@ -76,7 +73,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .about__title{margin-bottom:35px;font-size:55px;text-transform:capitalize}
 .about__title span{font-weight:700}
 .about__descr{max-width:580px;margin:0 auto 50px;font-size:18px;line-height:1.1;color:#fff}
-.about__go-next{display:block;width:125px;height:35px;margin:0 auto 45px;padding-top:10px;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
+.about__go-next{display:block;width:125px;height:25px;margin:0 auto 45px;padding-top:10px;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
 .about__go-next:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
 .about__go-next:hover{background-color:#158f76}
 
@@ -128,8 +125,10 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .contact__card-item.place:before{content:"\f041"}
 .contact__card-item.tel{padding-left:17px;margin-bottom:10px}
 .contact__card-item.tel:before{content:"\f098"}
+/*
 .contact__card-item.tel-two{padding-left:17px;margin-bottom:10px}
 .contact__card-item.tel-two:before{content:"\f098"}
+*/
 .contact__card-item.fax:before{content:"\f02f"}
 .contact__card-item.email{content:"\f0e0";display:inline-block;padding-left:20px;font-size:14px;line-height:24px;color:#444}
 
