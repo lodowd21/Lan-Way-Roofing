@@ -26,6 +26,7 @@ function showDiv2() {
 }
 
 function sendEmail(){
+    alert(`Start`);
 
     let name = document.forms["requestForm"]["name"].value;
     let email = document.forms["requestForm"]["email"].value;
@@ -53,7 +54,8 @@ function sendEmail(){
             console.log(`error ${xhr.status} ${xhr.statusText}`)
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
         }
-    } 
+    }
+    alert(`End`); 
 }
 
 function thankyouMessage() {
