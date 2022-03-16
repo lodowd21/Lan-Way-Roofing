@@ -49,7 +49,7 @@ function sendEmail(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             //alert(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`);
-            console.log(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`)
+            //console.log(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`)
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
