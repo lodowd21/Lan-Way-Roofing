@@ -48,10 +48,8 @@ function sendEmail(){
         console.log(xhr.status)
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
-            //alert(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`);
+            alert(`Quote requested successfully!`);
             console.log(`Quote requested successfully!`);
-            //window.location.href = "https://victorious-sand-018f36a0f.azurestaticapps.net/#contact";
-
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
