@@ -55,7 +55,7 @@ function sendEmail(){
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
         }
     }
-    //alert(`End`); 
+    alert(`Thank you for the request! We will be in touch shortly.`); 
 }
 
 function thankyouMessage() {
