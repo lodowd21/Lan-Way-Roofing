@@ -49,7 +49,9 @@ function sendEmail(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             //alert(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`);
-            console.log(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`)
+            console.log(`Quote requested successfully! ${xhr.status}  ${xhr.statusText}`);
+            window.location.href = "https://victorious-sand-018f36a0f.azurestaticapps.net/#contact";
+
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
