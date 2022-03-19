@@ -61,7 +61,7 @@ function sendEmail(){
 
     //alert(`Thank you for the request! We will be in touch shortly.`); 
 }
-
+/*
 function createNewCustomer(){
 
     let first = document.forms["requestForm"]["first"].value;
@@ -91,9 +91,8 @@ function createNewCustomer(){
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${customerData}`);
         }
     }
-
 }
-
+*/
 function thankyouMessage() {
     let x = document.forms["requestForm"]["name"].value;
     let y = document.forms["requestForm"]["email"].value;
