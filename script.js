@@ -28,17 +28,18 @@ function showDiv2() {
 function sendEmail(){
     //alert(`Start`);
 
-    let name = document.forms["requestForm"]["name"].value;
+    let first = document.forms["requestForm"]["first"].value;
+    let last = document.forms["requestForm"]["last"].value;
     let email = document.forms["requestForm"]["email"].value;
     let address = document.forms["requestForm"]["address"].value;
+    let phoneNum = document.forms["requestForm"]["phone_num"].value;
     let city = document.forms["requestForm"]["city"].value;
     let state = document.forms["requestForm"]["state"].value;
     let zip = document.forms["requestForm"]["zip"].value;
-    let phoneNum = document.forms["requestForm"]["phone_num"].value;
     let message = document.forms["requestForm"]["message"].value;
 
     var xhr = new XMLHttpRequest();
-    var formData = JSON.stringify({"name": name, "email": email, "address": address, "city": city, "state": state, "zip": zip, "phoneNum": phoneNum, "message": message});
+    var formData = JSON.stringify({"first": first, "last": last, "email": email, "address": address, "city": city, "state": state, "zip": zip, "phoneNum": phoneNum, "message": message});
     xhr.withCredentials = false;
     xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-quote-email/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=SHSUDdbpZdTXJxOWuhvB4CFWFvGW2cTKm6l15Nw5ZPg");
     //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
