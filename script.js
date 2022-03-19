@@ -82,13 +82,14 @@ function createNewCustomer(){
         console.log(xhr)
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
-            alert(`Employee created successfully! ${xhr.status}  ${xhr.statusText}`);
+            alert(`Customer created successfully! ${xhr.status}  ${xhr.statusText}`);
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${customerData}`);
         }
     }
+    
 }
 
 function thankyouMessage() {
