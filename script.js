@@ -51,7 +51,6 @@ function sendEmail(){
             //console.log(JSON.parse(xhr.response));
             alert(`Quote requested successfully!`);
             console.log(`Created new employee!`);
-            createNewCustomer();
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
