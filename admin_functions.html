@@ -25,6 +25,8 @@
     <button id="show_new_admin" onclick="show_admin_div('new-fax')">Change Fax Number</button>
     <button id="show_new_admin" onclick="show_admin_div('new-email')">Change Email</button>
     <button id="show_new_admin" onclick="show_admin_div('new-po')">Change P.O Box</button>
+    <br><br>
+    <button id="show_new_admin">Get Employee info</button>
 
 
     <div id="new-admin" class="new-admin">
@@ -40,13 +42,17 @@
     <div id="new-employee" class="new-employee">
         <h2>Create new Lan-Way Employee</h2>
         <form name="newEmployee" method="post" action="">
+            <p><input type="text" name="employee_ID" value="" placeholder="Employee ID"></p>
             <p><input type="text" name="employeeFirst" value="" placeholder="First Name"></p>
             <p><input type="text" name="employeeLast" value="" placeholder="Last Name"></p>
-            <p><input type="text" name="employeePosition" value="" placeholder="Position"></p>
+            <p><input type="text" name="employeeJob" value="" placeholder="Job Description"></p>
             <p><input type="text" name="employeeNum" value="" placeholder="Phone Number"></p>
             <p><input type="text" name="employeeAddress" value="" placeholder="Address"></p>
+            <p><input type="text" name="employeeCity" value="" placeholder="City"></p>
+            <p><input type="text" name="employeeZip" value="" placeholder="Zip"></p>
             <p><input type="text" name="employeeSalary" value="" placeholder="Salary/Hourly Rate"></p>
             <input class="create" type="button" value="Create" onclick="createNewEmployee();">
+            
         </form>
     </div>
 
