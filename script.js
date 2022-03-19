@@ -44,7 +44,7 @@ function sendEmail(){
     xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createCustomer/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=E8zKdPnJQe1vMyMm9MkQJPV8PIZYDQMHyx2YTwxVEzU");
     //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(formData, formData);
+    xhr.send(formData);
     xhr.onload = () => {
         console.log(xhr.status)
         if (xhr.status === 200) {
