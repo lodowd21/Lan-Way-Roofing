@@ -26,7 +26,7 @@ function showDiv2() {
 }
 
 function sendEmail(){
-    //alert(`Start`);
+    console.log(`in send email`)
 
     let first = document.forms["requestForm"]["first"].value;
     let last = document.forms["requestForm"]["last"].value;
@@ -57,6 +57,8 @@ function sendEmail(){
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
         }
     }
+    console.log(`end send email`)
+
     //alert(`Thank you for the request! We will be in touch shortly.`); 
 }
 
@@ -89,7 +91,7 @@ function createNewCustomer(){
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${customerData}`);
         }
     }
-    
+
 }
 
 function thankyouMessage() {
