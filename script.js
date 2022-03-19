@@ -41,7 +41,7 @@ function sendEmail(){
     var xhr = new XMLHttpRequest();
     var formData = JSON.stringify({"first": first, "last": last, "email": email, "address": address, "city": city, "state": state, "zip": zip, "phoneNum": phoneNum, "message": message});
     xhr.withCredentials = false;
-    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-quote-email/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=SHSUDdbpZdTXJxOWuhvB4CFWFvGW2cTKm6l15Nw5ZPg");
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createCustomer/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=E8zKdPnJQe1vMyMm9MkQJPV8PIZYDQMHyx2YTwxVEzU");
     //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(formData);
@@ -50,14 +50,45 @@ function sendEmail(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             alert(`Quote requested successfully!`);
-            console.log(`Quote requested successfully!`);
+            console.log(`Created new employee!`);
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
             alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
         }
     }
-    alert(`Thank you for the request! We will be in touch shortly.`); 
+    //alert(`Thank you for the request! We will be in touch shortly.`); 
+}
+
+function createNewCustomer(){
+
+    let first = document.forms["requestForm"]["first"].value;
+    let last = document.forms["requestForm"]["last"].value;
+    let email = document.forms["requestForm"]["email"].value;
+    let address = document.forms["requestForm"]["address"].value;
+    let phoneNum = document.forms["requestForm"]["phone_num"].value;
+    let city = document.forms["requestForm"]["city"].value;
+    let state = document.forms["requestForm"]["state"].value;
+    let zip = document.forms["requestForm"]["zip"].value;
+    let message = document.forms["requestForm"]["message"].value;
+
+    var xhr = new XMLHttpRequest();
+    var employeeData = JSON.stringify({"employee_ID": employeeID, "first": first, "last": last, "job_description": position, "phone_num": num, "address": address, "city": city, "zip": zip, "salary": salary});
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createEmployee/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5kIcp2zjga_q7j9GyVIAYYI7EYhMIKw1bG18kdCHOWM");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(employeeData);
+    xhr.onload = () => {
+        console.log(xhr)
+        if (xhr.status === 200) {
+            //console.log(JSON.parse(xhr.response));
+            alert(`Employee created successfully! ${xhr.status}  ${xhr.statusText}`);
+        }
+        else {
+            console.log(`error ${xhr.status} ${xhr.statusText}`)
+            alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${employeeData}`);
+        }
+    }
 }
 
 function thankyouMessage() {
