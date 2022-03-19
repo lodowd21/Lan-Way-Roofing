@@ -218,7 +218,6 @@ function createNewUser(){
 }
 
 function createNewEmployee(){
-    console.log(`1`);
     let employeeID = document.forms["newEmployee"]["employee_ID"].value;
     let first = document.forms["newEmployee"]["employeeFirst"].value;
     let last = document.forms["newEmployee"]["employeeLast"].value;
