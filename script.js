@@ -48,7 +48,7 @@ function sendEmail(){
     xhr.onload = () => {
         console.log(xhr.status)
         if (xhr.status === 200) {
-            //console.log(JSON.parse(xhr.response));
+            console.log(JSON.parse(xhr.response));
             alert(`Quote requested successfully!`);
             console.log(`Created new employee!`);
         }
