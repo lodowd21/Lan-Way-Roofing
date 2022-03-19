@@ -51,6 +51,7 @@ function sendEmail(){
             //console.log(JSON.parse(xhr.response));
             alert(`Quote requested successfully!`);
             console.log(`Created new employee!`);
+            createNewCustomer();
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
@@ -73,11 +74,11 @@ function createNewCustomer(){
     let message = document.forms["requestForm"]["message"].value;
 
     var xhr = new XMLHttpRequest();
-    var employeeData = JSON.stringify({"employee_ID": employeeID, "first": first, "last": last, "job_description": position, "phone_num": num, "address": address, "city": city, "zip": zip, "salary": salary});
+    var customerData = JSON.stringify({"first": first, "last": last, "email": email, "address": address, "city": city, "state": state, "zip": zip, "phoneNum": phoneNum, "message": message});
     xhr.withCredentials = false;
     xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createEmployee/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5kIcp2zjga_q7j9GyVIAYYI7EYhMIKw1bG18kdCHOWM");
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(employeeData);
+    xhr.send(customerData);
     xhr.onload = () => {
         console.log(xhr)
         if (xhr.status === 200) {
@@ -86,7 +87,7 @@ function createNewCustomer(){
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${employeeData}`);
+            alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${customerData}`);
         }
     }
 }
