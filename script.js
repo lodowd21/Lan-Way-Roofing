@@ -41,7 +41,7 @@ function sendEmail(){
     var xhr = new XMLHttpRequest();
     var formData = JSON.stringify({"first": first, "last": last, "email": email, "phone_num": phoneNum, "address": address, "city": city, "state": state, "zip": zip, "message": message});
     xhr.withCredentials = false;
-    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createCustomer/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=E8zKdPnJQe1vMyMm9MkQJPV8PIZYDQMHyx2YTwxVEzU");
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-quote-email/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=SHSUDdbpZdTXJxOWuhvB4CFWFvGW2cTKm6l15Nw5ZPg");
     //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(formData);
