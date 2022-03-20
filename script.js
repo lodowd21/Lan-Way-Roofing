@@ -54,7 +54,7 @@ function sendEmail(){
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${formData} x: ${name}  y: ${address}`);
+            alert(`Unexpected error. Please try again. ${xhr.status}`);
         }
     }
     console.log(`end send email`)
