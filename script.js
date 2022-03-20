@@ -57,6 +57,7 @@ function sendEmail(){
             alert(`Unexpected error. Please try again. ${xhr.status}`);
         }
     }
+    alert(`Quote requested successfully. We will be in touch shortly!`)
     console.log(`end send email`)
 
     //alert(`Thank you for the request! We will be in touch shortly.`); 
