@@ -26,7 +26,7 @@ function showDiv2() {
 }
 
 function sendEmail(){
-    console.log(`in send email`)
+    console.log(`in send email`);
 
     let first = document.forms["requestForm"]["first"].value;
     let last = document.forms["requestForm"]["last"].value;
@@ -48,8 +48,8 @@ function sendEmail(){
     xhr.onload = () => {
         console.log(xhr.status)
         if (xhr.status === 200) {
-            console.log(JSON.parse(xhr.response));
-            alert(`Quote requested successfully!`);
+            console.log(xhr.response);
+            alert(`Quote requested successfully. We will be in touch shortly!`)
             console.log(`Created new employee!`);
         }
         else {
@@ -57,8 +57,7 @@ function sendEmail(){
             alert(`Unexpected error. Please try again. ${xhr.status}`);
         }
     }
-    alert(`Quote requested successfully. We will be in touch shortly!`)
-    console.log(`end send email`)
+    console.log(`end send email`);
 
     //alert(`Thank you for the request! We will be in touch shortly.`); 
 }
