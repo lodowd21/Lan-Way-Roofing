@@ -49,8 +49,8 @@ function sendEmail(){
         console.log(xhr.status)
         if (xhr.status === 200) {
             //console.log(xhr.response);
-            alert(`Quote requested successfully. We will be in touch shortly!`)
-            console.log(`Created new employee!`);
+            //alert(`Quote requested successfully. We will be in touch shortly!`)
+            console.log(`sent email!`);
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
@@ -59,7 +59,7 @@ function sendEmail(){
     }
     console.log(`end send email`);
 
-    //alert(`Thank you for the request! We will be in touch shortly.`); 
+    alert(`Thank you for the request! We will be in touch shortly.`); 
 }
 /*
 function createNewCustomer(){
