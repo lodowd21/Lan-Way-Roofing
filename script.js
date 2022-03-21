@@ -240,7 +240,7 @@ function createNewUser(){
             hide_div('new-admin');
             //window.location.href = "admin_functions.html";
         } else if(xhr.status === 409){
-            alert(`Username already exists ${xhr.status}  ${xhr.statusText}`);
+            alert(`Username already exists. ${xhr.status}  ${xhr.statusText}`);
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
@@ -261,18 +261,23 @@ function createNewEmployee(){
     let zip = document.forms["newEmployee"]["employeeZip"].value;
     let salary = document.forms["newEmployee"]["employeeSalary"].value;
 
+    if (employeeID == "") {
+        alert("Employee must have an ID.");
+        return false;
+    }
+
     if (first == "") {
-        alert("First name must be filled out");
+        alert("First name must be filled out.");
         return false;
     }
 
     if (address == "") {
-        alert("Address must be filled out");
+        alert("Address must be filled out.");
         return false;
     }
 
     if (salary == "") {
-        alert("Pay must be filled out");
+        alert("Pay must be filled out.");
         return false;
     }
 
@@ -288,6 +293,8 @@ function createNewEmployee(){
             //console.log(JSON.parse(xhr.response));
             alert(`Employee created successfully! ${xhr.status}  ${xhr.statusText}`);
             hide_div('new-employee');
+        } else if (xhr.status === 409){
+            alert(`That ID already exists. Please enter a new one.`);
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
