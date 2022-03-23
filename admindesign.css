@@ -112,9 +112,6 @@ body {
   .new-admin{display: none;}
   .new-employee{display: none;}
 
-  #new-num{display:none;}
-  #new-fax{display:none;}
-  #new-email{display:none;}
-  #new-po{display: none;}
+  #change-contact-card{display:none}
   #enter-id{display: none;}
   #show-employee-data{display: none;}

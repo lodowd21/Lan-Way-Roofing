@@ -288,7 +288,6 @@ function getEmployee() {
  
         if (xhr.status === 200) {
             console.log(JSON.parse(xhr.response));
-            alert(`The logic app api worked ${xhr.status}`);
             document.forms['get_employee_data'].first.placeholder = JSON.parse(xhr.response).first;
             document.forms['get_employee_data'].last.placeholder = JSON.parse(xhr.response).last;
             document.forms['get_employee_data'].job_descr.placeholder = JSON.parse(xhr.response).job_description;
@@ -299,26 +298,15 @@ function getEmployee() {
             document.forms['get_employee_data'].salary.placeholder = JSON.parse(xhr.response).salary_hourly_rate;
         } else {
             console.log(`error ${xhr.status}`)
-            alert(`The logic app api failed ${xhr.status}`);
+            alert(`An unexpected error has occured. ${xhr.status}`);
 
         }
     }
 }
 
 
-
-function newPhoneNum(){
-    hide_div('new-num');
+function newContactCard(){
+    hide_div('change-contact-card');
 }
 
-function newFaxNum(){
-    hide_div('new-fax');
-}
 
-function newEmailAddress(){
-    hide_div('new-email');
-}
-
-function newPOBox(){
-    hide_div('new-po');
-}

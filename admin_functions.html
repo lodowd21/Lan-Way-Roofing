@@ -21,10 +21,7 @@
     <button id="show_new_admin" onclick="show_admin_div('new-admin')">Create New Admin</button>
     <button id="show_new_admin" onclick="show_admin_div('new-employee')">Create New Employee</button>
     <br><br>
-    <button id="show_new_admin" onclick="show_admin_div('new-num')">Change Phone Number</button>
-    <button id="show_new_admin" onclick="show_admin_div('new-fax')">Change Fax Number</button>
-    <button id="show_new_admin" onclick="show_admin_div('new-email')">Change Email</button>
-    <button id="show_new_admin" onclick="show_admin_div('new-po')">Change P.O Box</button>
+    <button id="show_new_admin" onclick="show_admin_div('change-contact-card')">Change Contact Card</button>
     <br><br>
     <button id="show_new_admin" onclick="show_admin_div('enter-id')">Get employee info</button>
 
@@ -61,37 +58,14 @@
         </form>
     </div>
 
-    <div id="new-num">
-        <h2>Change Phone Number</h2>
+    <div id="change-contact-card">
+        <h2>Change Contact Card Information</h2>
         <form name="newNum" method="post" action="">
             <p><input type="text" name="number" value="" placeholder="New Number"></p>
-            <input class="create" type="button" value="Submit" onclick="newPhoneNum();">
+            <input class="create" type="button" value="Submit" onclick="newContactCard();">
         </form>
     </div>
 
-    <div id="new-fax">
-        <h2>Change Phone Number</h2>
-        <form name="newFax" method="post" action="">
-            <p><input type="text" name="number" value="" placeholder="New Fax Number"></p>
-            <input class="create" type="button" value="Submit" onclick="newFaxNum();">
-        </form>
-    </div>
-
-    <div id="new-email">
-        <h2>Change Email</h2>
-        <form name="newEmail" method="post" action="">
-            <p><input type="text" name="email" value="" placeholder="New Email"></p>
-            <input class="create" type="button" value="Submit" onclick="newEmailAddress();">
-        </form>
-    </div>
-
-    <div id="new-po">
-        <h2>Change P.O Box</h2>
-        <form name="newPO" method="post" action="">
-            <p><input type="text" name="pobox" value="" placeholder="New P.O Box"></p>
-            <input class="create" type="button" value="Submit" onclick="newPOBox();">
-        </form>
-    </div>
 
     <div id="enter-id">
         <form name="get_employee_data" method="post">
