@@ -116,3 +116,5 @@ body {
   #new-fax{display:none;}
   #new-email{display:none;}
   #new-po{display: none;}
+  #enter-id{display: none;}
+  #show-employee-data{display: none;}

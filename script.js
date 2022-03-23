@@ -61,38 +61,7 @@ function sendEmail(){
 
     alert(`Thank you for the request! We will be in touch shortly.`); 
 }
-/*
-function createNewCustomer(){
 
-    let first = document.forms["requestForm"]["first"].value;
-    let last = document.forms["requestForm"]["last"].value;
-    let email = document.forms["requestForm"]["email"].value;
-    let address = document.forms["requestForm"]["address"].value;
-    let phoneNum = document.forms["requestForm"]["phone_num"].value;
-    let city = document.forms["requestForm"]["city"].value;
-    let state = document.forms["requestForm"]["state"].value;
-    let zip = document.forms["requestForm"]["zip"].value;
-    let message = document.forms["requestForm"]["message"].value;
-
-    var xhr = new XMLHttpRequest();
-    var customerData = JSON.stringify({"first": first, "last": last, "email": email, "address": address, "city": city, "state": state, "zip": zip, "phoneNum": phoneNum, "message": message});
-    xhr.withCredentials = false;
-    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createEmployee/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5kIcp2zjga_q7j9GyVIAYYI7EYhMIKw1bG18kdCHOWM");
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(customerData);
-    xhr.onload = () => {
-        console.log(xhr)
-        if (xhr.status === 200) {
-            //console.log(JSON.parse(xhr.response));
-            alert(`Customer created successfully! ${xhr.status}  ${xhr.statusText}`);
-        }
-        else {
-            console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${customerData}`);
-        }
-    }
-}
-*/
 function thankyouMessage() {
     let x = document.forms["requestForm"]["name"].value;
     let y = document.forms["requestForm"]["email"].value;
@@ -302,6 +271,41 @@ function createNewEmployee(){
         }
     }
 }
+
+function getEmployee() {
+
+    let employeeID = document.forms["get_employee_data"]["employeeID"].value;
+
+    var xhr = new XMLHttpRequest();
+    var employeeData = JSON.stringify({"employee_ID": employeeID});
+    console.log(`employeeID ${employeeData}`)
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-getEmployeeInfo/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pj1Q--Jl7lJHYLEh6pdW_CrFZp1ox7IgiDirKUoSyfw");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(employeeData);
+    xhr.onload = () => {
+        //console.log(xhr)
+ 
+        if (xhr.status === 200) {
+            console.log(JSON.parse(xhr.response));
+            alert(`The logic app api worked ${xhr.status}`);
+            document.forms['get_employee_data'].first.placeholder = JSON.parse(xhr.response).first;
+            document.forms['get_employee_data'].last.placeholder = JSON.parse(xhr.response).last;
+            document.forms['get_employee_data'].job_descr.placeholder = JSON.parse(xhr.response).job_description;
+            document.forms['get_employee_data'].phone.placeholder = JSON.parse(xhr.response).phone_num;
+            document.forms['get_employee_data'].address.placeholder = JSON.parse(xhr.response).address;
+            document.forms['get_employee_data'].city.placeholder = JSON.parse(xhr.response).city;
+            document.forms['get_employee_data'].zip.placeholder = JSON.parse(xhr.response).zip;
+            document.forms['get_employee_data'].salary.placeholder = JSON.parse(xhr.response).salary_hourly_rate;
+        } else {
+            console.log(`error ${xhr.status}`)
+            alert(`The logic app api failed ${xhr.status}`);
+
+        }
+    }
+}
+
+
 
 function newPhoneNum(){
     hide_div('new-num');

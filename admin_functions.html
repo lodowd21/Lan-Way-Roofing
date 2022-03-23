@@ -26,7 +26,8 @@
     <button id="show_new_admin" onclick="show_admin_div('new-email')">Change Email</button>
     <button id="show_new_admin" onclick="show_admin_div('new-po')">Change P.O Box</button>
     <br><br>
-    <button id="show_new_admin">Get Employee info</button>
+    <button id="show_new_admin" onclick="show_admin_div('enter-id')">Get employee info</button>
+
 
 
     <div id="new-admin" class="new-admin">
@@ -89,6 +90,23 @@
         <form name="newPO" method="post" action="">
             <p><input type="text" name="pobox" value="" placeholder="New P.O Box"></p>
             <input class="create" type="button" value="Submit" onclick="newPOBox();">
+        </form>
+    </div>
+
+    <div id="enter-id">
+        <form name="get_employee_data" method="post">
+            <p><input type="text" name="employeeID" placeholder="Enter Employee ID"></p>
+            <p><input type="text" name="first" placeholder="First"></p>
+            <p><input type="text" name="last" placeholder="Last"></p>
+            <p><input type="text" name="job_descr" placeholder="Job Description"></p>
+            <p><input type="text" name="phone" placeholder="Phone Number"></p>
+            <p><input type="text" name="address" placeholder="Address"></p>
+            <p><input type="text" name="city" placeholder="City"></p>
+            <p><input type="text" name="zip" placeholder="Zip"></p>
+            <p><input type="text" name="salary" placeholder="Salary/Hourly Rate"></p>
+            <input class="create" type="button" value="Submit" onclick="getEmployee(); show_admin_div('show-employee-data');">
+            <input class="cancel" type="button" value="Cancel" onclick="hide_div('enter-id');">
+
         </form>
     </div>
 
