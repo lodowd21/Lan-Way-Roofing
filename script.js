@@ -288,14 +288,14 @@ function getEmployee() {
  
         if (xhr.status === 200) {
             console.log(JSON.parse(xhr.response));
-            document.forms['get_employee_data'].first.placeholder = JSON.parse(xhr.response).first;
-            document.forms['get_employee_data'].last.placeholder = JSON.parse(xhr.response).last;
-            document.forms['get_employee_data'].job_descr.placeholder = JSON.parse(xhr.response).job_description;
-            document.forms['get_employee_data'].phone.placeholder = JSON.parse(xhr.response).phone_num;
-            document.forms['get_employee_data'].address.placeholder = JSON.parse(xhr.response).address;
-            document.forms['get_employee_data'].city.placeholder = JSON.parse(xhr.response).city;
-            document.forms['get_employee_data'].zip.placeholder = JSON.parse(xhr.response).zip;
-            document.forms['get_employee_data'].salary.placeholder = JSON.parse(xhr.response).salary_hourly_rate;
+            document.forms['get_employee_data'].first.value = JSON.parse(xhr.response).first;
+            document.forms['get_employee_data'].last.value = JSON.parse(xhr.response).last;
+            document.forms['get_employee_data'].job_descr.value = JSON.parse(xhr.response).job_description;
+            document.forms['get_employee_data'].phone.value = JSON.parse(xhr.response).phone_num;
+            document.forms['get_employee_data'].address.value = JSON.parse(xhr.response).address;
+            document.forms['get_employee_data'].city.value = JSON.parse(xhr.response).city;
+            document.forms['get_employee_data'].zip.value = JSON.parse(xhr.response).zip;
+            document.forms['get_employee_data'].salary.value = JSON.parse(xhr.response).salary_hourly_rate;
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
@@ -306,7 +306,27 @@ function getEmployee() {
 
 
 function newContactCard(){
-    hide_div('change-contact-card');
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-get-contact-card/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=w8ca5DCfcUgZh7NMRHVXcDnrRM6UHBadDHPhuzf8atk");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send();
+    xhr.onload = () => {
+        //console.log(xhr)
+        if (xhr.status === 200) {
+            console.log(JSON.parse(xhr.response));
+            document.forms['new_info'].address.value = JSON.parse(xhr.response).address;
+            document.forms['new_info'].po_box.value = JSON.parse(xhr.response).po_box;
+            document.forms['new_info'].phone_num.value = JSON.parse(xhr.response).phone_num;
+            document.forms['new_info'].fax_num.value = JSON.parse(xhr.response).fax_num;
+            document.forms['new_info'].email.value = JSON.parse(xhr.response).email;
+        } else {
+            console.log(`error ${xhr.status}`)
+            alert(`An unexpected error has occured. ${xhr.status}`);
+
+        }
+    }
 }
 
 
