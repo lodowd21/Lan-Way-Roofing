@@ -296,6 +296,8 @@ function getEmployee() {
             document.forms['get_employee_data'].city.value = JSON.parse(xhr.response).city;
             document.forms['get_employee_data'].zip.value = JSON.parse(xhr.response).zip;
             document.forms['get_employee_data'].salary.value = JSON.parse(xhr.response).salary_hourly_rate;
+        } else if (xhr.status === 404){
+            alert(`ID not found. Please enter a valid ID. ${xhr.status}`);
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
