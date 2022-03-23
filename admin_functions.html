@@ -18,12 +18,12 @@
     <h1>Lan-Way Administrator</h1>
     <button onclick="window.location.href='index.html'">Go home</button>
     <br><br>
-    <button id="show_new_admin" onclick="show_admin_div('new-admin')">Create New Admin</button>
-    <button id="show_new_admin" onclick="show_admin_div('new-employee')">Create New Employee</button>
+    <button id="show_new_admin" onclick="show_admin_div('new-admin');">Create New Admin</button>
+    <button id="show_new_admin" onclick="show_admin_div('new-employee');">Create New Employee</button>
     <br><br>
-    <button id="show_new_admin" onclick="show_admin_div('change-contact-card')">Change Contact Card</button>
+    <button id="show_new_admin" onclick="show_admin_div('change-contact-card'); getContactCard();">Change Contact Card</button>
     <br><br>
-    <button id="show_new_admin" onclick="show_admin_div('enter-id')">Get employee info</button>
+    <button id="show_new_admin" onclick="show_admin_div('enter-id');">Get employee info</button>
 
 
 
@@ -52,9 +52,7 @@
             <p><input type="text" name="employeeZip" value="" placeholder="Zip"></p>
             <p><input type="text" name="employeeSalary" value="" placeholder="Salary/Hourly Rate"></p>
             <input class="create" type="button" value="Create" onclick="createNewEmployee();">
-            <input class="cancel" type="button" value="Cancel" onclick="hide_div('new-employee');">
-
-            
+            <input class="cancel" type="button" value="Cancel" onclick="hide_div('new-employee');">           
         </form>
     </div>
 
@@ -66,7 +64,7 @@
             <p><input type="text" name="phone_num" placeholder="New Number"></p>
             <p><input type="text" name="fax_num" placeholder="New Fax Number"></p>
             <p><input type="text" name="email" placeholder="New Email"></p>
-            <input class="create" type="button" value="Submit" onclick="newContactCard();">
+            <input class="create" type="button" value="Submit" onclick="updateContactCard();">
         </form>
     </div>
 
@@ -83,7 +81,7 @@
             <p><input type="text" name="city" placeholder="City"></p>
             <p><input type="text" name="zip" placeholder="Zip"></p>
             <p><input type="text" name="salary" placeholder="Salary/Hourly Rate"></p>
-            <input class="create" type="button" value="Submit" onclick="getEmployee(); show_admin_div('show-employee-data');">
+            <input class="create" type="button" value="Submit" onclick="getEmployee();">
             <input class="cancel" type="button" value="Cancel" onclick="hide_div('enter-id');">
 
         </form>

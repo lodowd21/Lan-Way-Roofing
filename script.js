@@ -297,17 +297,17 @@ function getEmployee() {
             document.forms['get_employee_data'].zip.value = JSON.parse(xhr.response).zip;
             document.forms['get_employee_data'].salary.value = JSON.parse(xhr.response).salary_hourly_rate;
         } else if (xhr.status === 404){
-            alert(`ID not found. Please enter a valid ID. ${xhr.status}`);
+            alert(`ID not found. Please enter a valid ID. Error code: ${xhr.status}`);
         } else {
             console.log(`error ${xhr.status}`)
-            alert(`An unexpected error has occured. ${xhr.status}`);
+            alert(`An unexpected error has occured. Error code: ${xhr.status}`);
 
         }
     }
 }
 
 
-function newContactCard(){
+function getContactCard(){
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = false;
@@ -327,6 +327,33 @@ function newContactCard(){
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
 
+        }
+    }
+}
+
+
+function updateContactCard(){
+
+    let address = document.forms["new_info"]["address"].value;
+    let pobox = document.forms["new_info"]["po_box"].value;
+    let phone = document.forms["new_info"]["phone_num"].value;
+    let fax = document.forms["new_info"]["fax_num"].value;
+    let email = document.forms["new_info"]["email"].value;
+
+    var xhr = new XMLHttpRequest();
+    var contactCard = JSON.stringify({"address": address, "po_box": pobox, "phone_num": phone, "fax_num": fax, "email": email});
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-update-contact-card/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MtldJmT6aoNSq3tPB8feFRWsnFy8LcXdB2gMz5tkLvM");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(contactCard);
+    xhr.onload = () => {
+        //console.log(xhr)
+        if (xhr.status === 200) {
+            console.log(xhr.response);
+            hide_div('change-contact-card');
+        } else {
+            console.log(`error ${xhr.status}`)
+            alert(`An unexpected error has occured. ${xhr.status}`);
         }
     }
 }
