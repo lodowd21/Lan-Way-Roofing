@@ -407,4 +407,25 @@ function updateEmployeeInfo(){
     }
 }
 
+function deleteEmployee(){
 
+    let employee_ID = document.forms["delete"]["employee_ID"].value;
+
+    var xhr = new XMLHttpRequest();
+    var employeeID = JSON.stringify({"employee_ID": employee_ID});
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-delete-employee/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=C5JqWmJMoaupoPhPWTfQ0rjYOYTWqf0r0x-VIPNf6j4");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(employeeID);
+    xhr.onload = () => {
+        //console.log(xhr)
+        if (xhr.status === 200) {
+            console.log(xhr.response);
+            alert(`Employee deleted successfully. ${xhr.status}`);
+            hide_div('delete-employee');
+        } else {
+            console.log(`error ${xhr.status}`)
+            alert(`An unexpected error has occured. ${xhr.status}`);
+        }
+    }
+}

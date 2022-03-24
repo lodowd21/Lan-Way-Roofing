@@ -24,7 +24,8 @@
     <button id="show_new_admin" onclick="show_admin_div('change-contact-card'); getContactCard();">Change Contact Card</button>
     <br><br>
     <button id="show_new_admin" onclick="show_admin_div('enter-id');">Get employee info</button>
-
+    <br><br>
+    <button id="show_new_admin" onclick="show_admin_div('delete-employee');">Delete Employee</button>
 
 
     <div id="new-admin" class="new-admin">
@@ -84,6 +85,16 @@
             <input class="create" type="button" value="Submit" onclick="updateEmployeeInfo();">
             <input class="cancel" type="button" value="Cancel" onclick="hide_div('enter-id');">
 
+        </form>
+    </div>
+
+
+    <div id="delete-employee">
+        <h2>Enter ID to delete employee</h2>
+        <form name="delete" method="post" action="">
+            <p><input type="text" name="employee_ID" placeholder="Employee ID"></p>
+            <input class="create" type="button" value="Submit" onclick="deleteEmployee();">
+            <input class="cancel" type="button" value="Cancel" onclick="hide_div('delete-employee');">
         </form>
     </div>
 
