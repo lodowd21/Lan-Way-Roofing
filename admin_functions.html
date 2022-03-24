@@ -71,7 +71,7 @@
 
     <div id="enter-id">
         <form name="get_employee_data" method="post">
-            <p>Submit employee ID to retrieve their information</p>
+            <input class="create" type="button" value="Get Info" onclick="getEmployee();">
             <p><input type="text" name="employeeID" placeholder="Enter Employee ID"></p>
             <p><input type="text" name="first" placeholder="First"></p>
             <p><input type="text" name="last" placeholder="Last"></p>
@@ -81,7 +81,7 @@
             <p><input type="text" name="city" placeholder="City"></p>
             <p><input type="text" name="zip" placeholder="Zip"></p>
             <p><input type="text" name="salary" placeholder="Salary/Hourly Rate"></p>
-            <input class="create" type="button" value="Submit" onclick="getEmployee();">
+            <input class="create" type="button" value="Submit" onclick="updateEmployeeInfo();">
             <input class="cancel" type="button" value="Cancel" onclick="hide_div('enter-id');">
 
         </form>

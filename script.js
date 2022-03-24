@@ -358,4 +358,53 @@ function updateContactCard(){
     }
 }
 
+function updateEmployeeInfo(){
+    let employeeID = document.forms["get_employee_data"]["employeeID"].value;
+    let first = document.forms["get_employee_data"]["first"].value;
+    let last = document.forms["get_employee_data"]["last"].value;
+    let position = document.forms["get_employee_data"]["job_descr"].value;
+    let num = document.forms["get_employee_data"]["phone"].value;
+    let address = document.forms["get_employee_data"]["address"].value;
+    let city = document.forms["get_employee_data"]["city"].value;
+    let zip = document.forms["get_employee_data"]["zip"].value;
+    let salary = document.forms["get_employee_data"]["salary"].value;
+
+    if (employeeID == "") {
+        alert("Employee must have an ID.");
+        return false;
+    }
+
+    if (first == "") {
+        alert("First name must be filled out.");
+        return false;
+    }
+
+    if (address == "") {
+        alert("Address must be filled out.");
+        return false;
+    }
+
+    if (salary == "") {
+        alert("Pay must be filled out.");
+        return false;
+    }
+
+    var xhr = new XMLHttpRequest();
+    var employeeData = JSON.stringify({"employee_ID": employeeID, "first": first, "last": last, "job_description": position, "phone_num": num, "address": address, "city": city, "zip": zip, "salary_hourly_rate": salary});
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-update-employee/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=TLvHfMnAoGhEWbHHacHkmDvc-l0K2XHc5K_9EVRLy6g");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(employeeData);
+    xhr.onload = () => {
+        //console.log(xhr)
+        if (xhr.status === 200) {
+            console.log(xhr.response);
+            alert(`Employee information updated.`);
+        } else {
+            console.log(`error ${xhr.status}`)
+            alert(`An unexpected error has occured. Error code: ${xhr.status}`);
+        }
+    }
+}
+
 
