@@ -176,7 +176,7 @@ button:hover {
 }
 
 @media screen and (max-width:480px){
-h2{display: none}
+h1{display: none}
 .page-header{min-height:50px}
 .page-header_inner{text-align:center}
 .page-header_logo{float:none;position:relative;display:inline-block;margin:20px auto 10px;text-align:left}
