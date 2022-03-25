@@ -10,6 +10,7 @@
 
     <title>Lan-Way Roofing Admin</title>
     <link rel="stylesheet" href="admindesign.css">
+
 </head>
 
 <body>
@@ -18,84 +19,95 @@
     <h1>Lan-Way Administrator</h1>
     <button onclick="window.location.href='index.html'">Go home</button>
     <br><br>
-    <button id="show_new_admin" onclick="show_admin_div('new-admin');">Create New Admin</button>
-    <button id="show_new_admin" onclick="show_admin_div('new-employee');">Create New Employee</button>
+    <button id="myBtn" onclick="openModal('newAdminModal');">Create New Admin</button>
+    <button id="newAdminBtn" onclick="openModal('newEmployeeModal');">Create New Employee</button>
     <br><br>
-    <button id="show_new_admin" onclick="show_admin_div('change-contact-card'); getContactCard();">Change Contact Card</button>
+    <button id="changeBtn" onclick="openModal('changeModal'); getContactCard();">Change Contact
+        Card</button>
     <br><br>
-    <button id="show_new_admin" onclick="show_admin_div('enter-id');">Get employee info</button>
+    <button id="employeeBtn" onclick="openModal('getEmployeeData');">Get employee
+        info</button>
     <br><br>
-    <button id="show_new_admin" onclick="show_admin_div('delete-employee');">Delete Employee</button>
+    <button id="deleteBtn" onclick="openModal('deleteModal');">Delete Employee</button>
 
+    <!-- The Modal -->
+    <div id="newAdminModal" class="modal">
+        <div id="new-admin" class="modal-content">
+            <h2>Create new Lan-Way admin</h2>
+            <form name="newLogin" method="post" action="">
+                <p><input type="text" name="newUsername" value="" placeholder="New Username"></p>
+                <p><input type="password" name="newPassword" value="" placeholder="New Password"></p>
+                <p><input type="password" name="newPassword2" value="" placeholder="Confirm Password"></p>
+                <input class="create" type="button" value="Create" onclick="createNewUser();">
+                <input class="cancel" type="button" value="Cancel" onclick="hide_div('newAdminModal');">
 
-    <div id="new-admin" class="new-admin">
-        <h2>Create new Lan-Way admin</h2>
-        <form name="newLogin" method="post" action="">
-            <p><input type="text" name="newUsername" value="" placeholder="New Username"></p>
-            <p><input type="password" name="newPassword" value="" placeholder="New Password"></p>
-            <p><input type="password" name="newPassword2" value="" placeholder="Confirm Password"></p>
-            <input class="create" type="button" value="Create" onclick="createNewUser();">
-            <input class="cancel" type="button" value="Cancel" onclick="hide_div('new-admin');">
-
-        </form>
+            </form>
+        </div>
     </div>
 
-    <div id="new-employee" class="new-employee">
-        <h2>Create new Lan-Way Employee</h2>
-        <form name="newEmployee" method="post" action="">
-            <p><input type="text" name="employee_ID" value="" placeholder="Employee ID"></p>
-            <p><input type="text" name="employeeFirst" value="" placeholder="First Name"></p>
-            <p><input type="text" name="employeeLast" value="" placeholder="Last Name"></p>
-            <p><input type="text" name="employeeJob" value="" placeholder="Job Description"></p>
-            <p><input type="text" name="employeeNum" value="" placeholder="Phone Number"></p>
-            <p><input type="text" name="employeeAddress" value="" placeholder="Address"></p>
-            <p><input type="text" name="employeeCity" value="" placeholder="City"></p>
-            <p><input type="text" name="employeeZip" value="" placeholder="Zip"></p>
-            <p><input type="text" name="employeeSalary" value="" placeholder="Salary/Hourly Rate"></p>
-            <input class="create" type="button" value="Create" onclick="createNewEmployee();">
-            <input class="cancel" type="button" value="Cancel" onclick="hide_div('new-employee');">           
-        </form>
+    <div id="newEmployeeModal" class="modal">
+        <div id="new-employee" class="modal-content">
+            <h2>Create new Lan-Way Employee</h2>
+            <form name="newEmployee" method="post" action="">
+                <p><input type="text" name="employee_ID" value="" placeholder="Employee ID"></p>
+                <p><input type="text" name="employeeFirst" value="" placeholder="First Name"></p>
+                <p><input type="text" name="employeeLast" value="" placeholder="Last Name"></p>
+                <p><input type="text" name="employeeJob" value="" placeholder="Job Description"></p>
+                <p><input type="text" name="employeeNum" value="" placeholder="Phone Number"></p>
+                <p><input type="text" name="employeeAddress" value="" placeholder="Address"></p>
+                <p><input type="text" name="employeeCity" value="" placeholder="City"></p>
+                <p><input type="text" name="employeeZip" value="" placeholder="Zip"></p>
+                <p><input type="text" name="employeeSalary" value="" placeholder="Salary/Hourly Rate"></p>
+                <input class="create" type="button" value="Create" onclick="createNewEmployee();">
+                <input class="cancel" type="button" value="Cancel" onclick="hide_div('newEmployeeModal');">
+            </form>
+        </div>
     </div>
 
-    <div id="change-contact-card">
-        <h2>Change Contact Card Information</h2>
-        <form name="new_info" method="post" action="">
-            <p><input type="text" name="address" placeholder="New Address"></p>
-            <p><input type="text" name="po_box" placeholder="New PO Box"></p>
-            <p><input type="text" name="phone_num" placeholder="New Number"></p>
-            <p><input type="text" name="fax_num" placeholder="New Fax Number"></p>
-            <p><input type="text" name="email" placeholder="New Email"></p>
-            <input class="create" type="button" value="Submit" onclick="updateContactCard();">
-        </form>
+    <div id="changeModal" class="modal">
+        <div id="change-contact-card" class="modal-content">
+            <h2>Change Contact Card Information</h2>
+            <form name="new_info" method="post">
+                <input class="create" type="button" value="Retrieve Data">
+                <p><input type="text" name="address" placeholder="New Address"></p>
+                <p><input type="text" name="po_box" placeholder="New PO Box"></p>
+                <p><input type="text" name="phone_num" placeholder="New Number"></p>
+                <p><input type="text" name="fax_num" placeholder="New Fax Number"></p>
+                <p><input type="text" name="email" placeholder="New Email"></p>
+                <input class="create" type="button" value="Submit" onclick="updateContactCard();">
+                <input class="cancel" type="button" value="Cancel" onclick="hide_div('changeModal');">
+            </form>
+        </div>
     </div>
 
-
-    <div id="enter-id">
-        <form name="get_employee_data" method="post">
-            <input class="create" type="button" value="Get Info" onclick="getEmployee();">
-            <p><input type="text" name="employeeID" placeholder="Enter Employee ID"></p>
-            <p><input type="text" name="first" placeholder="First"></p>
-            <p><input type="text" name="last" placeholder="Last"></p>
-            <p><input type="text" name="job_descr" placeholder="Job Description"></p>
-            <p><input type="text" name="phone" placeholder="Phone Number"></p>
-            <p><input type="text" name="address" placeholder="Address"></p>
-            <p><input type="text" name="city" placeholder="City"></p>
-            <p><input type="text" name="zip" placeholder="Zip"></p>
-            <p><input type="text" name="salary" placeholder="Salary/Hourly Rate"></p>
-            <input class="create" type="button" value="Submit" onclick="updateEmployeeInfo();">
-            <input class="cancel" type="button" value="Cancel" onclick="hide_div('enter-id');">
-
-        </form>
+    <div id="getEmployeeData" class="modal">
+        <div id="enter-id" class="modal-content">
+            <form name="get_employee_data" method="post">
+                <input class="create" type="button" value="Get Info" onclick="getEmployee();">
+                <p><input type="text" name="employeeID" placeholder="Enter Employee ID"></p>
+                <p><input type="text" name="first" placeholder="First"></p>
+                <p><input type="text" name="last" placeholder="Last"></p>
+                <p><input type="text" name="job_descr" placeholder="Job Description"></p>
+                <p><input type="text" name="phone" placeholder="Phone Number"></p>
+                <p><input type="text" name="address" placeholder="Address"></p>
+                <p><input type="text" name="city" placeholder="City"></p>
+                <p><input type="text" name="zip" placeholder="Zip"></p>
+                <p><input type="text" name="salary" placeholder="Salary/Hourly Rate"></p>
+                <input class="create" type="button" value="Submit" onclick="updateEmployeeInfo();">
+                <input class="cancel" type="button" value="Cancel" onclick="hide_div('getEmployeeData');">
+            </form>
+        </div>
     </div>
 
-
-    <div id="delete-employee">
-        <h2>Enter ID to delete employee</h2>
-        <form name="delete" method="post" action="">
-            <p><input type="text" name="employee_ID" placeholder="Employee ID"></p>
-            <input class="create" type="button" value="Submit" onclick="deleteEmployee();">
-            <input class="cancel" type="button" value="Cancel" onclick="hide_div('delete-employee');">
-        </form>
+    <div id="deleteModal" class="modal">
+        <div id="deleteEmployee" class="modal-content">
+            <h2>Enter ID to delete employee</h2>
+            <form name="delete" method="post" action="">
+                <p><input type="text" name="employee_ID" placeholder="Employee ID"></p>
+                <input class="create" type="button" value="Submit" onclick="deleteEmployee();">
+                <input class="cancel" type="button" value="Cancel" onclick="hide_div('deleteModal');">
+            </form>
+        </div>
     </div>
 
 </body>

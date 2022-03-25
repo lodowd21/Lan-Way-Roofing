@@ -25,6 +25,30 @@ function showDiv2() {
     document.getElementById('contact').style.display = "block";
 }
 
+function openModal(modal_ID) {
+
+    var modal = document.getElementById(modal_ID);
+    console.log(modal_ID);
+
+    //var btn = document.getElementById(button_ID);
+    //console.log(button_ID);
+
+    modal.style.display = "block";
+    console.log(`hi`);
+    /* When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+    */
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
 function sendEmail(){
     console.log(`in send email`);
 
@@ -261,7 +285,7 @@ function createNewEmployee(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             alert(`Employee created successfully! ${xhr.status}  ${xhr.statusText}`);
-            hide_div('new-employee');
+            hide_div('newAdminModal');
         } else if (xhr.status === 409){
             alert(`That ID already exists. Please enter a new one.`);
         }
@@ -273,6 +297,9 @@ function createNewEmployee(){
 }
 
 function getEmployee() {
+
+    console.log(`In get employee`);
+
 
     let employeeID = document.forms["get_employee_data"]["employeeID"].value;
 
@@ -308,6 +335,9 @@ function getEmployee() {
 
 
 function getContactCard(){
+
+    console.log(`In get contact card`);
+
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = false;
@@ -350,7 +380,8 @@ function updateContactCard(){
         //console.log(xhr)
         if (xhr.status === 200) {
             console.log(xhr.response);
-            hide_div('change-contact-card');
+            alert(`Successfully Updated! ${xhr.status}`);
+            hide_div('changeModal');
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
@@ -359,6 +390,7 @@ function updateContactCard(){
 }
 
 function updateEmployeeInfo(){
+
     let employeeID = document.forms["get_employee_data"]["employeeID"].value;
     let first = document.forms["get_employee_data"]["first"].value;
     let last = document.forms["get_employee_data"]["last"].value;
@@ -400,6 +432,7 @@ function updateEmployeeInfo(){
         if (xhr.status === 200) {
             console.log(xhr.response);
             alert(`Employee information updated.`);
+            hide_div('getEmployeeData');
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. Error code: ${xhr.status}`);
@@ -422,10 +455,11 @@ function deleteEmployee(){
         if (xhr.status === 200) {
             console.log(xhr.response);
             alert(`Employee deleted successfully. ${xhr.status}`);
-            hide_div('delete-employee');
+            hide_div('deleteModal');
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
         }
     }
 }
+
