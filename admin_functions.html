@@ -10,26 +10,38 @@
 
     <title>Lan-Way Roofing Admin</title>
     <link rel="stylesheet" href="admindesign.css">
+    <link rel="icon" href="images/lanway.png" type="image/x-icon">
+
 
 </head>
 
 <body>
     <script src="script.js"></script>
 
-    <h1>Lan-Way Administrator</h1>
-    <button onclick="window.location.href='index.html'">Go home</button>
-    <br><br>
-    <button id="myBtn" onclick="openModal('newAdminModal');">Create New Admin</button>
-    <button id="newAdminBtn" onclick="openModal('newEmployeeModal');">Create New Employee</button>
-    <br><br>
-    <button id="changeBtn" onclick="openModal('changeModal'); getContactCard();">Change Contact
-        Card</button>
-    <br><br>
-    <button id="employeeBtn" onclick="openModal('getEmployeeData');">Get employee
-        info</button>
-    <br><br>
-    <button id="deleteBtn" onclick="openModal('deleteModal');">Delete Employee</button>
+    <!-- $Page header-->
+    <header class="page-header">
+        <div class="page-header_inner">
+            <div class="page-header_logo"></div>
+            <nav class="page-header_nav">
+                <ul>
+                    <li><a class="nav_link" id="nav_home" href="index.html">Home</a></li>
+                    <li><a class="nav_link" id="nav_logout" href="admin.html">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+
+    <h1>Lan-Way Roofing Administrator</h1>
+    <div id="btn_div">
+        <button class="btn" onclick="openModal('newAdminModal');">Create New Admin</button>
+        <button class="btn" onclick="openModal('newEmployeeModal');">Create New Employee</button>
+        <button class="btn" onclick="openModal('changeModal'); getContactCard();">Update Contact
+            Card</button>
+        <button class="btn" onclick="openModal('getEmployeeData');">Get Employee
+            Info</button>
+        <button class="btn" onclick="openModal('deleteModal');">Delete Employee</button>
+    </div>
     <!-- The Modal -->
     <div id="newAdminModal" class="modal">
         <div id="new-admin" class="modal-content">

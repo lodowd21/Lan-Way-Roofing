@@ -3,11 +3,7 @@ function start() {
 
 }
 
-function showDiv() {
-    document.getElementById('missionStatement').style.display = "block";
-}
-
-function show_admin_div(id){
+function show_div(id){
     document.getElementById(id).style.display = "block";
 }
 
@@ -21,27 +17,13 @@ function preloadImage(url) {
 }
 
 
-function showDiv2() {
-    document.getElementById('contact').style.display = "block";
-}
-
 function openModal(modal_ID) {
 
     var modal = document.getElementById(modal_ID);
     console.log(modal_ID);
 
-    //var btn = document.getElementById(button_ID);
-    //console.log(button_ID);
-
     modal.style.display = "block";
-    console.log(`hi`);
-    /* When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-    */
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -298,9 +280,6 @@ function createNewEmployee(){
 
 function getEmployee() {
 
-    console.log(`In get employee`);
-
-
     let employeeID = document.forms["get_employee_data"]["employeeID"].value;
 
     var xhr = new XMLHttpRequest();
@@ -335,9 +314,6 @@ function getEmployee() {
 
 
 function getContactCard(){
-
-    console.log(`In get contact card`);
-
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = false;
