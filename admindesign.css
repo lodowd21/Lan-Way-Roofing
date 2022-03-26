@@ -176,7 +176,6 @@ button:hover {
 }
 
 #home{display: none;}
-#back{display: none;}
 
 
 @media screen and (max-width:480px){
@@ -189,5 +188,4 @@ button:hover {
 #btn_div{margin-left: 0;}
 
 #home{display: block;}
-#back{display: block;}
 }
