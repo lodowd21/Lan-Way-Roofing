@@ -175,14 +175,19 @@ button:hover {
   width: 80%;
 }
 
+#home{display: none;}
+#back{display: none;}
+
+
 @media screen and (max-width:480px){
 .page-header{min-height:50px}
 .page-header_inner{text-align:center}
 .page-header_logo{float:none;position:relative;display:inline-block;margin:20px auto 10px;text-align:left}
 .page-header_logo h1{display:block}
 .page-header_logo span{display:inline-block}
-
-.page-header_logo{display: none;}
-
+.nav_link{display: none;}
 #btn_div{margin-left: 0;}
+
+#home{display: block;}
+#back{display: block;}
 }
