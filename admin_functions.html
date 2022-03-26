@@ -43,8 +43,13 @@
         <button class="btn" onclick="openModal('deleteModal');">Delete Employee</button>
     </div>
     <br>
-    <a id="home" class="nav_link" href="index.html">Home</a>
-    <a id="back" class="nav_link" href="admin.html">Log Out</a>
+    <form id="home" action="index.html">
+        <input class="create" type="button" value="Home">
+    </form>
+
+    <form id="back" action="admin.html">
+        <input class="cancel" type="button" value="Log Out">
+    </form>
    
     <!-- The Modal -->
     <div id="newAdminModal" class="modal">
