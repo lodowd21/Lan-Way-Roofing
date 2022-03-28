@@ -33,16 +33,20 @@
 
 
     <h1>Lan-Way Roofing Administrator</h1>
-    <div id="btn_div">
+    <div class="btn_div">
         <button class="btn" onclick="openModal('newAdminModal');">Create New Admin</button>
         <button class="btn" onclick="openModal('newEmployeeModal');">Create New Employee</button>
-        <button class="btn" onclick="openModal('changeModal'); getContactCard();">Update Contact
-            Card</button>
-        <button class="btn" onclick="openModal('getEmployeeData');">Get Employee
+        <button class="btn" onclick="openModal('getEmployeeData');">Get/Update Employee
             Info</button>
         <button class="btn" onclick="openModal('deleteModal');">Delete Employee</button>
+        <button class="btn" onclick="openModal('changeModal'); getContactCard();">Update Contact
+            Card</button>
     </div>
     <br>
+    <div class="btn_div">
+        <button class="btn" onclick="openModal('messageModal');"> Get Messages</button>
+    </div>
+
 
 
 
@@ -50,7 +54,6 @@
     <form id="home" action="index.html">
         <input class="create" type="button" value="Go Home">
         <input class="cancel" type="button" value="Log Out">
-
     </form>
   
     <!-- The Modal -->
@@ -128,6 +131,18 @@
                 <p><input type="text" name="employee_ID" placeholder="Employee ID"></p>
                 <input class="create" type="button" value="Submit" onclick="deleteEmployee();">
                 <input class="cancel" type="button" value="Cancel" onclick="hide_div('deleteModal');">
+            </form>
+        </div>
+    </div>
+
+    <div id="messageModal" class="modal">
+        <div id="messages" class="modal-content">
+            <h2>Enter email to get their messages</h2>
+            <form name="delete" method="post" action="">
+                <p><input type="text" name="email" placeholder="Customer Email"></p>
+                <input class="create" type="button" value="Submit">
+                <p><input type="text" name="customerMessage" placeholder="message" style="width: 500px; height: 200px"></p>
+                <input class="cancel" type="button" value="Close" onclick="hide_div('messageModal');">
             </form>
         </div>
     </div>

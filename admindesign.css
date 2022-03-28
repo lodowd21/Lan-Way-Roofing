@@ -22,7 +22,7 @@ h1 {
 #nav_home:hover{background-color: #0ca3d2;}
 #nav_logout:hover{background-color: red;}
 
-#btn_div{
+.btn_div{
   margin-left: 150px;
 }
 
