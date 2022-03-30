@@ -523,7 +523,6 @@ function getQuotes(){
         if (xhr.status === 200) {
             console.log(JSON.parse(xhr.response));
             document.forms['message_form'].customerMessage.value = JSON.parse(xhr.response);
-
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
