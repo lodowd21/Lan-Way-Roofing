@@ -118,7 +118,7 @@
                 slides[slideIndex - 1].style.display = "block";
             }
         </script>
-
+        <!--
         <br><br>
         <a onclick="getWeather()">Hi6</a>
         <p>Loading content from the API: <b id="name">...</b></p>
@@ -128,6 +128,7 @@
                 document.querySelector('#name').textContent = text;
             }())
             </script>
+        -->
 
     </section>
 
@@ -268,17 +269,17 @@
             <div class="contact__card vcard">
                 <h3 class="contact__card-title">Information</h3>
                 <div class="contact__card-item place">
-                    <div class="fn org">Lan-Way Roofing</div>
+                    <div id="lanway" class="fn org" style="color: black"></div>
                     <div class="adr">
-                        <div class="street-address">3200 Spottswood Street Suite 106</div>
-                        <span class="locality">Raleigh</span>,<span class="region">&nbsp;&nbsp;North Carolina</span>
+                        <div id="addy" class="street-address"></div>
+                        <span id ="local" class="locality"></span>
                     </div>
                 </div>
-                <div class="contact__card-item po">P.O. Box 58087</div>
-                <div class="contact__card-item tel">(Phone)<span class="type">&nbsp;+</span>919-872-3102</div>
+                <div id="pobox" class="contact__card-item po"></div>
+                <div id="phonenum" class="contact__card-item tel">(Phone)<span class="type">&nbsp;+</span></div>
                 <!-- <div class="contact__card-item tel-two">(Phone)<span class="type">&nbsp;+</span>800-352-6929</div> -->
-                <div class="contact__card-item fax tel">(FAX)<span class="type">&nbsp;+</span>919-878-9895</div>
-                <div class="contact__card-item email">lanwayroofing@gmail.com</div>
+                <div id="faxnum" class="contact__card-item fax tel">(FAX)<span class="type">&nbsp;+</span></div>
+                <div id="show_email" class="contact__card-item email"></div>
             </div>
         </div>
         <br><br>

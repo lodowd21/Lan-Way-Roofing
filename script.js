@@ -1,6 +1,6 @@
 function start() {
     preloadImage('images/roof.jpg');
-
+    getContactCard2();
 }
 
 function show_div(id){
@@ -329,10 +329,38 @@ function getContactCard(){
             document.forms['new_info'].phone_num.value = JSON.parse(xhr.response).phone_num;
             document.forms['new_info'].fax_num.value = JSON.parse(xhr.response).fax_num;
             document.forms['new_info'].email.value = JSON.parse(xhr.response).email;
+            document.forms['new_info'].state.value = JSON.parse(xhr.response).state;
+            document.forms['new_info'].city.value = JSON.parse(xhr.response).city;
+            document.forms['new_info'].company_name.value = JSON.parse(xhr.response).company_name;
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
 
+        }
+    }
+}
+
+function getContactCard2(){
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-get-contact-card/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=w8ca5DCfcUgZh7NMRHVXcDnrRM6UHBadDHPhuzf8atk");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send();
+    xhr.onload = () => {
+        //console.log(xhr)
+        if (xhr.status === 200) {
+            console.log(JSON.parse(xhr.response));
+            document.getElementById('addy').innerHTML = "<p>" + JSON.parse(xhr.response).address + "</p>";
+            document.getElementById('pobox').innerHTML = "<p>" + JSON.parse(xhr.response).po_box + "</p>";
+            document.getElementById('phonenum').innerHTML = "<p>" + "(Phone) " + JSON.parse(xhr.response).phone_num + "</p>";
+            document.getElementById('faxnum').innerHTML = "<p>" + "(Fax)" + JSON.parse(xhr.response).fax_num + "</p>";
+            document.getElementById('show_email').innerHTML = "<p>" + JSON.parse(xhr.response).email + "</p>";
+            document.getElementById('lanway').innerHTML = "<p>" + JSON.parse(xhr.response).company_name + "</p>";
+            document.getElementById('local').innerHTML = "<p>" + JSON.parse(xhr.response).city + ", " + JSON.parse(xhr.response).state + "</p>";
+        } else {
+            console.log(`error ${xhr.status}`)
+            //alert(`An unexpected error has occured. ${xhr.status}`);
         }
     }
 }
@@ -345,9 +373,12 @@ function updateContactCard(){
     let phone = document.forms["new_info"]["phone_num"].value;
     let fax = document.forms["new_info"]["fax_num"].value;
     let email = document.forms["new_info"]["email"].value;
+    let company = document.forms["new_info"]["company_name"].value;
+    let state = document.forms["new_info"]["state"].value;
+    let city = document.forms["new_info"]["city"].value;
 
     var xhr = new XMLHttpRequest();
-    var contactCard = JSON.stringify({"address": address, "po_box": pobox, "phone_num": phone, "fax_num": fax, "email": email});
+    var contactCard = JSON.stringify({"company_name": company, "address": address, "po_box": pobox, "phone_num": phone, "fax_num": fax, "email": email, "state": state, "city": city});
     xhr.withCredentials = false;
     xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-update-contact-card/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MtldJmT6aoNSq3tPB8feFRWsnFy8LcXdB2gMz5tkLvM");
     xhr.setRequestHeader("Content-Type", "application/json");

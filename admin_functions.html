@@ -94,11 +94,13 @@
         <div id="change-contact-card" class="modal-content">
             <h2>Change Contact Card Information</h2>
             <form name="new_info" method="post">
-                <p><input type="text" name="address" placeholder="New Address"></p>
+                <p><input type="text" name="company_name" placeholder="Company Name"></p>
                 <p><input type="text" name="po_box" placeholder="New PO Box"></p>
                 <p><input type="text" name="phone_num" placeholder="New Number"></p>
                 <p><input type="text" name="fax_num" placeholder="New Fax Number"></p>
-                <p><input type="text" name="email" placeholder="New Email"></p>
+                <p><input type="text" name="email" placeholder="New Email"></p>                <p><input type="text" name="address" placeholder="New Address"></p>
+                <p><input type="text" name="state" placeholder="New State"></p>
+                <p><input type="text" name="city" placeholder="New City"></p>
                 <input class="create" type="button" value="Submit" onclick="updateContactCard();">
                 <input class="cancel" type="button" value="Cancel" onclick="hide_div('changeModal');">
             </form>

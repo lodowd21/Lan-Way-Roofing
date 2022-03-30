@@ -137,6 +137,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .contact__card-item.email:before{content:"\f003"}
 .contact__card-item.email:hover{text-decoration:underline}
+
 /* footer */
 .page-footer{width:100%;min-height:85px;padding-bottom:30px;background-color:#2d3e50}
 .page-footer__inner{max-width:1024px;margin:0 auto}
