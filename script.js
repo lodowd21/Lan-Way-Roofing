@@ -508,3 +508,25 @@ function deleteEmployee(){
     }
 }
 
+function getQuotes(){
+
+    let customer_email = document.forms["message_form"]["email"].value;
+
+    var xhr = new XMLHttpRequest();
+    var customer_email_json = JSON.stringify({"in_email": customer_email})
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-get-quotes-by-email/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=e5_vvxkMnf5QOMb8xKJ1LQ3O91mdNMk5MKwTMnTVef8");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(customer_email_json);
+    xhr.onload = () => {
+        //console.log(xhr)
+        if (xhr.status === 200) {
+            console.log(JSON.parse(xhr.response));
+        } else {
+            console.log(`error ${xhr.status}`)
+            alert(`An unexpected error has occured. ${xhr.status}`);
+
+        }
+    }
+}
+
