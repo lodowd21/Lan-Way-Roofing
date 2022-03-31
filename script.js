@@ -512,6 +512,19 @@ function getQuotes(){
 
     let customer_email = document.forms["message_form"]["email"].value;
 
+    let quote_row = "";
+    var quote_table_columns = ["Date", "Message"];
+
+    var quote_table = document.createElement("table");
+    var tr = quote_table.insertRow(-1); // TABLE ROW.
+
+    for (var i = 0; i < quote_table_columns.length; i++) {
+        var th = document.createElement("th");      // TABLE HEADER.
+        th.innerHTML = quote_table_columns[i];
+        tr.appendChild(th);
+    }
+
+
     var xhr = new XMLHttpRequest();
     var customer_email_json = JSON.stringify({"in_email": customer_email})
     xhr.withCredentials = false;
@@ -521,13 +534,49 @@ function getQuotes(){
     xhr.onload = () => {
         //console.log(xhr)
         if (xhr.status === 200) {
-            console.log(JSON.parse(xhr.response));
-            document.forms['message_form'].customerMessage.value = JSON.parse(xhr.response);
+            console.log(`xhr response json: ${(xhr.response)}`);
+            let quotes = JSON.stringify(xhr.response);
+            console.log(`quote: ${quotes}`); // works has full json payload
+
+            console.log(`quotes array length ${JSON.parse(xhr.response).value.length}`)
+            //console.log(`quotes 0: ${JSON.parse(quotes).value[0].status}`); throws an exception cant find value num
+
+            for (var i = 0; i < JSON.parse(xhr.response).value.length; i++) {
+                console.log(`messages: ${JSON.parse(xhr.response).value[i].message}`);
+               // quote_row = quote_row + JSON.parse(xhr.response).value[i].message + ", " + JSON.parse(xhr.response).value[i].status + ", " + JSON.parse(xhr.response).value[i].request_time + "\n";
+                //document.forms['message_form'].customerMessage.value = quote_row;
+                /*
+                for (var key in quotes[i]) {
+                    if (quote_data.indexOf(key) === -1) {
+                        quote_data.push(key);
+                    }
+                }
+                */
+
+                tr = quote_table.insertRow(-1);
+                var tabCell = tr.insertCell(-1);
+                var tabCell2 = tr.insertCell(-1);
+
+                tabCell.innerHTML = JSON.parse(xhr.response).value[i].request_time.slice(0, 16);
+                tabCell2.innerHTML = JSON.parse(xhr.response).value[i].message;
+
+            }
+
+            //let quote_row = JSON.parse(xhr.response).value[0].message + ", " + JSON.parse(xhr.response).value[0].status + ", " + JSON.parse(xhr.response).value[0].request_time;
+            //document.forms['message_form'].customerMessage.value = quote_row;
+            //document.forms['message_form'].customerMessage.value = JSON.parse(xhr.response).value[0].status;
+            //document.forms['message_form'].customerMessage.value = JSON.parse(xhr.response).value[0].request_time;
+
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
 
         }
     }
+
+    var divShowData = document.getElementById('showData');
+    divShowData.innerHTML = "";
+    divShowData.appendChild(quote_table);
+
 }
 

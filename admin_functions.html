@@ -51,12 +51,12 @@
         <input class="create" type="button" value="Go Home">
         <input class="cancel" type="button" value="Log Out">
     </form>
-  
+
     <!-- The Modal -->
     <div id="newAdminModal" class="modal">
         <div id="new-admin" class="modal-content">
             <h2>Create new Lan-Way admin</h2>
-            <form name="newLogin" method="post" action="">
+            <form name="newLogin" method="post">
                 <p><input type="text" name="newUsername" value="" placeholder="New Username"></p>
                 <p><input type="password" name="newPassword" value="" placeholder="New Password"></p>
                 <p><input type="password" name="newPassword2" value="" placeholder="Confirm Password"></p>
@@ -70,7 +70,7 @@
     <div id="newEmployeeModal" class="modal">
         <div id="new-employee" class="modal-content">
             <h2>Create new Lan-Way Employee</h2>
-            <form name="newEmployee" method="post" action="">
+            <form name="newEmployee" method="post">
                 <p><input type="text" name="employee_ID" value="" placeholder="Employee ID"></p>
                 <p><input type="text" name="employeeFirst" value="" placeholder="First Name"></p>
                 <p><input type="text" name="employeeLast" value="" placeholder="Last Name"></p>
@@ -94,7 +94,8 @@
                 <p><input type="text" name="po_box" placeholder="New PO Box"></p>
                 <p><input type="text" name="phone_num" placeholder="New Number"></p>
                 <p><input type="text" name="fax_num" placeholder="New Fax Number"></p>
-                <p><input type="text" name="email" placeholder="New Email"></p>                <p><input type="text" name="address" placeholder="New Address"></p>
+                <p><input type="text" name="email" placeholder="New Email"></p>
+                <p><input type="text" name="address" placeholder="New Address"></p>
                 <p><input type="text" name="state" placeholder="New State"></p>
                 <p><input type="text" name="city" placeholder="New City"></p>
                 <input class="create" type="button" value="Submit" onclick="updateContactCard();">
@@ -125,7 +126,7 @@
     <div id="deleteModal" class="modal">
         <div id="deleteEmployee" class="modal-content">
             <h2>Enter ID to delete employee</h2>
-            <form name="delete" method="post" action="">
+            <form name="delete" method="post">
                 <p><input type="text" name="employee_ID" placeholder="Employee ID"></p>
                 <input class="create" type="button" value="Submit" onclick="deleteEmployee();">
                 <input class="cancel" type="button" value="Cancel" onclick="hide_div('deleteModal');">
@@ -136,12 +137,12 @@
     <div id="messageModal" class="modal">
         <div id="messages" class="modal-content">
             <h2>Enter email to get their messages</h2>
-            <form name="message_form" method="post" action="">
+            <form name="message_form" method="post">
                 <p><input type="text" name="email" placeholder="Customer Email"></p>
                 <input class="create" type="button" value="Submit" onclick="getQuotes();">
-                <p><input type="text" name="customerMessage" placeholder="message" style="width: 500px; height: 200px"></p>
-                <input class="cancel" type="button" value="Close" onclick="hide_div('messageModal');">
             </form>
+            <p id='showData'></p>
+            <input class="cancel" type="button" value="Close" onclick="hide_div('messageModal');">
         </div>
     </div>
 
