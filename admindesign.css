@@ -204,7 +204,6 @@ th {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  border-right: 1px solid black;
   width: 33.33%;
   padding: 10px;
   height: 79.8vh;
