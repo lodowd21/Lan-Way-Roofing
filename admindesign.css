@@ -10,6 +10,11 @@ h1 {
   color: black;
 }
 
+h2 {
+  text-align: center;
+  color: black;
+}
+
 .page-header{width:100%;min-height:95px;background-color:#fff; border-bottom: 3px solid black;}
 .page-header:after{display:table;clear:both}
 .page-header.is-fixed{position:fixed;top:0;left:0;z-index:999;-webkit-box-shadow:0 2px 4px 0 #424242;box-shadow:0 2px 4px 0 #424242}
@@ -192,6 +197,32 @@ th {
   font-weight:bold;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  border-right: 1px solid black;
+  width: 33.33%;
+  padding: 10px;
+  height: 79.8vh;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width:480px){
 .page-header{min-height:50px}

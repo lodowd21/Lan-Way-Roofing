@@ -250,7 +250,7 @@ function createNewUser(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             alert(`Account created successfully. ${xhr.status}  ${xhr.statusText}`);
-            hide_div('new-admin');
+            hide_div('newAdminModal');
             //window.location.href = "admin_functions.html";
         } else if(xhr.status === 409){
             alert(`Username already exists. ${xhr.status}  ${xhr.statusText}`);
