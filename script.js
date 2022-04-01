@@ -407,6 +407,7 @@ function getContactCard2(){
             //alert(`An unexpected error has occured. ${xhr.status}`);
         }
     }
+    document.getElementById('addy').innerHTML.style.color = "black";
 }
 
 
@@ -462,12 +463,32 @@ function updateEmployeeInfo(){
         return false;
     }
 
+    if (last == "") {
+        alert("Last name must be filled out.");
+        return false;
+    }
+
+    if (position == "") {
+        alert("Employee must have a job description.");
+        return false;
+    }
+
     if (address == "") {
         alert("Address must be filled out.");
         return false;
     }
 
-    if (salary == "") {
+    if (city == "") {
+        alert("City must be filled out.");
+        return false;
+    }
+
+    if (address == "") {
+        alert("Address must be filled out.");
+        return false;
+    }
+
+    if (zip == "") {
         alert("Pay must be filled out.");
         return false;
     }
@@ -518,7 +539,6 @@ function getQuotes(){
 
     let customer_email = document.forms["message_form"]["email"].value;
 
-    let quote_row = "";
     var quote_table_columns = ["Date", "Message"];
 
     var quote_table = document.createElement("table");
@@ -542,22 +562,12 @@ function getQuotes(){
         if (xhr.status === 200) {
             console.log(`xhr response json: ${(xhr.response)}`);
             let quotes = JSON.stringify(xhr.response);
-            console.log(`quote: ${quotes}`); // works has full json payload
+            console.log(`quote: ${quotes}`);
 
             console.log(`quotes array length ${JSON.parse(xhr.response).value.length}`)
-            //console.log(`quotes 0: ${JSON.parse(quotes).value[0].status}`); throws an exception cant find value num
 
             for (var i = 0; i < JSON.parse(xhr.response).value.length; i++) {
                 console.log(`messages: ${JSON.parse(xhr.response).value[i].message}`);
-               // quote_row = quote_row + JSON.parse(xhr.response).value[i].message + ", " + JSON.parse(xhr.response).value[i].status + ", " + JSON.parse(xhr.response).value[i].request_time + "\n";
-                //document.forms['message_form'].customerMessage.value = quote_row;
-                /*
-                for (var key in quotes[i]) {
-                    if (quote_data.indexOf(key) === -1) {
-                        quote_data.push(key);
-                    }
-                }
-                */
 
                 tr = quote_table.insertRow(-1);
                 var tabCell = tr.insertCell(-1);
@@ -567,12 +577,6 @@ function getQuotes(){
                 tabCell2.innerHTML = JSON.parse(xhr.response).value[i].message;
 
             }
-
-            //let quote_row = JSON.parse(xhr.response).value[0].message + ", " + JSON.parse(xhr.response).value[0].status + ", " + JSON.parse(xhr.response).value[0].request_time;
-            //document.forms['message_form'].customerMessage.value = quote_row;
-            //document.forms['message_form'].customerMessage.value = JSON.parse(xhr.response).value[0].status;
-            //document.forms['message_form'].customerMessage.value = JSON.parse(xhr.response).value[0].request_time;
-
         } else {
             console.log(`error ${xhr.status}`)
             alert(`An unexpected error has occured. ${xhr.status}`);
