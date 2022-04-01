@@ -288,9 +288,11 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .commercial_img1{display:none;}
 
 .commercial_expert{display:none;}
-commercial_text{margin-left: 0;}
+.commercial_text{margin-left: 0;}
 .industrial_expert{display:none;}
-.service__repair_expert{display: none;}
+.service__repair_expert{display: none; margin-left: 0;}
+
+#phone_disay{display:block}
 }
 /*
 .page-footer__gotop{float:none;width:100%;margin:20px auto 0}
