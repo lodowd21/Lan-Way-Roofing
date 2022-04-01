@@ -13,7 +13,7 @@ button,input[type=submit]{cursor:pointer}
 h1{font-size:42px;font-weight:lighter}    
 h2{font-size:26px;font-weight:lighter}    
 h3{font-size:20px;font-weight:lighter}    
-p{font-size:15px;font-weight:lighter;color:#909090}    
+p{font-size:15px;color:black}    
 a{font-size:20px;text-decoration:none}    
 
 html,body{width:100%;height:100%}    
@@ -199,9 +199,19 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .service__repair_text p{color:black;text-align: left;font-size: 18px;}
 .service__repair_text li{color:black;text-align: left;font-size: 16px;}
 
-.service__repair_expert{width:470px;height:400px;float:left;margin-left:17%;position:relative;top:-400px;}
-.service__repair_expert h2{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
-.service__repair_expert p{color:black;text-align: left;font-size: 18px;}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 @media(max-width: 1300px) {
 .commercial_img1{margin-left:0%;width:350px;}
@@ -255,8 +265,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__member{display:block;width:260px;margin:0 auto 30px}
 .services__member-info{height:auto} 
 .services__member-descr{display:none}
-.services__member-soc{width:260px;top:220px;margin-left:-130px}    
-/*.tester{font-size: 10px; margin-left:0; margin-right: 0;}*/
+.services__member-soc{width:260px;top:220px;margin-left:-130px}
 }
 
 /* fits mobile screens */
