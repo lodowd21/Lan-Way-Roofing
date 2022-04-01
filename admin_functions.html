@@ -38,7 +38,7 @@
     <div class="row">
         <div class="column">
             <h2>Admin Functions</h2>
-            <button class="btn" onclick="openModal('newAdminModal');">Create New Admin</button>
+            <button class="btn" onclick="openModal('newAdminModal');">Create Admin</button>
             <br>
             <button class="btn" onclick="openModal('changeModal'); getContactCard();">Update Contact
                 Card</button>
@@ -51,7 +51,7 @@
             <button class="btn" onclick="openModal('deleteModal');">Delete Employee</button>
         </div>
         <div class="column">
-            <h2>Quote Messages</h2>
+            <h2>Quotes</h2>
             <button class="btn" onclick="openModal('messageModal');"> Get Messages</button>
         </div>
     </div>
@@ -133,6 +133,7 @@
     <div id="getEmployeeData" class="modal">
         <div id="enter-id" class="modal-content">
             <form name="get_employee_data" method="post">
+                <h3>Enter ID and press "Get Info" to get their data.</h3>
                 <input class="create" type="button" value="Get Info" onclick="getEmployee();">
                 <p><input type="text" name="employeeID" placeholder="Enter Employee ID"></p>
                 <p><input type="text" name="first" placeholder="First"></p>

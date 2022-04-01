@@ -191,12 +191,12 @@ function validateUser() {
         var isLoginSuccessful = JSON.parse(xhr.response)
         console.log(isLoginSuccessful.isValid)
         if (xhr.status === 200 && isLoginSuccessful.isValid === true) {
-            console.log(JSON.parse(xhr.response));
-            alert(`Successful login ${xhr.status}  ${xhr.statusText}`);
+            //console.log(JSON.parse(xhr.response));
+           // alert(`Successful login ${xhr.status}  ${xhr.statusText}`);
             window.location.href = "admin_functions.html";
         } else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Username or password incorrect ${xhr.status}  ${xhr.statusText} ld: ${loginData} x: ${x}  y: ${y}`);
+            alert(`Username or password incorrect.`);
 
         }
     }
@@ -305,7 +305,7 @@ function createNewEmployee(){
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
             alert(`Employee created successfully! ${xhr.status}  ${xhr.statusText}`);
-            hide_div('newAdminModal');
+            hide_div('newEmployeeModal');
         } else if (xhr.status === 409){
             alert(`That ID already exists. Please enter a new one.`);
         }
@@ -318,7 +318,13 @@ function createNewEmployee(){
 
 function getEmployee() {
 
+
     let employeeID = document.forms["get_employee_data"]["employeeID"].value;
+
+    if(employeeID == ""){
+        alert("Must enter an ID first!")
+        return false;
+    }
 
     var xhr = new XMLHttpRequest();
     var employeeData = JSON.stringify({"employee_ID": employeeID});
@@ -503,7 +509,7 @@ function deleteEmployee(){
             hide_div('deleteModal');
         } else {
             console.log(`error ${xhr.status}`)
-            alert(`An unexpected error has occured. ${xhr.status}`);
+            alert(`That employee does not exist. ${xhr.status}`);
         }
     }
 }
