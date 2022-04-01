@@ -194,7 +194,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .service__repair__info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
 .service__repair_img1{float:left;margin-left:17%;position: relative;padding-bottom: 250px;}
-.service__repair_text{display:inline-blcok;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:650px;margin-left: 50%;position: relative;}
+.service__repair_text{display:inline-block;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:650px;margin-left: 50%;position: relative;}
 .service__repair_text h2,h4{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
 .service__repair_text p{color:black;text-align: left;font-size: 18px;}
 .service__repair_text li{color:black;text-align: left;font-size: 16px;}
