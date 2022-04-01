@@ -16,6 +16,13 @@ function preloadImage(url) {
     img.src = url;
 }
 
+function goHome(){
+    window.location.href = "index.html";
+}
+
+function logOut(){
+    window.location.href = "admin.html";
+}
 
 function openModal(modal_ID) {
 
