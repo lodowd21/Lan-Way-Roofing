@@ -217,10 +217,10 @@ th {
 }
 
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+@media screen and (max-width: 700px) {
+  .column {width: 100%;}
+  .nav_link{display: none;}
+  .page-header_nav{display: none;}
 }
 
 @media screen and (max-width:480px){
@@ -229,8 +229,8 @@ th {
 .page-header_logo{float:none;position:relative;display:inline-block;margin:20px auto 10px;text-align:left}
 .page-header_logo h1{display:block}
 .page-header_logo span{display:inline-block}
-.nav_link{display: none;}
+.column{height: 43vh;}
 #btn_div{margin-left: 0;}
 
-#home{display: block;}
+#home{display: block; margin-left: 25%;}
 }

@@ -199,14 +199,12 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .service__repair_text p{color:black;text-align: left;font-size: 18px;}
 .service__repair_text li{color:black;text-align: left;font-size: 16px;}
 
-/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 33.33%;
   padding: 10px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -266,6 +264,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__member-info{height:auto} 
 .services__member-descr{display:none}
 .services__member-soc{width:260px;top:220px;margin-left:-130px}
+.column {width: 100%;}
 }
 
 /* fits mobile screens */
