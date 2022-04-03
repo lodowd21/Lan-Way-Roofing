@@ -414,7 +414,6 @@ function getContactCard2(){
             //alert(`An unexpected error has occured. ${xhr.status}`);
         }
     }
-    document.getElementById('addy').innerHTML.style.color = "black";
 }
 
 

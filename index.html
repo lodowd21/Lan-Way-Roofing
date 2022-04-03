@@ -21,7 +21,6 @@
 </head>
 
 <body onload="start()">
-
     <script src="script.js"></script>
 
     <!-- $Page header-->
@@ -52,20 +51,19 @@
     <section class="aboutus" id="aboutus">
         <div class="aboutus__inner">
             <h2 class="aboutus__title">About Us</h2>
-            <!--<p class="aboutus__descr">Roof Repair – Roof Replacement – Roofing Contractors</p>-->
             <p class="aboutus__descr">The original concept was not to become one of the biggest companies in the
                 industry, but simply one of the best.
             </p>
 
             <div class="aboutus__filter">
                 <a class="aboutus__filter-btn" href="featuredProjects.html">Featured Projects</a>
-                <a class="aboutus__filter-btn" onclick="show_div('missionStatement')">Mission Statement</a>
+                <a class="aboutus__filter-btn" id="mission" onclick="show_div('missionStatement')">Mission Statement</a>
                 <a class="aboutus__filter-btn" href="#contact">Request a Quote</a>
             </div>
 
         </div>
         <br>
-        <div id="missionStatement" style="display: none;" class="aboutus_mission">
+        <div id="missionStatement" style="display: none;">
             “To ensure the longevity of our company through repeat and referral business achieved by customer
             satisfaction in all areas including timeliness, attention to detail, and service-minded attitudes.”
         </div>

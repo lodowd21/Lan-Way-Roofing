@@ -244,6 +244,9 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .aboutus__item{width:190px;height:190px;margin:0 5% 35px}
 .services__member{width:180px;margin:0 10px 30px}
+.slideshow__container {width:50%;}
+#mission{display:none}
+
 }
 
 @media screen and (max-width:640px){
@@ -265,6 +268,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__member-descr{display:none}
 .services__member-soc{width:260px;top:220px;margin-left:-130px}
 .column {width: 100%;}
+.aboutus__filter{width:100px}
 }
 
 /* fits mobile screens */
