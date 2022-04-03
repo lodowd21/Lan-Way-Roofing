@@ -1,7 +1,7 @@
 html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,address,big,cite,img,i,center,ol,ul,li,form,input,label,footer,header,menu,main,section
 {margin:0;padding:0;border:0;scroll-behavior: smooth;-webkit-box-sizing:border-box;box-sizing:border-box}    
 
-nav ol,nav ul{list-style:none}    
+/*nav ol,nav ul{list-style:none}   */
 
 blockquote,q{quotes:none}    
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}    
@@ -246,6 +246,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .services__member{width:180px;margin:0 10px 30px}
 .slideshow__container {width:50%;}
 #mission{display:none}
+.services__member-descr{display: none;}
+.services__member{height:300px}
 
 }
 
@@ -264,7 +266,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .services{padding:55px 10px}
 .services__member{display:block;width:260px;margin:0 auto 30px}
-.services__member-info{height:auto} 
+.services__member-info{height:50px} 
 .services__member-descr{display:none}
 .services__member-soc{width:260px;top:220px;margin-left:-130px}
 .column {width: 100%;}
@@ -287,7 +289,6 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-footer{padding:0 10px 30px;text-align:center}
 .page-footer__lan{margin:35px auto 0}
 
-.services__member-info{height: 100px;}
 .contact__card-item.tel-two{display: none;}
 .imageHolder{display: none;}
 .commercial_expert{display:none;}
