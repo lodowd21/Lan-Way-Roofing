@@ -1,0 +1,116 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Condition": {
+                "actions": {
+                    "Set_variable": {
+                        "inputs": {
+                            "name": "isValid",
+                            "value": true
+                        },
+                        "runAfter": {},
+                        "type": "SetVariable"
+                    }
+                },
+                "expression": {
+                    "and": [
+                        {
+                            "equals": [
+                                "@length(body('get_rows')?['value'])",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "Get_rows": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "If"
+            },
+            "Get_rows": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "postgresql"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[LanwayAdmin]'))}/items",
+                    "queries": {
+                        "$filter": "username eq '@{triggerBody()?['username']}' and password eq '@{triggerBody()?['pass']}'"
+                    }
+                },
+                "runAfter": {
+                    "Initialize_variable": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            },
+            "Initialize_variable": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "isValid",
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ]
+                },
+                "runAfter": {},
+                "type": "InitializeVariable"
+            },
+            "Response": {
+                "inputs": {
+                    "body": {
+                        "isValid": "@variables('isValid')"
+                    },
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    "schema": {
+                        "properties": {
+                            "userfound": {
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "statusCode": 200
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Condition": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Response"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {
+                        "properties": {
+                            "pass": {
+                                "type": "string"
+                            },
+                            "username": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "kind": "Stateless"
+}
