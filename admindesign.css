@@ -216,6 +216,9 @@ th {
   clear: both;
 }
 
+@media screen and (max-width: 1000px) {
+  #home{display: block; margin-left: 25%;}
+}
 
 @media screen and (max-width: 700px) {
   .column {width: 100%;}
@@ -232,5 +235,4 @@ th {
 .column{height: 50vh;}
 #btn_div{margin-left: 0;}
 
-#home{display: block; margin-left: 25%;}
 }
