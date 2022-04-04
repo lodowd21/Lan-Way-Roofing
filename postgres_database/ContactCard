@@ -1,0 +1,22 @@
+-- Table: public.ContactCard
+
+-- DROP TABLE public."ContactCard";
+
+CREATE TABLE IF NOT EXISTS public."ContactCard"
+(
+    address character varying COLLATE pg_catalog."default",
+    po_box character varying COLLATE pg_catalog."default",
+    phone_num character varying COLLATE pg_catalog."default",
+    fax_num character varying COLLATE pg_catalog."default",
+    email character varying COLLATE pg_catalog."default",
+    row_num integer NOT NULL DEFAULT nextval('"ContactCard_row_num_seq"'::regclass),
+    company_name character varying COLLATE pg_catalog."default",
+    state character varying COLLATE pg_catalog."default",
+    city character varying COLLATE pg_catalog."default",
+    CONSTRAINT "ContactCard_pkey" PRIMARY KEY (row_num)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."ContactCard"
+    OWNER to lodowd;
