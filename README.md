@@ -14,7 +14,8 @@ Built with:
 
 
 ## URLS
-
+The following urls are non-production urls used for testing. Once the legacy website is retired, the urls below will be updated in dns to https://lanway.com/*
+<br/>
 Main Page:
 https://victorious-sand-018f36a0f.azurestaticapps.net/
 
