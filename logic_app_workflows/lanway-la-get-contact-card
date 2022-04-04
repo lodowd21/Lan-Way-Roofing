@@ -1,0 +1,55 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Get_row": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "postgresql"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[ContactCard]'))}/items/@{encodeURIComponent(encodeURIComponent('1'))}"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            },
+            "Response": {
+                "inputs": {
+                    "body": {
+                        "address": "@body('Get_row')?['address']",
+                        "city": "@body('Get_row')?['city']",
+                        "company_name": "@body('Get_row')?['company_name']",
+                        "email": "@body('Get_row')?['email']",
+                        "fax_num": "@body('Get_row')?['fax_num']",
+                        "phone_num": "@body('Get_row')?['phone_num']",
+                        "po_box": "@body('Get_row')?['po_box']",
+                        "state": "@body('Get_row')?['state']"
+                    },
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    "statusCode": 200
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Get_row": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Response"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "manual": {
+                "inputs": {},
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "kind": "Stateless"
+}

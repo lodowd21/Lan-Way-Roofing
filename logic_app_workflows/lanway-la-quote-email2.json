@@ -1,0 +1,192 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Check_if_customer_exists": {
+                "actions": {
+                    "Update_row": {
+                        "inputs": {
+                            "body": {
+                                "address": "@triggerBody()?['address']",
+                                "city": "@triggerBody()?['city']",
+                                "first": "@triggerBody()?['first']",
+                                "last": "@triggerBody()?['last']",
+                                "phone_num": "@triggerBody()?['phone_num']",
+                                "state": "@triggerBody()?['state']",
+                                "zip": "@triggerBody()?['zip']"
+                            },
+                            "host": {
+                                "connection": {
+                                    "referenceName": "postgresql"
+                                }
+                            },
+                            "method": "patch",
+                            "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[Customer]'))}/items/@{encodeURIComponent(encodeURIComponent(triggerBody()?['email']))}"
+                        },
+                        "runAfter": {},
+                        "type": "ApiConnection"
+                    }
+                },
+                "else": {
+                    "actions": {
+                        "Insert_row": {
+                            "inputs": {
+                                "body": {
+                                    "address": "@triggerBody()?['address']",
+                                    "city": "@triggerBody()?['city']",
+                                    "email": "@triggerBody()?['email']",
+                                    "first": "@triggerBody()?['first']",
+                                    "last": "@triggerBody()?['last']",
+                                    "phone_num": "@triggerBody()?['phone_num']",
+                                    "state": "@triggerBody()?['state']",
+                                    "zip": "@triggerBody()?['zip']"
+                                },
+                                "host": {
+                                    "connection": {
+                                        "referenceName": "postgresql"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[Customer]'))}/items"
+                            },
+                            "runAfter": {},
+                            "type": "ApiConnection"
+                        }
+                    }
+                },
+                "expression": {
+                    "and": [
+                        {
+                            "equals": [
+                                "@length(body('get_rows')?['value'])",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "Get_Rows": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "If"
+            },
+            "Get_Rows": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "postgresql"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[Customer]'))}/items",
+                    "queries": {
+                        "$filter": "email eq '@{triggerBody()?['email']}'"
+                    }
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            },
+            "Insert_Messages": {
+                "inputs": {
+                    "body": {
+                        "customer_email": "@triggerBody()?['email']",
+                        "message": "@triggerBody()?['message']",
+                        "request_time": "@{utcNow()}",
+                        "status": "New"
+                    },
+                    "host": {
+                        "connection": {
+                            "referenceName": "postgresql"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[Quote]'))}/items"
+                },
+                "runAfter": {
+                    "Check_if_customer_exists": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            },
+            "Response": {
+                "inputs": {
+                    "statusCode": 200
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Send_an_email_(V2)": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Response"
+            },
+            "Send_an_email_(V2)": {
+                "inputs": {
+                    "body": {
+                        "Body": "<p>first name: @{triggerBody()?['first']}<br>\nlast name: @{triggerBody()?['last']}<br>\nemail: @{triggerBody()?['email']}<br>\naddress: @{triggerBody()?['address']}<br>\ncity: @{triggerBody()?['city']}<br>\nstate: @{triggerBody()?['state']}<br>\nzip: @{triggerBody()?['zip']}<br>\nphone: @{triggerBody()?['phone_num']}<br>\nmessage: @{triggerBody()?['message']}<br>\n</p>",
+                        "Subject": "New Quote!",
+                        "To": "lanwayroofing@gmail.com"
+                    },
+                    "host": {
+                        "connection": {
+                            "referenceName": "outlook"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/v2/Mail"
+                },
+                "runAfter": {
+                    "Insert_Messages": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {
+                        "properties": {
+                            "address": {
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            },
+                            "first": {
+                                "type": "string"
+                            },
+                            "last": {
+                                "type": "string"
+                            },
+                            "message": {
+                                "type": "string"
+                            },
+                            "phone_num": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "zip": {
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "kind": "Stateless"
+}

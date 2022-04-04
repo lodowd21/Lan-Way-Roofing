@@ -1,0 +1,74 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Get_row": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "postgresql"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[Employee]'))}/items/@{encodeURIComponent(encodeURIComponent(triggerBody()?['employee_ID']))}"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            },
+            "Response": {
+                "inputs": {
+                    "body": {
+                        "address": "@body('Get_row')['address']",
+                        "city": "@body('Get_row')['city']",
+                        "employee_ID": "@body('Get_row')['employee_ID']",
+                        "first": "@body('Get_row')['first']",
+                        "job_description": "@body('Get_row')['job_description']",
+                        "last": "@body('Get_row')['last']",
+                        "phone_num": "@body('Get_row')?['phone_num']",
+                        "salary_hourly_rate": "@body('Get_row')?['salary_hourly_rate']",
+                        "zip": "@body('Get_row')['zip']"
+                    },
+                    "statusCode": 200
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Get_row": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Response"
+            },
+            "Response_2": {
+                "inputs": {
+                    "statusCode": 404
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Get_row": [
+                        "FAILED"
+                    ]
+                },
+                "type": "Response"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {
+                        "properties": {
+                            "employee_ID": {
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "kind": "Stateless"
+}

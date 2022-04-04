@@ -1,0 +1,63 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Delete_row": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "postgresql"
+                        }
+                    },
+                    "method": "delete",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[Employee]'))}/items/@{encodeURIComponent(encodeURIComponent(triggerBody()?['employee_ID']))}"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            },
+            "Error": {
+                "inputs": {
+                    "statusCode": 404
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Delete_row": [
+                        "FAILED"
+                    ]
+                },
+                "type": "Response"
+            },
+            "Success": {
+                "inputs": {
+                    "statusCode": 200
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Delete_row": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Response"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {
+                        "properties": {
+                            "employee_ID": {
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "kind": "Stateless"
+}

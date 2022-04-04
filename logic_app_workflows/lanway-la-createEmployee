@@ -1,0 +1,135 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Condition": {
+                "actions": {
+                    "Insert_row": {
+                        "inputs": {
+                            "body": {
+                                "ID": "@{utcNow()}",
+                                "address": "@triggerBody()?['address']",
+                                "city": "@triggerBody()?['city']",
+                                "employee_ID": "@triggerBody()?['employee_ID']",
+                                "first": "@triggerBody()?['first']",
+                                "job_description": "@triggerBody()?['job_description']",
+                                "last": "@triggerBody()?['last']",
+                                "phone_num": "@triggerBody()?['phone_num']",
+                                "salary_hourly_rate": "@triggerBody()?['salary_hourly_rate']",
+                                "zip": "@triggerBody()?['zip']"
+                            },
+                            "host": {
+                                "connection": {
+                                    "referenceName": "postgresql"
+                                }
+                            },
+                            "method": "post",
+                            "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[Employee]'))}/items"
+                        },
+                        "runAfter": {},
+                        "type": "ApiConnection"
+                    },
+                    "Response": {
+                        "inputs": {
+                            "statusCode": 200
+                        },
+                        "kind": "http",
+                        "runAfter": {
+                            "Insert_row": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "Response"
+                    }
+                },
+                "else": {
+                    "actions": {
+                        "Response_2": {
+                            "inputs": {
+                                "statusCode": 409
+                            },
+                            "kind": "http",
+                            "runAfter": {},
+                            "type": "Response"
+                        }
+                    }
+                },
+                "expression": {
+                    "and": [
+                        {
+                            "equals": [
+                                "@length(body('get_rows')?['value'])",
+                                0
+                            ]
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "Get_rows": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "If"
+            },
+            "Get_rows": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "postgresql"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[Employee]'))}/items",
+                    "queries": {
+                        "$filter": "employee_ID eq '@{triggerBody()?['employee_ID']}'"
+                    }
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {
+                        "properties": {
+                            "address": {
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "employee_ID": {
+                                "type": "integer"
+                            },
+                            "first": {
+                                "type": "string"
+                            },
+                            "job_description": {
+                                "type": "string"
+                            },
+                            "last": {
+                                "type": "string"
+                            },
+                            "phone_num": {
+                                "type": "string"
+                            },
+                            "salary_hourly_rate": {
+                                "type": "integer"
+                            },
+                            "zip": {
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "kind": "Stateless"
+}

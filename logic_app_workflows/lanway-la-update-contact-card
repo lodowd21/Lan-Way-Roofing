@@ -1,0 +1,94 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Bad_response": {
+                "inputs": {
+                    "statusCode": 404
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Update_contact_card": [
+                        "FAILED"
+                    ]
+                },
+                "type": "Response"
+            },
+            "Success": {
+                "inputs": {
+                    "statusCode": 200
+                },
+                "kind": "http",
+                "runAfter": {
+                    "Update_contact_card": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Response"
+            },
+            "Update_contact_card": {
+                "inputs": {
+                    "body": {
+                        "address": "@triggerBody()?['address']",
+                        "city": "@triggerBody()?['city']",
+                        "company_name": "@triggerBody()?['company_name']",
+                        "email": "@triggerBody()?['email']",
+                        "fax_num": "@triggerBody()?['fax_num']",
+                        "phone_num": "@triggerBody()?['phone_num']",
+                        "po_box": "@triggerBody()?['po_box']",
+                        "state": "@{triggerBody()?['state']}"
+                    },
+                    "host": {
+                        "connection": {
+                            "referenceName": "postgresql"
+                        }
+                    },
+                    "method": "patch",
+                    "path": "/datasets/default/tables/@{encodeURIComponent(encodeURIComponent('[public].[ContactCard]'))}/items/@{encodeURIComponent(encodeURIComponent('1'))}"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {
+                        "properties": {
+                            "address": {
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "company_name": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            },
+                            "fax_num": {
+                                "type": "string"
+                            },
+                            "phone_num": {
+                                "type": "string"
+                            },
+                            "po_box": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type:": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "kind": "Stateless"
+}
