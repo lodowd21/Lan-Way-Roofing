@@ -25,14 +25,14 @@
 
     <!-- $Page header-->
     <header class="page-header">
-        <div class="page-header__inner">
-            <div class="page-header__logo"></div>
-            <nav class="page-header__nav">
+        <div class="page-header_inner">
+            <div class="page-header_logo"></div>
+            <nav class="page-header_nav">
                 <ul>
-                    <li><a class="page-header__nav-link" href="#home">Home</a></li>
-                    <li><a class="page-header__nav-link" href="#aboutus">About Us</a></li>
-                    <li><a class="page-header__nav-link" href="#services">Services</a></li>
-                    <li><a class="page-header__nav-link" href="#contact">Contact</a></li>
+                    <li><a class="page-header_nav-link" href="#home">Home</a></li>
+                    <li><a class="page-header_nav-link" href="#aboutus">About Us</a></li>
+                    <li><a class="page-header_nav-link" href="#services">Services</a></li>
+                    <li><a class="page-header_nav-link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,25 +40,24 @@
 
     <!-- $Promo section-->
     <section class="promo" id="home">
-        <h2 class="about__title">Safety • Service • Integrity • Quality • Value </h2>
-        <p class="about__descr">Proudly serving North Carolina, South Carolina, and Virginia since 1967.</p>
-        <!-- <a class="about__btn" href="#aboutus">Learn more</a> -->
-        <a class="about__go-next" href="#aboutus">Learn More</a>
+        <h2 class="about_title">Safety • Service • Integrity • Quality • Value </h2>
+        <p class="about_descr">Proudly serving North Carolina, South Carolina, and Virginia since 1967.</p>
+        <a class="about_go-next" href="#aboutus">Learn More</a>
     </section>
 
 
     <!-- $About Us section-->
     <section class="aboutus" id="aboutus">
-        <div class="aboutus__inner">
-            <h2 class="aboutus__title">About Us</h2>
-            <p class="aboutus__descr">The original concept was not to become one of the biggest companies in the
+        <div class="aboutus_inner">
+            <h2 class="aboutus_title">About Us</h2>
+            <p class="aboutus_descr">The original concept was not to become one of the biggest companies in the
                 industry, but simply one of the best.
             </p>
 
-            <div class="aboutus__filter">
-                <a class="aboutus__filter-btn" href="featuredProjects.html">Featured Projects</a>
-                <a class="aboutus__filter-btn" id="mission" onclick="show_div('missionStatement')">Mission Statement</a>
-                <a class="aboutus__filter-btn" href="#contact">Request a Quote</a>
+            <div class="aboutus_filter">
+                <a class="aboutus_filter-btn" href="featuredProjects.html">Featured Projects</a>
+                <a class="aboutus_filter-btn" id="mission" onclick="show_div('missionStatement')">Mission Statement</a>
+                <a class="aboutus_filter-btn" href="#contact">Request a Quote</a>
             </div>
 
         </div>
@@ -69,7 +68,7 @@
         </div>
         <br>
 
-        <div class="slideshow__container">
+        <div class="slideshow_container">
             <div class="mySlides">
                 <div class="numbertext">1 / 3</div>
                 <img src="images/wayneeidson2.jpg" style="width:100%">
@@ -115,21 +114,9 @@
                 slides[slideIndex - 1].style.display = "block";
             }
         </script>
-        <!--
-        <br><br>
-        <a onclick="getWeather()">Hi6</a>
-        <p>Loading content from the API: <b id="name">...</b></p>
-        <script>
-            (async function() {
-                const { text } = await( await fetch(`/api/message`)).json();
-                document.querySelector('#name').textContent = text;
-            }())
-            </script>
-        -->
-
     </section>
 
-    <section id="aboutus__text" class="aboutus__text"
+    <section id="aboutus_text" class="aboutus_text"
         style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url(images/aboutusimg.jpg); background-size: cover; width:100%; min-height:400px; background-repeat: no-repeat;">
 
@@ -187,17 +174,17 @@
 
     <!-- $Services section-->
     <section class="services" id="services">
-        <div class="services__inner">
-            <h2 class="services__title">Services from Lan-Way Roofing</h2>
-            <p class="services__descr">Specializing in roof replacement, repair, and maintenance on industrial and
+        <div class="services_inner">
+            <h2 class="services_title">Services from Lan-Way Roofing</h2>
+            <p class="services_descr">Specializing in roof replacement, repair, and maintenance on industrial and
                 commerical roofs. Click in each box to learn more!</p>
 
             <a href="commerical.html">
-                <div class="services__member">
+                <div class="services_member">
                     <img src="images/commercial.jpg" alt="Commercial Roofing">
-                    <div class="services__member-info">
-                        <h3 class="services__member-name">Commercial Roofing</h3>
-                        <p class="services__member-descr">We are an experienced roofing contractor and commercial
+                    <div class="services_member-info">
+                        <h3 class="services_member-name">Commercial Roofing</h3>
+                        <p class="services_member-descr">We are an experienced roofing contractor and commercial
                             roofing
                             company that works extensively to install,
                             maintain and repair several different commercial roof systems.</p>
@@ -206,11 +193,11 @@
             </a>
 
             <a href="industrial.html">
-                <div id=click class="services__member">
+                <div id=click class="services_member">
                     <img src="images/industrial.jpg" alt="Industrial Roofing">
-                    <div class="services__member-info">
-                        <h3 class="services__member-name">Industrial Roofing</h3>
-                        <p class="services__member-descr">We are an experienced roofing contractor and industrial
+                    <div class="services_member-info">
+                        <h3 class="services_member-name">Industrial Roofing</h3>
+                        <p class="services_member-descr">We are an experienced roofing contractor and industrial
                             roofing
                             company that works extensively to install,
                             maintain and repair several different industrial roof systems.</p>
@@ -219,11 +206,11 @@
             </a>
 
             <a href="service&Repair.html">
-                <div class="services__member">
+                <div class="services_member">
                     <img src="images/service1.jpg" alt="Service and Repair">
-                    <div class="services__member-info">
-                        <h3 class="services__member-name">Service and Repair</h3>
-                        <p class="services__member-descr">Your roof is a major corporate asset and should be a
+                    <div class="services_member-info">
+                        <h3 class="services_member-name">Service and Repair</h3>
+                        <p class="services_member-descr">Your roof is a major corporate asset and should be a
                             management priority.
                             We can
                             help maintain and repair your roof, click to learn more.
@@ -253,40 +240,40 @@
 
     <!-- $Contact section-->
     <section class="contact" id="contact">
-        <div class="contact__inner">
-            <h2 class="contact__title">Contact us</h2>
-            <p class="contact__descr">To request a quote, you can call us directly or complete and submit the form
+        <div class="contact_inner">
+            <h2 class="contact_title">Contact us</h2>
+            <p class="contact_descr">To request a quote, you can call us directly or complete and submit the form
                 below.</p>
-            <form name="requestForm" class="contact__form">
-                <input class="contact__form-input" id="name" type="text" name="first" placeholder="First name" required>
-                <input class="contact__form-input" id="name" type="text" name="last" placeholder="Last name" required>
-                <input class="contact__form-input" id="email" type="email" name="email" placeholder="Your email"
+            <form name="requestForm" class="contact_form">
+                <input class="contact_form-input" id="name" type="text" name="first" placeholder="First name" required>
+                <input class="contact_form-input" id="name" type="text" name="last" placeholder="Last name" required>
+                <input class="contact_form-input" id="email" type="email" name="email" placeholder="Your email"
                     required>
-                <input class="contact__form-input" id="phone_num" type="number" name="phone_num"
+                <input class="contact_form-input" id="phone_num" type="number" name="phone_num"
                     placeholder="Phone Number">
-                <input class="contact__form-input" id="address" type="text" name="address" placeholder="Mailing Address"
+                <input class="contact_form-input" id="address" type="text" name="address" placeholder="Mailing Address"
                     required>
-                <input class="contact__form-input" id="city" type="text" name="city" placeholder="City">
-                <input class="contact__form-input" id="state" type="text" name="state" placeholder="State">
-                <input class="contact__form-input" id="zip" type="number" name="zip" placeholder="Postal Code">
-                <textarea class="contact__form-tarea" id="message" name="message" placeholder="Your message"></textarea>
-                <input class="contact__form-submit" type="submit" value="Submit" onclick="sendQuote();">
+                <input class="contact_form-input" id="city" type="text" name="city" placeholder="City">
+                <input class="contact_form-input" id="state" type="text" name="state" placeholder="State">
+                <input class="contact_form-input" id="zip" type="number" name="zip" placeholder="Postal Code">
+                <textarea class="contact_form-tarea" id="message" name="message" placeholder="Your message"></textarea>
+                <input class="contact_form-submit" type="submit" value="Submit" onclick="sendQuote();">
             </form>
 
-            <div class="contact__card vcard">
-                <h3 class="contact__card-title">Information</h3>
-                <div class="contact__card-item place">
+            <div class="contact_card vcard">
+                <h3 class="contact_card-title">Information</h3>
+                <div class="contact_card-item place">
                     <div id="lanway"></div>
                     <div class="adr">
                         <div id="addy" class="street-address"></div>
                         <span id="local" class="locality"></span>
                     </div>
                 </div>
-                <div id="pobox" class="contact__card-item po"></div>
-                <div id="phonenum" class="contact__card-item tel">(Phone)<span class="type">&nbsp;+</span></div>
-                <!-- <div class="contact__card-item tel-two">(Phone)<span class="type">&nbsp;+</span>800-352-6929</div> -->
-                <div id="faxnum" class="contact__card-item fax tel">(FAX)<span class="type">&nbsp;+</span></div>
-                <div id="show_email" class="contact__card-item email"></div>
+                <div id="pobox" class="contact_card-item po"></div>
+                <div id="phonenum" class="contact_card-item tel">(Phone)<span class="type">&nbsp;+</span></div>
+                <!-- <div class="contact_card-item tel-two">(Phone)<span class="type">&nbsp;+</span>800-352-6929</div> -->
+                <div id="faxnum" class="contact_card-item fax tel">(FAX)<span class="type">&nbsp;+</span></div>
+                <div id="show_email" class="contact_card-item email"></div>
             </div>
         </div>
         <br><br><br>
@@ -306,12 +293,12 @@
 
     <!-- $Page footer-->
     <footer class="page-footer">
-        <div class="page-footer__inner"><span class="page-footer__lan">Lan-Way Roofing | Since 1967</span>
+        <div class="page-footer_inner"><span class="page-footer_lan">Lan-Way Roofing | Since 1967</span>
             <a href="http://lanwayroofing.com/wp-content/themes/lanway/images/menmber.png">
                 <img src="images/nrca.png" width="125" height="45" alt="Membership" />
             </a>&nbsp; &nbsp; &nbsp;
             <img src="images/veteran-owned-business-logo.jpg" width="114" height="45" />
-            <a class="page-footer__gotop" href="#home">Go to top</a>
+            <a class="page-footer_gotop" href="#home">Go to top</a>
             <a href="admin.html">Admin</a>
         </div>
     </footer>

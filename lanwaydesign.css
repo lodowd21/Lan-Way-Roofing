@@ -1,8 +1,6 @@
 html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,address,big,cite,img,i,center,ol,ul,li,form,input,label,footer,header,menu,main,section
 {margin:0;padding:0;border:0;scroll-behavior: smooth;-webkit-box-sizing:border-box;box-sizing:border-box}    
 
-/*nav ol,nav ul{list-style:none}   */
-
 blockquote,q{quotes:none}    
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}    
 
@@ -21,35 +19,35 @@ html,body{width:100%;height:100%}
 body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
     
 .promo{width:100%;height:600px;padding:70px 0;background:#323232 url(images/roof.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
-.promo__inner{max-width:1024px;margin:0 auto}
-.promo__inner:after{content:'';display:table;clear:both}
+.promo_inner{max-width:1024px;margin:0 auto}
+.promo_inner:after{content:'';display:table;clear:both}
 
 .page-header{width:100%;min-height:95px;background-color:#fff}
 .page-header:after{content:'';display:table;clear:both}
 .page-header.is-fixed{position:fixed;top:0;left:0;z-index:999;-webkit-box-shadow:0 2px 4px 0 #424242;box-shadow:0 2px 4px 0 #424242}
-.page-header__inner{max-width:1024px;margin:0 auto}
-.page-header__inner:after{content:'';display:table;clear:both}
-.page-header__logo{float:left;height:50px;width: 300px;margin:25px 0 0 40px;padding:5px 0 0 65px;background:url(images/logo.jpg) 0 center no-repeat}
-.page-header__nav{float:right;margin:30px 55px 0 0;background-color:#fff}
-.page-header__nav li{display:inline-block;margin-left:5px}
-.page-header__nav-link{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s;color:#424242}
-.page-header__nav-link:hover,.page-header__nav-link.is-active{background-color:#1bbc9b;color:#fff}
+.page-header_inner{max-width:1024px;margin:0 auto}
+.page-header_inner:after{content:'';display:table;clear:both}
+.page-header_logo{float:left;height:50px;width: 300px;margin:25px 0 0 40px;padding:5px 0 0 65px;background:url(images/logo.jpg) 0 center no-repeat}
+.page-header_nav{float:right;margin:30px 55px 0 0;background-color:#fff}
+.page-header_nav li{display:inline-block;margin-left:5px}
+.page-header_nav-link{display:inline-block;font-size:14px;text-transform:uppercase;padding:10px;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s;color:#424242}
+.page-header_nav-link:hover,.page-header_nav-link.is-active{background-color:#1bbc9b;color:#fff}
 
 
 .aboutus{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
-.aboutus__inner{max-width:1024px;margin:0 auto;}
-.aboutus__inner:after{content:'';display:table;clear:both}
-.aboutus__title{font-size:28px;font-weight:400;margin-bottom:10px}
-.aboutus__descr{font-size:14px;font-weight:400;margin-bottom:40px}
+.aboutus_inner{max-width:1024px;margin:0 auto;}
+.aboutus_inner:after{content:'';display:table;clear:both}
+.aboutus_title{font-size:28px;font-weight:400;margin-bottom:10px}
+.aboutus_descr{font-size:14px;font-weight:400;margin-bottom:40px}
 
-.aboutus__filter{width:140px;position:absolute;z-index: 1;left:0px;;overflow-x:hidden;padding: 8px 0;margin-top:30px;}
-.aboutus__filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:15px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
-.aboutus__filter-btn:hover,.aboutus__filter-btn.is-selected{background-color:#158f76}
+.aboutus_filter{width:140px;position:absolute;z-index: 1;left:0px;;overflow-x:hidden;padding: 8px 0;margin-top:30px;}
+.aboutus_filter-btn{display:inline-block;font-size:14px;text-transform:uppercase;padding:15px;color:#fff;background-color:#1bbc9b;-webkit-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
+.aboutus_filter-btn:hover,.aboutus_filter-btn.is-selected{background-color:#158f76}
 
-.aboutus__slideshow img{width:100%;height:100%;}
+.aboutus_slideshow img{width:100%;height:100%;}
 .mySlides img{width:100%;height:100%;}
 
-.slideshow__container {display:block;width:30%;height:375px;position:relative;margin: auto;margin-left:35%;overflow: hidden;}
+.slideshow_container {display:block;width:30%;height:375px;position:relative;margin: auto;margin-left:35%;overflow: hidden;}
 
 /* Next & previous buttons */
 .prev, .next {cursor: pointer;position: absolute;top: 50%;width: auto;padding: 16px;margin-top: -22px;color: white;font-weight: bold;font-size: 18px;border-radius: 0 3px 3px 0;user-select: none;}
@@ -66,31 +64,31 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 /* Number text (1/3 etc) */
 .numbertext {color: black;font-size: 12px;padding: 8px 12px;position: absolute;top: 0;}
 
-/*.aboutus__text{border: 1px solid black;}*/
-.aboutus__text img {width: 100%;}
+/*.aboutus_text{border: 1px solid black;}*/
+.aboutus_text img {width: 100%;}
 
 
-.about__title{margin-bottom:35px;font-size:55px;text-transform:capitalize}
-.about__title span{font-weight:700}
-.about__descr{max-width:580px;margin:0 auto 50px;font-size:18px;line-height:1.1;color:#fff}
-.about__go-next{display:block;width:125px;height:25px;margin:0 auto 45px;padding-top:10px;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
-.about__go-next:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-.about__go-next:hover{background-color:#158f76}
+.about_title{margin-bottom:35px;font-size:55px;text-transform:capitalize}
+.about_title span{font-weight:700}
+.about_descr{max-width:580px;margin:0 auto 50px;font-size:18px;line-height:1.1;color:#fff}
+.about_go-next{display:block;width:125px;height:25px;margin:0 auto 45px;padding-top:10px;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
+.about_go-next:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+.about_go-next:hover{background-color:#158f76}
 
 /* services section */
 .services{width:100%;min-height:645px;padding-top:55px;background-color:#16a086;text-align:center}
-.services__inner{max-width:1024px;margin:0 auto}    
-.services__inner:after{content:'';display:table;clear:both}
-.services__title{font-size:28px;font-weight:400;margin-bottom:10px;color:#fff;text-transform:capitalize}
-.services__descr{font-size:14px;font-weight:400;margin-bottom:45px;color:#fff}
+.services_inner{max-width:1024px;margin:0 auto}    
+.services_inner:after{content:'';display:table;clear:both}
+.services_title{font-size:28px;font-weight:400;margin-bottom:10px;color:#fff;text-transform:capitalize}
+.services_descr{font-size:14px;font-weight:400;margin-bottom:45px;color:#fff}
 
-.services__member{display:inline-block;position:relative;width:250px;height:450px;margin:0 30px 30px;background-color:#ecf0f1;transition: .5s;top:10%}
-.services__member:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
-.services__member img{width:100%;height:57%}
-.services__member-info{display:block;width:100%;height:190px;padding:15px 10px}
-.services__member-name{margin-bottom:5px;font-size:18px}
-.services__member-role{display:block;margin-bottom:20px;font-size:13px;font-style:italic;text-transform:capitalize}
-.services__member-descr{text-align:left;line-height:1.3}
+.services_member{display:inline-block;position:relative;width:250px;height:450px;margin:0 30px 30px;background-color:#ecf0f1;transition: .5s;top:10%}
+.services_member:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+.services_member img{width:100%;height:57%}
+.services_member-info{display:block;width:100%;height:190px;padding:15px 10px}
+.services_member-name{margin-bottom:5px;font-size:18px}
+.services_member-role{display:block;margin-bottom:20px;font-size:13px;font-style:italic;text-transform:capitalize}
+.services_member-descr{text-align:left;line-height:1.3}
 
 .advantages{text-align:center;border-left:10px solid #ecf0f1;border-right:10px solid #ecf0f1;float:left;width:98%;width:calc(100% - 40px);margin-left:1%;margin-right:1%;margin-left:calc(20px);margin-right:calc(20px);height:auto;margin-top:0;margin-bottom:30px;margin-top:50px;}
 .advantages h2{position:relative;color:black;font-weight:bold;font-size:30;margin-top:-15px}
@@ -104,58 +102,58 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 /* contact section */
 .contact{width:100%;min-height:500px;padding:50px 0;background-color:#ecf0f1;text-align:left;border-bottom: 4px solid #158f76;}    
-.contact__inner{max-width:1024px;margin:0 auto}    
-.contact__inner:after{content:'';display:table;clear:both}    
-.contact__title{font-size:28px;font-weight:400;margin-bottom:10px;text-transform:capitalize;text-align:center}    
-.contact__descr{font-size:14px;font-weight:400;margin-bottom:55px;text-align:center}    
-.contact__form{display:block;float:left;max-width:465px;margin:0 15px 0 40px}    
-.contact__form:after{content:'';display:table;clear:both}    
+.contact_inner{max-width:1024px;margin:0 auto}    
+.contact_inner:after{content:'';display:table;clear:both}    
+.contact_title{font-size:28px;font-weight:400;margin-bottom:10px;text-transform:capitalize;text-align:center}    
+.contact_descr{font-size:14px;font-weight:400;margin-bottom:55px;text-align:center}    
+.contact_form{display:block;float:left;max-width:465px;margin:0 15px 0 40px}    
+.contact_form:after{content:'';display:table;clear:both}    
 
-.contact__form-input{display:inline-block;width:220px;height:45px;margin-bottom:20px;padding-left:12px;border:2px solid #bec3c7;font-style:italic;color:#999}    
-.contact__form-input{margin-right:10px}   
-.contact__form-tarea{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;width:465px;height:155px;margin-bottom:25px;padding:20px 0 0 12px;border:2px solid #bec3c7;font-style:italic;color:#999;resize:none}
-.contact__form-submit{display:block;float:right;width:115px;height:35px;text-align:center;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
-.contact__form-submit:hover{background-color:#158f76}
-.contact__card{display:inline-block;width:230px;height:150px}
-.contact__card-title{margin-bottom:20px;font-size:14px;line-height:.5;text-transform:uppercase}
-.contact__card-item{position:relative;font-size:14px;line-height:24px}
+.contact_form-input{display:inline-block;width:220px;height:45px;margin-bottom:20px;padding-left:12px;border:2px solid #bec3c7;font-style:italic;color:#999}    
+.contact_form-input{margin-right:10px}   
+.contact_form-tarea{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;width:465px;height:155px;margin-bottom:25px;padding:20px 0 0 12px;border:2px solid #bec3c7;font-style:italic;color:#999;resize:none}
+.contact_form-submit{display:block;float:right;width:115px;height:35px;text-align:center;background-color:#1bbc9b;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
+.contact_form-submit:hover{background-color:#158f76}
+.contact_card{display:inline-block;width:230px;height:150px}
+.contact_card-title{margin-bottom:20px;font-size:14px;line-height:.5;text-transform:uppercase}
+.contact_card-item{position:relative;font-size:14px;line-height:24px}
 
-.contact__card-item:before{display:block;position:absolute;top:0;left:0;font-family:FontAwesome}
-.contact__card-item.place{padding-left:15px;margin-bottom:15px}
-.contact__card-item.place:before{content:"\f041"}
-.contact__card-item.tel{padding-left:17px;margin-bottom:10px}
-.contact__card-item.tel:before{content:"\f098"}
+.contact_card-item:before{display:block;position:absolute;top:0;left:0;font-family:FontAwesome}
+.contact_card-item.place{padding-left:15px;margin-bottom:15px}
+.contact_card-item.place:before{content:"\f041"}
+.contact_card-item.tel{padding-left:17px;margin-bottom:10px}
+.contact_card-item.tel:before{content:"\f098"}
 /*
-.contact__card-item.tel-two{padding-left:17px;margin-bottom:10px}
-.contact__card-item.tel-two:before{content:"\f098"}
+.contact_card-item.tel-two{padding-left:17px;margin-bottom:10px}
+.contact_card-item.tel-two:before{content:"\f098"}
 */
-.contact__card-item.fax:before{content:"\f02f"}
-.contact__card-item.email{content:"\f0e0";display:inline-block;padding-left:20px;font-size:14px;line-height:24px;color:#444}
+.contact_card-item.fax:before{content:"\f02f"}
+.contact_card-item.email{content:"\f0e0";display:inline-block;padding-left:20px;font-size:14px;line-height:24px;color:#444}
 
-.contact__card-item.po{padding-left:15px;margin-bottom:15px}
-.contact__card-item.po:before{content:"\f01c"}
+.contact_card-item.po{padding-left:15px;margin-bottom:15px}
+.contact_card-item.po:before{content:"\f01c"}
 
-.contact__card-item.email:before{content:"\f003"}
-.contact__card-item.email:hover{text-decoration:underline}
+.contact_card-item.email:before{content:"\f003"}
+.contact_card-item.email:hover{text-decoration:underline}
 
 /* footer */
 .page-footer{width:100%;min-height:85px;padding-bottom:30px;background-color:#2d3e50}
-.page-footer__inner{max-width:1024px;margin:0 auto}
-.page-footer__inner:after{content:'';display:table;clear:both}
-.page-footer__inner img{position:relative;top:19px;}
-.page-footer__lan{display:inline-block;margin:35px 0 0 45px;font-size:14px;color:#fff}
-.page-footer__gotop{display:block;float:right;width:45px;height:45px;margin:20px 45px 0 0;font-size:0;text-align:center;overflow:hidden;background-color:#1bbc9b;color:transparent;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
-.page-footer__gotop:hover{background-color:#158f76} 
-.page-footer__gotop:before{font-size:20px;line-height:45px;font-family:FontAwesome;content:"\f077";color:#fff}
+.page-footer_inner{max-width:1024px;margin:0 auto}
+.page-footer_inner:after{content:'';display:table;clear:both}
+.page-footer_inner img{position:relative;top:19px;}
+.page-footer_lan{display:inline-block;margin:35px 0 0 45px;font-size:14px;color:#fff}
+.page-footer_gotop{display:block;float:right;width:45px;height:45px;margin:20px 45px 0 0;font-size:0;text-align:center;overflow:hidden;background-color:#1bbc9b;color:transparent;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s}
+.page-footer_gotop:hover{background-color:#158f76} 
+.page-footer_gotop:before{font-size:20px;line-height:45px;font-family:FontAwesome;content:"\f077";color:#fff}
 
 
-/* Commercial__Info section */
-.commerical__promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/com__promo.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
-.commerical__quote{display:block;width:160px;height:55px;margin:0 auto 45px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center;margin-bottom: 10px;border-radius: 8px;}
-.commerical__quote:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-.commerical__quote:hover{background-color:blue}
+/* Commercial_Info section */
+.commerical_promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/com__promo.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
+.commerical_quote{display:block;width:160px;height:55px;margin:0 auto 45px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center;margin-bottom: 10px;border-radius: 8px;}
+.commerical_quote:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+.commerical_quote:hover{background-color:blue}
 
-.commercial__info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
+.commercial_info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
 .commercial_img1{float:left;margin-left:17%;position: relative;}
 .commercial_text{display:inline-blcok;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:830px;margin-left: 50%;position: relative;}
 .commercial_text h2,h4{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
@@ -169,13 +167,13 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .imageHolder{height:380px;margin:20px 5%;border-top:1px dashed black;border-bottom:1px dashed black;}
 .commercialmgContainer{position:relative;float:left;left:-400px;padding-top: 10px;}
 .imgContainer{position:relative;float:left;left:-300px;padding-top: 10px;}
-/* Industrial__Info section */
-.industrial__promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/industrial-cover.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
-.industrial__quote{display:block;width:160px;height:55px;margin:0 auto 45px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center;margin-bottom: 10px;border-radius: 8px;}
-.industrial__quote:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-.industrial__quote:hover{background-color:blue}
+/* Industrial_Info section */
+.industrial_promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/industrial-cover.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
+.industrial_quote{display:block;width:160px;height:55px;margin:0 auto 45px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center;margin-bottom: 10px;border-radius: 8px;}
+.industrial_quote:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+.industrial_quote:hover{background-color:blue}
 
-.industrial__info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
+.industrial_info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
 .industrial_img1{float:left;margin-left:17%;position: relative;}
 .industrial_text{display:inline-blcok;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:650px;margin-left: 50%;position: relative;}
 .industrial_text h2,h4{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
@@ -186,18 +184,18 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .industrial_expert h2{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
 .industrial_expert p{color:black;text-align: left;font-size: 18px;}
 
-/* Service and Repair__Info section */
-.service__repair__promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/service&repair.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
-.service__repair__quote{display:block;width:160px;height:55px;margin:0 auto 45px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center;margin-bottom: 10px;border-radius: 8px;}
-.service__repair__quote:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
-.service__repair__quote:hover{background-color:blue}
+/* Service and Repair_Info section */
+.service_repair_promo{width:100%;height:600px;padding:70px 0;background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/service&repair.jpg) center 0 no-repeat;background-attachment:fixed;-webkit-background-size:cover;background-size:100% 100%;text-align:center;color:#fff;border-top: 3px solid #0066ff;}
+.service_repair_quote{display:block;width:160px;height:55px;margin:0 auto 45px;background-color:#0066ff;font-size:15px;color:#fff;text-transform:uppercase;-webkit-transition:all .5s;-o-transition:all .5s;transition:all .5s;text-align: center;margin-bottom: 10px;border-radius: 8px;}
+.service_repair_quote:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+.service_repair_quote:hover{background-color:blue}
 
-.service__repair__info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
-.service__repair_img1{float:left;margin-left:17%;position: relative;padding-bottom: 250px;}
-.service__repair_text{display:inline-block;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:650px;margin-left: 50%;position: relative;}
-.service__repair_text h2,h4{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
-.service__repair_text p{color:black;text-align: left;font-size: 18px;}
-.service__repair_text li{color:black;text-align: left;font-size: 16px;}
+.service_repair_info{width:100%;min-height:680px;padding-top:50px;background-color:#fff;text-align:center;}
+.service_repair_img1{float:left;margin-left:17%;position: relative;padding-bottom: 250px;}
+.service_repair_text{display:inline-block;background-color:rgb(194, 189, 189);padding:20px;width: 450px;height:650px;margin-left: 50%;position: relative;}
+.service_repair_text h2,h4{color:black;font-weight: bold;text-align: left;text-transform:uppercase}
+.service_repair_text p{color:black;text-align: left;font-size: 18px;}
+.service_repair_text li{color:black;text-align: left;font-size: 16px;}
 
 .column {
   float: left;
@@ -216,8 +214,8 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .commercial_expert{margin-left:0%;width: 310px;}
 .industrial_img1{margin-left:0%;width:350px;}
 .industrial_expert{margin-left:0%;width: 310px;}
-.service__repair_img1{margin-left:0%;width:350px;}
-.service__repair_expert{margin-left:0%;width: 310px;}
+.service_repair_img1{margin-left:0%;width:350px;}
+.service_repair_expert{margin-left:0%;width: 310px;}
 
 .commercialmgContainer{display: block;}
 .commercialmgContainer{height:200px;width: 200px;}
@@ -227,89 +225,89 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 
 @media screen and (max-width:1000px){
-.aboutus__item{width:170px;height:170px;margin:0 1.5% 35px}
-.services__member{width:190px;margin:0 20px 30px}
-.aboutus__text{display: none;}
+.aboutus_item{width:170px;height:170px;margin:0 1.5% 35px}
+.services_member{width:190px;margin:0 20px 30px}
+.aboutus_text{display: none;}
 
 }
 
 @media screen and (max-width:800px){
-.contact__form{max-width:50%;margin:0 2% 0 8%}
-.contact__form-input{width:100%}
-.contact__form-tarea{width:100%}
-.contact__card{width:40%}
+.contact_form{max-width:50%;margin:0 2% 0 8%}
+.contact_form-input{width:100%}
+.contact_form-tarea{width:100%}
+.contact_card{width:40%}
 
-.page-header__logo{margin:25px 0 0 10px}
-.page-header__nav{margin:30px 10px 0 0}
+.page-header_logo{margin:25px 0 0 10px}
+.page-header_nav{margin:30px 10px 0 0}
 
-.aboutus__item{width:190px;height:190px;margin:0 5% 35px}
-.services__member{width:180px;margin:0 10px 30px}
-.slideshow__container {width:50%;}
+.aboutus_item{width:190px;height:190px;margin:0 5% 35px}
+.services_member{width:180px;margin:0 10px 30px}
+.slideshow_container {width:50%;}
 #mission{display:none}
-.services__member-descr{display: none;}
-.services__member{height:250px}
+.services_member-descr{display: none;}
+.services_member{height:250px}
 
 }
 
 @media screen and (max-width:640px){
 .contact{padding:50px 10px}
-.contact__form{float:none;max-width:90%;margin:0 auto 50px}
-.contact__card{display:block;width:230px;margin:20px auto}
-.contact__card-title{text-align:center}
+.contact_form{float:none;max-width:90%;margin:0 auto 50px}
+.contact_card{display:block;width:230px;margin:20px auto}
+.contact_card-title{text-align:center}
 
-.page-header__logo h1{display:none}
-.page-header__logo span{display:none}
-.page-header__nav li{margin-left:0}
+.page-header_logo h1{display:none}
+.page-header_logo span{display:none}
+.page-header_nav li{margin-left:0}
 
 .aboutus{padding:50px 10px}
-.aboutus__filter li{margin:0 5px}
+.aboutus_filter li{margin:0 5px}
 
 .services{padding:55px 10px}
-.services__member{display:block;width:260px;margin:0 auto 30px}
-.services__member-info{height:50px} 
-.services__member-descr{display:none}
-.services__member-soc{width:260px;top:220px;margin-left:-130px}
+.services_member{display:block;width:260px;margin:0 auto 30px}
+.services_member-info{height:50px} 
+.services_member-descr{display:none}
+.services_member-soc{width:260px;top:220px;margin-left:-130px}
 .column {width: 100%;}
-.aboutus__filter{width:100px}
+.aboutus_filter{width:100px}
 }
 
 /* fits mobile screens */
 
 @media screen and (max-width:480px){
-.contact__form-submit{float:none;margin:0 auto} 
+.contact_form-submit{float:none;margin:0 auto} 
 .page-header{min-height:50px}
-.page-header__inner{text-align:center}
-.page-header__logo{float:none;position:relative;display:inline-block;margin:20px auto 10px;text-align:left}
-.page-header__logo h1{display:block}
-.page-header__logo span{display:inline-block}
-.page-header__nav{float:none;margin:10px auto;padding-top:20px;text-align:center;border-top:1px solid #eee}
-.page-header__nav li{margin-left:0}
+.page-header_inner{text-align:center}
+.page-header_logo{float:none;position:relative;display:inline-block;margin:20px auto 10px;text-align:left}
+.page-header_logo h1{display:block}
+.page-header_logo span{display:inline-block}
+.page-header_nav{float:none;margin:10px auto;padding-top:20px;text-align:center;border-top:1px solid #eee}
+.page-header_nav li{margin-left:0}
 .tester{font-size: 10px; margin-left:0; margin-right: 0;}
 
 .page-footer{padding:0 10px 30px;text-align:center}
-.page-footer__lan{margin:35px auto 0}
+.page-footer_lan{margin:35px auto 0}
 
-.contact__card-item.tel-two{display: none;}
+.contact_card-item.tel-two{display: none;}
 .imageHolder{display: none;}
 .commercial_expert{display:none;}
-/* .service__repair__info{display:none;} */
+/* .service_repair_info{display:none;} */
 .industrial_expert{display:none;}
 .advantages h2:before,.advantages h2:after{display: none;background-color: clear;}
 
-.service__repair__promo h2{color: white;}
+.service_repair_promo h2{color: white;}
 .industrial_img1{display: none;}
-.service__repair_img1{display:none;}
+.service_repair_img1{display:none;}
 .commercial_img1{display:none;}
 
 .commercial_expert{display:none;}
 .commercial_text{float:left}
 .industrial_expert{display:none;}
-.service__repair_expert{display: none; float: left;}
+.service_repair_expert{display: none; float: left;}
 
 #phone_disay{display:block}
 }
 /*
-.page-footer__gotop{float:none;width:100%;margin:20px auto 0}
+.page-footer_gotop{float:none;width:100%;margin:20px auto 0}
 */
 
 @media only screen and (max-width: 300px) {

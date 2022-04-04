@@ -1,5 +1,10 @@
 function start() {
     preloadImage('images/roof.jpg');
+    preloadImage('images/wayneeidson2.jpg');
+    preloadImage('images/brownie-eidson.jpg');
+    preloadImage('images/nrca.png');
+    preloadImage('images/aboutusimg.jpg');
+
     getContactCard2();
 }
 
@@ -37,47 +42,9 @@ function openModal(modal_ID) {
         }
     }
 }
-/*
-function sendEmail(){
-    console.log(`in send email`);
-
-    let first = document.forms["requestForm"]["first"].value;
-    let last = document.forms["requestForm"]["last"].value;
-    let email = document.forms["requestForm"]["email"].value;
-    let address = document.forms["requestForm"]["address"].value;
-    let phoneNum = document.forms["requestForm"]["phone_num"].value;
-    let city = document.forms["requestForm"]["city"].value;
-    let state = document.forms["requestForm"]["state"].value;
-    let zip = document.forms["requestForm"]["zip"].value;
-    let message = document.forms["requestForm"]["message"].value;
-
-    var xhr = new XMLHttpRequest();
-    var formData = JSON.stringify({"first": first, "last": last, "email": email, "phone_num": phoneNum, "address": address, "city": city, "state": state, "zip": zip, "message": message});
-    xhr.withCredentials = false;
-    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-quote-email/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=SHSUDdbpZdTXJxOWuhvB4CFWFvGW2cTKm6l15Nw5ZPg");
-    //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(formData);
-    xhr.onload = () => {
-        console.log(xhr.status)
-        if (xhr.status === 200) {
-            //console.log(xhr.response);
-            //alert(`Quote requested successfully. We will be in touch shortly!`)
-            console.log(`sent email!`);
-        }
-        else {
-            console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Unexpected error. Please try again. ${xhr.status}`);
-        }
-    }
-    console.log(`end send email`);
-
-    alert(`Thank you for the request! We will be in touch shortly.`); 
-}
-*/
 
 function sendQuote(){
-    console.log(`in send email`);
+    //console.log(`in send email`);
 
     let first = document.forms["requestForm"]["first"].value;
     let last = document.forms["requestForm"]["last"].value;
@@ -101,68 +68,17 @@ function sendQuote(){
         if (xhr.status === 200) {
             //console.log(xhr.response);
             //alert(`Quote requested successfully. We will be in touch shortly!`)
-            console.log(`sent email!`);
+            //console.log(`sent email!`);
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
             alert(`Unexpected error. Please try again. ${xhr.status}`);
         }
     }
-    console.log(`end send email`);
+    //console.log(`end send email`);
 
     alert(`Thank you for the request! We will be in touch shortly.`); 
 }
-
-function thankyouMessage() {
-    let x = document.forms["requestForm"]["name"].value;
-    let y = document.forms["requestForm"]["email"].value;
-    let z = document.forms["requestForm"]["address"].value;
-
-    if (x != "" && y != "" && z != "") {
-        alert("Thank you, we will be in touch shortly!");
-        return false;
-    }
-
-}
-
-function getWeather() {
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = false;
-    xhr.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=london&appid=f4c546f898560a59b0cd737648f02285");
-    //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
-    xhr.send();
-    xhr.onload = () => {
-        console.log(xhr)
-        if (xhr.status === 200) {
-            console.log(JSON.parse(xhr.response));
-            alert(`The weather api worked ${xhr.status}  ${xhr.statusText}`);
-        } else {
-            console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`The weather api failed ${xhr.status}  ${xhr.statusText}`);
-
-        }
-    }
-}
-
-function getLogicApp() {
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = false;
-    xhr.open("GET", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-validate-user/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=MfH_Rxu-2s_5OhuwaUKsZWxwUWRO2tdkzqMV7VPl5HY");
-    //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
-    xhr.send();
-    xhr.onload = () => {
-        console.log(xhr)
-        if (xhr.status === 200) {
-            console.log(JSON.parse(xhr.response));
-            alert(`The logic app api worked ${xhr.status}  ${xhr.statusText}`);
-        } else {
-            console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`The logic app api failed ${xhr.status}  ${xhr.statusText}`);
-
-        }
-    }
-}
-
 
 
 function validateUser() {
@@ -179,12 +95,6 @@ function validateUser() {
         return false;
     }
 
-    /* test validation
-    if (x != "lodowd" || y != "hotdog"){
-        alert("incorrect user or pass");
-        return false;
-    }
-    */
 
     var xhr = new XMLHttpRequest();
     var loginData = JSON.stringify({"username": x, "pass": y});
@@ -241,30 +151,26 @@ function createNewUser(){
     }
     
 
-    console.log(x);
+    //console.log(x);
 
     var xhr = new XMLHttpRequest();
     var loginData = JSON.stringify({"username": x, "pass": y});
     xhr.withCredentials = false;
-    //xhr.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=london&appid=f4c546f898560a59b0cd737648f02285");
     xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-createUser/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=HlTKOFZEGlH-8oWyaroQmvGsDZ8byHZrRk_FvxnBe-A");
-    //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(loginData);
-    //xhr.send();
     xhr.onload = () => {
         console.log(xhr)
         if (xhr.status === 200) {
             //console.log(JSON.parse(xhr.response));
-            alert(`Account created successfully. ${xhr.status}  ${xhr.statusText}`);
+            alert(`Account created successfully!`);
             hide_div('newAdminModal');
-            //window.location.href = "admin_functions.html";
         } else if(xhr.status === 409){
-            alert(`Username already exists. ${xhr.status}  ${xhr.statusText}`);
+            alert(`Username already exists. ${xhr.status}  `);
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Failed to create account. Unexpected error occured. Try again ${xhr.status}  ${xhr.statusText} ld: ${loginData} x: ${x}  y: ${y}`);
+            alert(`Failed to create account. Unexpected error occured. Try again ${xhr.status}`);
         }
     }
    
@@ -291,8 +197,33 @@ function createNewEmployee(){
         return false;
     }
 
+    if (last == "") {
+        alert("Last name must be filled out.");
+        return false;
+    }
+
+    if (position == "") {
+        alert("Please fill out employee job description");
+        return false;
+    }
+
+    if (num == "") {
+        alert("Enter employee phone number.");
+        return false;
+    }
+
     if (address == "") {
         alert("Address must be filled out.");
+        return false;
+    }
+
+    if (city == "") {
+        alert("City must be filled out.");
+        return false;
+    }
+
+    if (zip == "") {
+        alert("Zip code must be filled out.");
         return false;
     }
 
@@ -318,7 +249,7 @@ function createNewEmployee(){
         }
         else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
-            alert(`Unexpected error. Please try again. ${xhr.status}  ${xhr.statusText} ld: ${employeeData}`);
+            alert(`Unexpected error. Please try again. ${xhr.status}s`);
         }
     }
 }
@@ -596,3 +527,41 @@ function getQuotes(){
 
 }
 
+/*
+function sendEmail(){
+    console.log(`in send email`);
+
+    let first = document.forms["requestForm"]["first"].value;
+    let last = document.forms["requestForm"]["last"].value;
+    let email = document.forms["requestForm"]["email"].value;
+    let address = document.forms["requestForm"]["address"].value;
+    let phoneNum = document.forms["requestForm"]["phone_num"].value;
+    let city = document.forms["requestForm"]["city"].value;
+    let state = document.forms["requestForm"]["state"].value;
+    let zip = document.forms["requestForm"]["zip"].value;
+    let message = document.forms["requestForm"]["message"].value;
+
+    var xhr = new XMLHttpRequest();
+    var formData = JSON.stringify({"first": first, "last": last, "email": email, "phone_num": phoneNum, "address": address, "city": city, "state": state, "zip": zip, "message": message});
+    xhr.withCredentials = false;
+    xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-quote-email/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=SHSUDdbpZdTXJxOWuhvB4CFWFvGW2cTKm6l15Nw5ZPg");
+    //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(formData);
+    xhr.onload = () => {
+        console.log(xhr.status)
+        if (xhr.status === 200) {
+            //console.log(xhr.response);
+            //alert(`Quote requested successfully. We will be in touch shortly!`)
+            console.log(`sent email!`);
+        }
+        else {
+            console.log(`error ${xhr.status} ${xhr.statusText}`)
+            alert(`Unexpected error. Please try again. ${xhr.status}`);
+        }
+    }
+    console.log(`end send email`);
+
+    alert(`Thank you for the request! We will be in touch shortly.`); 
+}
+*/
