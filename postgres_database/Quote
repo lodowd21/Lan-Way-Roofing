@@ -1,0 +1,18 @@
+-- Table: public.Quote
+
+-- DROP TABLE public."Quote";
+
+CREATE TABLE IF NOT EXISTS public."Quote"
+(
+    customer_email character varying COLLATE pg_catalog."default" NOT NULL,
+    request_time character varying COLLATE pg_catalog."default" NOT NULL,
+    message character varying COLLATE pg_catalog."default",
+    status character varying COLLATE pg_catalog."default",
+    action_by character varying COLLATE pg_catalog."default",
+    CONSTRAINT "Quote_pkey" PRIMARY KEY (customer_email, request_time)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."Quote"
+    OWNER to lodowd;

@@ -1,0 +1,21 @@
+-- Table: public.Customer
+
+-- DROP TABLE public."Customer";
+
+CREATE TABLE IF NOT EXISTS public."Customer"
+(
+    email character varying COLLATE pg_catalog."default" NOT NULL,
+    first character varying COLLATE pg_catalog."default" NOT NULL,
+    last character varying COLLATE pg_catalog."default" NOT NULL,
+    phone_num character varying COLLATE pg_catalog."default",
+    address character varying COLLATE pg_catalog."default" NOT NULL,
+    city character varying COLLATE pg_catalog."default" NOT NULL,
+    state character varying COLLATE pg_catalog."default" NOT NULL,
+    zip integer,
+    CONSTRAINT "Customer_pkey" PRIMARY KEY (email)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."Customer"
+    OWNER to lodowd;

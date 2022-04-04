@@ -1,0 +1,23 @@
+-- Table: public.Employee
+
+-- DROP TABLE public."Employee";
+
+CREATE TABLE IF NOT EXISTS public."Employee"
+(
+    "ID" character varying COLLATE pg_catalog."default" NOT NULL,
+    "employee_ID" integer NOT NULL,
+    first character varying COLLATE pg_catalog."default" NOT NULL,
+    last character varying COLLATE pg_catalog."default" NOT NULL,
+    job_description character varying COLLATE pg_catalog."default" NOT NULL,
+    phone_num character varying COLLATE pg_catalog."default",
+    address character varying COLLATE pg_catalog."default" NOT NULL,
+    city character varying COLLATE pg_catalog."default" NOT NULL,
+    zip integer NOT NULL,
+    salary_hourly_rate double precision,
+    CONSTRAINT "Employee_pkey1" PRIMARY KEY ("employee_ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."Employee"
+    OWNER to lodowd;

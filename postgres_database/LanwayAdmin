@@ -1,0 +1,16 @@
+-- Table: public.LanwayAdmin
+
+-- DROP TABLE public."LanwayAdmin";
+
+CREATE TABLE IF NOT EXISTS public."LanwayAdmin"
+(
+    "ID" character varying COLLATE pg_catalog."default" NOT NULL,
+    username character varying COLLATE pg_catalog."default",
+    password character varying COLLATE pg_catalog."default",
+    CONSTRAINT "Admin_pkey" PRIMARY KEY ("ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."LanwayAdmin"
+    OWNER to lodowd;
