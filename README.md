@@ -20,8 +20,6 @@ The application encompasses front-end and back-end development to provide a comp
 
 
 ## URLS
-The following urls are non-production urls used for testing. Once the legacy website is retired, the urls below will be updated in dns to https://www.lanway.com/*
-<br/>
 
 Main Page:
 https://victorious-sand-018f36a0f.azurestaticapps.net/
@@ -30,11 +28,13 @@ https://victorious-sand-018f36a0f.azurestaticapps.net/
 Admin Login:
 (Test username: TestAdmin Test password: csci481)
 https://victorious-sand-018f36a0f.azurestaticapps.net/admin.html
-This is also accessible on the main page. A the very bottom there is a link that says "Admin" in dark blue to the right of the American flag.
+This is also accessible on the main page, at the very bottom there is a link that says "Admin" in dark blue to the right of the American flag.
 
 
 Admin Functions:
 https://victorious-sand-018f36a0f.azurestaticapps.net/admin_functions.html
+
+The above urls are non-production urls used for testing. Once the legacy website is retired, the urls will be updated in dns to https://www.lanway.com/*
 
 ## Azure
 Microsoft azure is a leading cloud 
