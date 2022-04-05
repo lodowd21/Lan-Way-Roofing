@@ -42,7 +42,7 @@ The logic_app_workflows folder contains all the apis used on the web application
 - lanway-la-getEmployeeInfo: This will display all employee information after their ID has been submitted.
 - lanway-la-quote-email2: After a customer submits the form to request a quote this api will automatically send an email to the company email, add the customer information to the Customer table, and add their email, message, and time it was submitted to the Quote table. 
 - lanway-la-update-contact-card: Called when an admin updates company information such as address.
-- lanway-la-update-employee: This api is called when employees data needs to be updated such as their phone number. 
+- lanway-la-update-employee: This api is called when employee data needs to be updated such as their phone number. 
 
 ## Database
 This is an azure postgres managed database. The database stores customer and employee information. The SQL code to create the tables is in the postgres_database folder.
