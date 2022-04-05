@@ -36,6 +36,9 @@ This is also accessible on the main page. A the very bottom there is a link that
 Admin Functions:
 https://victorious-sand-018f36a0f.azurestaticapps.net/admin_functions.html
 
+## Azure
+Microsoft azure is a leading cloud 
+
 ## Logic Apps
 The logic_app_workflows folder contains all the apis used on the web application.
 
@@ -55,6 +58,9 @@ This is an azure postgres managed database. The database stores customer and emp
 
 ## Postman
 The postman_api_test_collection folder contains a JSON script of the all the requests that were used to test the apis.
+
+## CI/CD Pipeline
+The pipeline is an azure DevOps pipeline that is triggered when the code is pushed into github via visual studio code or eclipse. A webhook on this github repo is configured to run the pipeline. The pipeline verifies the build and deploys the website to the runtime stack. In the event the pipeline an email is sent with details on the failure. Pipeline invocations can also be viewed via the azure portal. 
 
 ## Author
 Liam O'Dowd
