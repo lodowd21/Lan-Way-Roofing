@@ -45,7 +45,7 @@ The logic_app_workflows folder contains all the apis used on the web application
 - lanway-la-update-employee: This api is called when employees data needs to be updated such as their phone number. 
 
 ## Database
-This is an azure postgres managed database
+This is an azure postgres managed database. The database stores customer and employee information. The SQL code to create the tables is in the postgres_database folder.
 
 ## Author
 Liam O'Dowd
