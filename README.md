@@ -47,5 +47,8 @@ The logic_app_workflows folder contains all the apis used on the web application
 ## Database
 This is an azure postgres managed database. The database stores customer and employee information. The SQL code to create the tables is in the postgres_database folder.
 
+## Postman
+The postman_api_test_collection folder contains a JSON script of the all the requests that were used to test the apis.
+
 ## Author
 Liam O'Dowd
