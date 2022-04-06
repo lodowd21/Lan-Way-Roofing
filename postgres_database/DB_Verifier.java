@@ -1,5 +1,8 @@
 package lanway;
 
+/**
+ * Liam O'Dowd
+ */
 
 import java.sql.*;
 
@@ -7,7 +10,7 @@ public class DB_Verifier {
 
    static final String DB_URL = "jdbc:postgresql://lanway-db.postgres.database.azure.com:5432/lanway-website-db?sslmode=require";
    static final String USER = "lodowd";
-   static final String PASS = "Liverpool99";
+   static final String PASS = "********";
    static final String QUERY = "SELECT * FROM \"Employee\"";
 
    public static void main(String[] args) {
