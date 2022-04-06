@@ -1,3 +1,4 @@
+// preloads images and displays dynamic content to the front end
 function start() {
     preloadImage('images/roof.jpg');
     preloadImage('images/wayneeidson2.jpg');
