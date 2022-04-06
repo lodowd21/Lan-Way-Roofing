@@ -47,7 +47,7 @@ The logic_app_workflows folder contains all the apis used on the web application
 - lanway-la-createUser: This api is used when a new admin is being created, it will insert the data into the user table in the database.
 - lanway-la-delete-employee: An employee ID will be passed in and will then that row will be deleted from the employee table.
 - lanway-la-get-contact-card: This is called when the web application is loaded and dynamically retrieves the contanct information from the ContactCard table.
-- lanway-la-get-quotes-by-email: A customer email will be passed in and then it will retrieve all of their quote messages and display them in a table.
+- lanway-la-get-quotes-by-email: A customer email will be passed in and then it will retrieve all of their quote messages and display them in a table. Use the email "102@unca.edu" to see an example.
 - lanway-la-getEmployeeInfo: This will display all employee information after their ID has been submitted.
 - lanway-la-quote-email2: After a customer submits the form to request a quote this api will automatically send an email to the company email, add the customer information to the Customer table, and add their email, message, and time it was submitted to the Quote table. 
 - lanway-la-update-contact-card: Called when an admin updates company information such as address.
