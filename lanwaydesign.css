@@ -120,6 +120,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 .contact_card-item:before{display:block;position:absolute;top:0;left:0;font-family:FontAwesome}
 .contact_card-item.place{padding-left:15px;margin-bottom:15px}
+/* content displays the icon */
 .contact_card-item.place:before{content:"\f041"}
 .contact_card-item.tel{padding-left:17px;margin-bottom:10px}
 .contact_card-item.tel:before{content:"\f098"}
@@ -208,6 +209,10 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
   display: table;
   clear: both;
 }
+
+/* 
+* Media queries used make UI fit smaller screens
+*/
 
 @media(max-width: 1300px) {
 .commercial_img1{margin-left:0%;width:350px;}
