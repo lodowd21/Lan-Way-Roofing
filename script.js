@@ -29,6 +29,9 @@ function logOut(){
     window.location.href = "admin.html";
 }
 
+/*
+* Opens a pop up when an admin clicks a button
+*/
 function openModal(modal_ID) {
 
     var modal = document.getElementById(modal_ID);
@@ -43,6 +46,11 @@ function openModal(modal_ID) {
     }
 }
 
+/*
+* takes in input from the request a quote form and sends and automatic email
+* adds customer info to the Customer table
+* adds the message to the Quote table
+*/
 function sendQuote(){
     //console.log(`in send email`);
 
@@ -80,7 +88,9 @@ function sendQuote(){
     alert(`Thank you for the request! We will be in touch shortly.`); 
 }
 
-
+/*
+* Checks in the Admin table to validate that their username and password is in the database.
+*/
 function validateUser() {
     let x = document.forms["login"]["username"].value;
     let y = document.forms["login"]["password"].value;
@@ -120,6 +130,9 @@ function validateUser() {
 
 }
 
+/*
+* Creates a new admin and adds their data the Admin table
+*/
 function createNewUser(){
     let x = document.forms["newLogin"]["newUsername"].value;
     let y = document.forms["newLogin"]["newPassword"].value;
@@ -176,6 +189,9 @@ function createNewUser(){
    
 }
 
+/*
+* Creates a new employee and adds their data the Employee table
+*/
 function createNewEmployee(){
     let employeeID = document.forms["newEmployee"]["employee_ID"].value;
     let first = document.forms["newEmployee"]["employeeFirst"].value;
@@ -254,8 +270,10 @@ function createNewEmployee(){
     }
 }
 
+/*
+* After an ID has been submitted it displays their data in a form
+*/
 function getEmployee() {
-
 
     let employeeID = document.forms["get_employee_data"]["employeeID"].value;
 
@@ -294,7 +312,9 @@ function getEmployee() {
     }
 }
 
-
+/*
+* Gets the contact information from the ContactCard table
+*/
 function getContactCard(){
 
     var xhr = new XMLHttpRequest();
@@ -322,6 +342,10 @@ function getContactCard(){
     }
 }
 
+/*
+* Gets the contact information from the ContactCard table
+* displays the returned data dynamically to the front end
+*/
 function getContactCard2(){
 
     var xhr = new XMLHttpRequest();
@@ -347,7 +371,9 @@ function getContactCard2(){
     }
 }
 
-
+/*
+* Gets the information from the new_info form and updates the ContactCard table
+*/
 function updateContactCard(){
 
     let address = document.forms["new_info"]["address"].value;
@@ -378,6 +404,9 @@ function updateContactCard(){
     }
 }
 
+/*
+* Gets the information from the get_employee form and updates a row in Employee table
+*/
 function updateEmployeeInfo(){
 
     let employeeID = document.forms["get_employee_data"]["employeeID"].value;
@@ -449,6 +478,9 @@ function updateEmployeeInfo(){
     }
 }
 
+/*
+* Deletes a row in the Employee table
+*/
 function deleteEmployee(){
 
     let employee_ID = document.forms["delete"]["employee_ID"].value;
@@ -472,6 +504,10 @@ function deleteEmployee(){
     }
 }
 
+/*
+* Gets quote messages from the Quotes table for the corresponding email
+* Displays the quote messages in a table to the front end
+*/
 function getQuotes(){
 
     let customer_email = document.forms["message_form"]["email"].value;
