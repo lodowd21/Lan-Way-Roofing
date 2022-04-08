@@ -62,7 +62,7 @@ Link to my github repo that contains a driver file and java program used for tes
 The postman_api_test_collection folder contains a JSON script of the all the requests that were used to test the apis.
 
 ## CI/CD Pipeline
-The pipeline is an azure DevOps pipeline that is triggered when the code is pushed into github via visual studio code or eclipse. A webhook on this github repo is configured to run the pipeline. The pipeline verifies the build and deploys the website to the runtime stack. In the event the pipeline an email is sent with details on the failure. Pipeline invocations can also be viewed via the azure portal. 
+The pipeline is an azure DevOps pipeline that is triggered when the code is pushed into github via visual studio code or eclipse. A webhook on this github repo is configured to run the pipeline. The pipeline verifies the build and deploys the website to the runtime stack. In the event of a pipeline failure an email is sent with details on the fail. Pipeline invocations can also be viewed via the azure portal. 
 
 ## Author
 Liam O'Dowd
