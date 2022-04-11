@@ -93,25 +93,23 @@ function sendQuote(){
 * Checks in the Admin table to validate that their username and password is in the database.
 */
 function validateUser() {
-    let x = document.forms["login"]["username"].value;
-    let y = document.forms["login"]["password"].value;
+    let user = document.forms["login"]["username"].value;
+    let pass = document.forms["login"]["password"].value;
 
-    if (x == "") {
-        alert("Username7 must be filled out");
+    if (user == "") {
+        alert("Username must be filled out");
         return false;
     }
 
-    if (y == "") {
+    if (pass == "") {
         alert("Password must be filled out");
         return false;
     }
 
-
     var xhr = new XMLHttpRequest();
-    var loginData = JSON.stringify({"username": x, "pass": y});
+    var loginData = JSON.stringify({"username": user, "pass": pass});
     xhr.withCredentials = false;
     xhr.open("POST", "https://lanway-logicapp1.azurewebsites.net:443/api/lanway-la-admin-login/triggers/manual/invoke?api-version=2020-05-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=9VrhMwMgkDGkcwhOQmI5UAkSFrT6pVbtB13P9NE42Yo");
-    //xhr.setRequestHeader('Access-Control-Allow-Origin','https://openweathermap.org/api');
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(loginData);
     xhr.onload = () => {
@@ -119,8 +117,6 @@ function validateUser() {
         var isLoginSuccessful = JSON.parse(xhr.response)
         console.log(isLoginSuccessful.isValid)
         if (xhr.status === 200 && isLoginSuccessful.isValid === true) {
-            //console.log(JSON.parse(xhr.response));
-           // alert(`Successful login ${xhr.status}  ${xhr.statusText}`);
             window.location.href = "admin_functions.html";
         } else {
             console.log(`error ${xhr.status} ${xhr.statusText}`)
