@@ -34,7 +34,7 @@ This is also accessible on the main page, at the very bottom there is a link tha
 Admin Functions:
 https://victorious-sand-018f36a0f.azurestaticapps.net/admin_functions.html
 
-The above urls are non-production urls used for testing. Once the legacy website is retired, the urls will be updated in dns to https://www.lanway.com/*
+The above urls are non-production urls used for testing. Once the legacy website is retired, the urls will be updated in dns to https://www.lanwayroofing.com/*
 
 ## Azure
 This projects implements the Lan-Way website on Azure using Azure Static Web Apps which provides a serverless deployment environment and ability to serve dynamic content via APIs: https://azure.microsoft.com/en-us/services/app-service/static/
