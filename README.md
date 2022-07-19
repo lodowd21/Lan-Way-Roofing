@@ -22,7 +22,7 @@ The application encompasses front-end and back-end development to provide a comp
 ## URLS
 
 The below URLs are no longer active. Please kick on the link to watch a demo video of the website starting at 12:38.
-https://drive.google.com/drive/folders/1485TQa4FiwktfNw_qZmUtDXaKL8tTQu0
+https://drive.google.com/file/d/15rr7U3J1I88idliRFrDYgVNb3Dd7bCDV/view?usp=sharing
 
 Main Page:
 https://victorious-sand-018f36a0f.azurestaticapps.net/
